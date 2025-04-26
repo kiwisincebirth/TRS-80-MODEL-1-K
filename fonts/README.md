@@ -26,6 +26,14 @@ In summary each character has
 * 2 line for decenders
 * 2 trailing blank lines
 
+ORIGINAL (example)
+
+(FONT-Orig.jpg)
+
+FINAL (example)
+
+(FONT-NEW.jpg)
+
 ### Glens Character Rom
 
 This is an unmodified copy 9which is compatable) of the font file used in the following project
