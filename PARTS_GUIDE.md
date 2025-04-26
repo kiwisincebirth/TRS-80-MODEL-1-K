@@ -1,0 +1,66 @@
+# Parts Guide
+
+## Specific Parts Used
+
+###  Crystal Oscilator (10.6445 Mhz)
+
+https://www.ebay.com/itm/195727646631\
+
+or 10.7 mhZ (closest)
+
+https://www.aliexpress.com/item/1005006183714474.html
+
+https://www.aliexpress.com/item/1005003752108473.html
+
+### Main System ROM
+
+Supports 27128, 27256, 27512 EPROM, or 28256 EEPROM - 28 pin devices
+
+### Character Generator ROM
+
+same as main system ROM
+
+### Main System RAM
+
+https://www.digikey.com.au/en/products/detail/alliance-memory-inc/AS6C1008-55PCN/4234576
+
+### Video Memory
+
+uDP2114LC or equivilent
+
+### Cassette Relay (G5V-1)
+
+https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_1.pdf
+
+### RCA Video Connector
+
+https://neurochrome.com/products/rca-connectors
+
+can be obtained easily on Ali express.
+
+### Power Connector
+
+https://core-electronics.com.au/dc-barrel-power-jack-connector.html
+
+can be obtained fairly easily from multiple sources, these usualy come in either 2.1 or 2.5mm you need to chhose the best 
+one based on the power brick you intend to use.
+
+### Power Switch
+
+https://www.digikey.com.au/en/products/detail/e-switch/100AWDP1T1B4M6QE/1803008
+
+https://configured-product-images.s3.amazonaws.com/Datasheets/100A.pdf
+
+https://www.altronics.com.au/p/s1360-salecom-dpdt-horizontal-action-pcb-mount-mini-toggle-switch/
+
+https://www.salecom.com/en/product/t8021.html
+
+### Reset Switch
+
+https://www.digikey.com.au/en/products/detail/e-switch/800SP8B6M6RE/502075
+
+https://configured-product-images.s3.amazonaws.com/Datasheets/800.pdf
+
+https://www.altronics.com.au/p/s1495-salecom-spdt-mom.-90-deg.-pcb-sub-mini-pushbutton-switch/#/
+
+https://www.salecom.com/en/product/es-22a.html

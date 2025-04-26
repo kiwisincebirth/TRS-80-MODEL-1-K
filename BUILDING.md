@@ -3,13 +3,13 @@
 
 ## Provied Files
 
-Shematics in PDF Format
+The files provided in this project are primarily:
 
-Gerber files for manufacture
+- The Shematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1.pdf)
+- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_Gerberv1.zip)
+- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1.csv)
 
-Bill Of materials
-
-also see the Parts Guide
+also see the parts guide [Parts Guide](PARTS_GUIDE.md)
 
 ## Assembly Order
 

@@ -138,7 +138,7 @@ The above list may not be exhaustive
 
 ## Building
 
-See the sererate buildes guide
+See the separate [Builders Guide](/BUILDING.md) for complete technical documentation
 
 ## Credits
 
