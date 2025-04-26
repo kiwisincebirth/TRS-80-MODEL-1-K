@@ -19,6 +19,9 @@ Each font has 2 versions
 The modified Final fonts have the following changes:
 * The punctuation characters  , : ;  moved vertically down for correct alignment.
 * The lower case characters  g j p q y ) are stretched to have 2 line decenders
+* All characters are moved down by 1 pixel
+
+![Font Changes](Font-Changes.png)
 
 In summary each character has 
 * 1 leading blank line
@@ -28,11 +31,11 @@ In summary each character has
 
 ORIGINAL (example)
 
-[Original Font](FONT-Orig.jpg)
+![Original Font](FONT-Orig.jpg)
 
 FINAL (example)
 
-[Final Font](FONT-NEW.jpg)
+![Final Font](FONT-NEW.jpg)
 
 ### Glens Character Rom
 
