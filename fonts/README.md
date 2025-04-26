@@ -28,11 +28,11 @@ In summary each character has
 
 ORIGINAL (example)
 
-(FONT-Orig.jpg)
+[Original Font](FONT-Orig.jpg)
 
 FINAL (example)
 
-(FONT-NEW.jpg)
+[Final Font](FONT-NEW.jpg)
 
 ### Glens Character Rom
 
