@@ -72,19 +72,22 @@ If you intend to connect an expansion interface then the RAM in the interface wi
 ### Character Generation
 
 All character generation (both alpha characters and graphics) has been been replaced with a single character set 
-that includes all 256 characters defined in a ROM (U37). Each character defines the full 6x12 pixel matrix that is 
-generated, and requires 16 bytes for a total of 4k bytes for the entire character set. 
+that includes all 256 characters defined in ROM (U37). Each character defines the full 6x12 pixel matrix that is 
+generated, and requires 16 bytes (only 12 are used) per character, for a total of 4k bytes for the entire character set. 
 
-Multiple character sets  can be defined (depending on ROM used), the character set chosen is configured by Switches SW1.
-Since characters sets can control all lines of the raster true lower case descender's can be defined e.g. Gendon3.
-The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. A few fonts have been provided in this project
+Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by Switches SW1.
+Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
+The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. 
 
-Since a traditional character ROM (Z37, Z38) only has a single 128 character 6x8 font, existing font (ROM's) are not compatible.
+A few fonts have been provided in this project see ![Fonts](/fontsRAEDME.md)
+
+Normal font ROM's are not compatible.
 
 ### Video Output
 
-Output is via standard a RCA connector, or the original DIN plug, you can solder either onto the board. 
-The RCA connector is more compatible with a larger range of external monitors, and potentially more reliable and less subject to noise.
+Composite video output is via standard a RCA connector or the original DIN plug, you can solder either onto the board. 
+The RCA connector is provided to be compatible with a larger range of external monitors, potentially more reliable and 
+less subject to noise.
 
 ### Internal Expansion:
 

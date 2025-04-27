@@ -6,9 +6,9 @@ The following are some character generator fonts for use
 
 Each font file is 4Kb (4,096 bytes) in length, and should be appended if burning  
 
-### Character Set 06, 08, 14, 15
+### Character Set(s) 06, 08, 14, 15
 
-These are traditional font sets and are documented here: 
+These four traditional font sets and are documented here: 
 
 [Character Generator Roms](https://github.com/RetroStack/Character_Generator_ROMs/tree/main/TRS-80%20Model%201/Individual)
 
@@ -18,24 +18,26 @@ Each font has 2 versions
 
 The modified Final fonts have the following changes:
 * The punctuation characters  , : ;  moved vertically down for correct alignment.
-* The lower case characters  g j p q y ) are stretched to have 2 line decenders
+* The lower case characters  g j p q y  are stretched to have 2 line decenders
 * All characters are moved down by 1 pixel
+
+The following shows how these changes apply differences
 
 ![Font Changes](Font-Changes.png)
 
 In summary each character has 
 * 1 leading blank line
 * 7 Lines for body of the character
-* 2 line for decenders
+* 2 line for descenders
 * 2 trailing blank lines
 
 ORIGINAL (example)
 
-![Original Font](FONT-Orig.jpg)
+![Original Font](Font-Original.jpg)
 
 FINAL (example)
 
-![Final Font](FONT-NEW.jpg)
+![Final Font](Font-New.jpg)
 
 ### Glens Character Rom
 
