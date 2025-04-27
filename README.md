@@ -79,7 +79,7 @@ Multiple character sets  can be defined (depending on ROM size), the character s
 Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
 The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. 
 
-A few fonts have been provided in this project see ![Fonts](/fontsRAEDME.md)
+A few fonts have been provided in this project see [Fonts](/fonts/README.md)
 
 Normal font ROM's are not compatible.
 
