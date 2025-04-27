@@ -7,6 +7,8 @@ TRS-80 Model 1 - Hardware Replacement Mainboard - Evolution (Rev K)
 This project is an upgraded / evolved TRS-80 Model 1 main board replacement. It was designed to provide a reliable, 
 compact, an modern replacement, removing some of the limitations of the original 1970's product
 
+![MainboardFrontBuiltK1](/images/IMG_8736.jpeg)
+
 ### What this is:
 - Drop in (mostly) replacement main board for existing TRS-80 Model 1
 - Modernised using larger density (memory) components to reduce component count
@@ -18,8 +20,6 @@ compact, an modern replacement, removing some of the limitations of the original
 - Is not a faithful recreation of the original Model 1, other projects exist for this.
 - Is not compatible with 32Kb external RAM expansion, external RAM will need to be disabled
 - Is not compatible with Model 1 unregulated power supply, requires regulated 5V power
-
-![MainboardFrontBuiltK1](/images/IMG_8736.jpeg)
 
 ## Features
 
