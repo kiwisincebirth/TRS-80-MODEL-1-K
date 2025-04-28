@@ -5,7 +5,8 @@ TRS-80 Model 1 - Hardware Replacement Mainboard - Evolution (Rev K)
 ## Introduction
 
 This project is an upgraded / evolved TRS-80 Model 1 main board replacement. It was designed to provide a reliable, 
-compact, an modern replacement, removing some of the limitations of the original 1970's product
+compact, and modern replacement, removing some of the limitations of the original 1970's product, 
+while still remaining faithful to the original technology (i.e. no FPGA's) 
 
 ![MainboardFrontBuiltK1](/images/IMG_8736.jpeg)
 
@@ -128,7 +129,7 @@ The following additional changes were made:
 - Decoupling capacitors have been added throughout the board, on most IC's
 - Full Ground Planes have been implemented, and Silkscreen has been modernised.
 - RAM and ROM have been moved to the main data bus (previously memory data), leaving only keyboard on memory data.
-- Address Decoding changes for ROM and RAM, the circuit is different to the JP service manual
+- Address decoding ROM and RAM logic has been changed, the circuit is different to the JP service manual
 - JK Flip Flop Z62A (pins 1-6) was repurposed for CPU Speed control
 - JK Flip Flop Z53A (pin 1-6) (previously part of Kana character generator) was used in place of Z62A
 - U7 (dual 4 bit counter) replaces both Z7 and Z28 which were single counters
@@ -138,6 +139,10 @@ The following additional changes were made:
 - Z44 (quad nand) used in address decoder and video timing was removed
 
 The above list may not be exhaustive
+
+## Status / Future
+
+See the seperate [Status and Future](/STATUS.md) 
 
 ## Building
 
