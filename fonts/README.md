@@ -6,20 +6,28 @@ The following are some character generator fonts for use
 
 Each font file is 4Kb (4,096 bytes) in length, and should be appended if burning  
 
-### Character Set(s) 06, 08, 14, 15
+### General Character Sets
 
-These four traditional font sets and are documented here: 
+These four traditional font sets (and 2 new derivitives) and are documented here: 
 
 [Character Generator Roms](https://github.com/RetroStack/Character_Generator_ROMs/tree/main/TRS-80%20Model%201/Individual)
+
+In Summary:
+* 06 - no duplicates, [ \ ] ^ ` ~
+* 08 - no duplicates, ↑ ↓ ← → £/¥
+* 14 - duplicates AZ, [ \ ] ^ ` ~
+* 15 - duplicates AZ, ↑ ↓ ← → £/¥
+* 17 - no duplicates, ↑ ↓ ← → ` ~ (derivitive)
+* 18 - duplicates AZ, ↑ ↓ ← → ` ~ (derivitive)
 
 Each font has 2 versions
 * Original - Is the original font converted to the correct 4KB format, but otherwise unmodified.
 * Final - Is a modified font as per below.
 
 The modified Final fonts have the following changes:
-* The punctuation characters  , : ;  moved vertically down for correct alignment.
+* The punctuation characters  . , : ;  moved vertically down for correct alignment.
 * The lower case characters  g j p q y  are stretched to have 2 line decenders
-* All characters are moved down by 1 pixel
+* All characters are moved down by 1 pixel, leaving a blank first raster line
 
 The following shows how these changes apply differences
 
