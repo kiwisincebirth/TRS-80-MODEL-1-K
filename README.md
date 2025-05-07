@@ -129,14 +129,18 @@ The following additional changes were made:
 - Decoupling capacitors have been added throughout the board, on most IC's
 - Full Ground Planes have been implemented, and Silkscreen has been modernised.
 - RAM and ROM have been moved to the main data bus (previously memory data), leaving only keyboard on memory data.
-- Address decoding ROM and RAM logic has been changed, the circuit is different to the JP service manual
-- JK Flip Flop Z62A (pins 1-6) was repurposed for CPU Speed control
+
+Misc Circuit changes:
+- Address decoding RAM/ROM logic has been changed, the circuit is different to the JP service manual
+- JK Flip Flop Z63A (pins 1-6) was repurposed for CPU Speed control
 - JK Flip Flop Z53A (pin 1-6) (previously part of Kana character generator) was used in place of Z62A
 - U7 (dual 4 bit counter) replaces both Z7 and Z28 which were single counters
 - U11 (8 bit latch) replaces Z11 (6 bit latch), moving other 2 data bits from Z56
 - U24 (8 bit buffer) replaces Z24 (6 bit buffer), moving other 2 data bits from Z30
 - U46 (quad nand) replaces Z46 (hex inverter)
 - Z44 (quad nand) used in address decoder and video timing was removed
+- Z39, Z55, and Z58 removed after consolidaton of graphics into standard character generator
+- Z62 and Z63 (partial) removed after removal of the DRAM timimng circuitry
 
 The above list may not be exhaustive
 
@@ -147,6 +151,8 @@ See the seperate [Status and Future](/STATUS.md)
 ## Building
 
 See the separate [Builders Guide](/BUILDING.md) for complete technical documentation
+
+See [TRS-80 Model 1 L2 Rom](https://github.com/kiwisincebirth/TRS-80) for customisable L2 ROM images 
 
 ## Credits
 
