@@ -1,11 +1,11 @@
 
 # Builders Guide
 
-## Provied Files
+## Provided Files
 
 The files provided in this project are primarily:
 
-- The Shematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1.pdf)
+- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1.pdf)
 - Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_Gerberv1.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1.csv)
 
@@ -13,7 +13,7 @@ also see the parts guide [Parts Guide](PARTS_GUIDE.md)
 
 ## Assembly Order
 
-Typically solder components in order of lowest profile to tallest components.
+Typically, solder components in order of the lowest profile to the tallest components.
 - Solder jumpers for Video Frequency (JP6, JP7, JP8, JP10) and Rom Memory Size (J13, J14)
 - All resistors, these can be installed in any direction
 - Diodes, fitting CR5-CR8, and then CR4 last
@@ -42,25 +42,31 @@ Typically solder components in order of lowest profile to tallest components.
 The following patches should be noted for the board. These were discovered after initial PCB manufacture, and affect
 the boards design, and or the silkscreen.
 - The main power connector (J11) GND pins use thermal reliefs, ideally they shouldn't. To provide better GND connection, 
-  install wire from GND pin to the GND pins of the vide connector.
+  install wire from GND pin to the GND pins of the video connector.
 - To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50
 - For the main crystal oscillator (X1) the closest part I could find was a 10.7 Mhz crystal. the exact part is 
   available but is expensive.
 - Z50 should be a SN7404N, not a 74LS04 as labelled. Z50 acts as an amplifier and requires an unbuffered part.
-- Z65 should be a SN74LS92, not a 74HCT92 as labelled. The 7492 was never produced in HCT varient
+- Z65 should be a SN74LS92, not a 74HCT92 as labelled. The 7492 was never produced in HCT variant
 - C51 (decoupling capacitor) duplicates C79. C51 can be omitted/removed as desired.
 
 ## Configuration
 
 Configuration is provided by several jumper options
-- JP6, JP7, JP8, and JP10 are used to configure video output to either 50Hz or 60Hz.
-- JP13, JP14 configure the size of the main system ROM as either 12KB (standard), 13KB, or 14KB
-- JP21, JP27 configures the type and Page of the main ROM
-    - Note: Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
-- SW10 - SW13 configures the Character generator ROM
-    - Note: The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1 This isnt clearly stated on the board
-- J18 - Shorted to set CPU speed to Normal 1.77Mhz, remove for 2x speed.
-    - This can be routed to a switch, which could use a small capacitor to avoid bounce
+- JP6, JP7, JP8, and JP10 - Used to configure video output to either 50Hz or 60Hz.
+- JP13, JP14 - Size of the main system ROM as either 12KB (standard), 13KB, or 14KB
+  - Note : 1&2 are bridged by default and need to be cut for any change.
+  - Note : Using a 14KB ROM size will prevent the use of Model 1 floppy controller or printer port which occupy
+    memory in the 0x37E0 - 0x37FF range. If using a 14kb ROM the 0x37E0 - 0x37EF memory address should probably
+    return 0xFF so (if installed) a Level 2 ROM will not think a floppy controller is attached.
+- JP21, JP27 - Configures the type and Page of the main ROM. 
+  - Note : JP21 controls Pin 21, and JP27 controls Pin 27
+  - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
+- SW10 - SW13 Configures the Character generator ROM
+  - Note : See silkscreen for details of this.
+  - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
+- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for 2x speed.
+  - This can be routed to a switch, which could use a small capacitor to avoid bounce
 
 ## Testing
 
