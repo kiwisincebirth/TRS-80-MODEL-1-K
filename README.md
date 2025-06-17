@@ -46,7 +46,8 @@ A double speed (3.56 Mhz) clock speedup mod has been applied. A jumper (J18) all
 This could be by external switch, or any future circuit potentially under software control. See U1, U2 in schematic.
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
-A pin Header (J19) next to CPU exposes /RD, /WR, and /M1 Z80 signals used for protocol decoding in Sigrok logic analyser.
+A pin Header (J19) next to CPU exposes /RD, /WR, and /M1, the essentuil signals used for Sigrok Z80 protocol decoding,
+that are not exposed on the main expansion interface.
 Other signals such as address and data lines can be obtained from expansion IO header (J20)
 
 The Reset Switch can now be changed (JP16) from a soft NMI Reset to a hard CPU Reset. Also an onboard hard

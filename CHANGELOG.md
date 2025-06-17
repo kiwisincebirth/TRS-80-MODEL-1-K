@@ -11,7 +11,7 @@ Unreleased
 * Onboard Audio amplifier utilising small class D module.
 * Alpha Joystick port (5 bit) with header to connect 9 Pin Connector
 * RGBtoHDMI full support by exposing HSYNC on video DIN
-* Tim Halloran's no chip VBLANK modification has been added  
+* Added Tim Halloran's no chip VBLANK modification  
 * Added a pin Header (J19) next to CPU to expose /RD, /WR, and /M1 signals
   used for protocol decoding i.e. in Sigrok logic analyser
 
