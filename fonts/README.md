@@ -17,8 +17,8 @@ In Summary:
 * 08 - no duplicates, ↑ ↓ ← → £/¥
 * 14 - duplicates AZ, [ \ ] ^ ` ~
 * 15 - duplicates AZ, ↑ ↓ ← → £/¥
-* 17 - no duplicates, ↑ ↓ ← → ` ~ (derivitive)
-* 18 - duplicates AZ, ↑ ↓ ← → ` ~ (derivitive)
+* 17 - no duplicates, ↑ ↓ ← → ` ~ (derivative)
+* 18 - duplicates AZ, ↑ ↓ ← → ` ~ (derivative)
 
 Each font has 2 versions
 * Original - Is the original font converted to the correct 4KB format, but otherwise unmodified.
@@ -28,6 +28,7 @@ The modified Final fonts have the following changes:
 * The punctuation characters  . , : ;  moved vertically down for correct alignment.
 * The lower case characters  g j p q y  are stretched to have 2 line decenders
 * All characters are moved down by 1 pixel, leaving a blank first raster line
+* The last character (hex 7F) expands to fill the entire 6 by 12 matrix
 
 The following shows how these changes apply differences
 
@@ -47,9 +48,21 @@ FINAL (example)
 
 ![Final Font](Font-New.jpg)
 
+### GenDon3
+
+This is an unmodified copy of "two" of the fonts provided by the GenDon3 hardware modification
+
+* GenDon3-61 - I would suggest going with Dash 61 with the real underscore, for better ASCII compatibility.
+* GenDon3-6A (not provided) - has differences in the characters ' , ; V j m. The three punctuation marks are too far to the right, and the semicolon appears to be missing a pixel
+* GenDon3-9E - The only difference between 9E and Dash 61 is that Dash 61 has a real underscore at the ASCII underscore code (95), where 9E has a four-line-high lump. They both have the lump at code 31
+
+See The following discussion:
+
+[GENDON3 improved character generator for the Model I](https://forum.vcfed.org/index.php?threads/gendon3-improved-character-generator-for-the-model-i-discussion.59498)
+
 ### Glens Character Rom
 
-This is an unmodified copy 9which is compatable) of the font file used in the following project
+This is an unmodified copy 9which is compatible) of the font file used in the following project
 
 [Glens Stuff TRS-80 Clone](https://www.glensstuff.com/trs80/trs80.htm)
 
