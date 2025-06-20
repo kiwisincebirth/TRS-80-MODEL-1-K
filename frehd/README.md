@@ -6,11 +6,12 @@ This is a project to provide a FreHD that directly connects to the TRS-80 Model 
 It was designed to be functionally compatible using primarily all the same parts, 
 and also software compatible, as it uses he same PIC and GAL firmware
 
-It was also designed to work with the Model 1 board via it's internal expansion port,
-or externally attached via appropriate 40 pin ribbon cable.
+It was designed to work with the Model 1 attached via appropriate 40 pin ribbon cable,
+and specifically for the Model 1k via it's internal expansion port,
 
 The physical layout of the board while different still has the 
 power and IO connection is on one side, and SD card and LED's on the other.
+Mounting holes and some pinouts are different.
 
 ![3D Render](/frehd/images/Board3dRender.png)
 
@@ -26,12 +27,15 @@ To provide open collector a revised version of the GAL firmware must be programm
 on the board switched from 1-2 , to 2-3. Note: only needed if issue with other WAIT from other peripials
 is known to exist.
 
-The J1 header for external LED's and Reset, has the pinout adjusted for direct compatibility with 
-microchip programmer ICSP pinout. Also, an onboard reset pushbutton is provided.
-
-Another improvement was the user of full GND and Power planes, as well as more decoupling capacitors. 
+General improvements include, an optional onboard PCB reset pushbutton, full GND and Power planes, 
+as well as more decoupling capacitors located (where possible) closer to chip VCC's
 
 ### Modifications
+
+The J4 power connector may not have same pinout as modern (v1.3) FreHD. 
+
+The J1 header for external LED's and Reset, has the pinout adjusted for direct compatibility with
+microchip programmer ICSP pinout. If you 
 
 The IOREQ signal provided to GAL has been removed and the GAL input tied to GND. 
 It was determined that this signal was not required, as it duplicated RW/WR 
@@ -47,7 +51,9 @@ See comments in the schematic for other modifications made.
 
 ### Files
 
-The [pcb](./pcb) directory contains [PDF Schematics](./pcb/FreHD-SchematicV1.1.pdf), Gerber files, and Bill of Materials.
+The [pcb](./pcb) directory contains
+* [PDF Schematics](./pcb/FreHD-SchematicV1.1.pdf), 
+* Gerber files, and Bill of Materials.
 
 ### Parts
 
