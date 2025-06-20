@@ -102,7 +102,7 @@ Dual sets of onboard LED's are are provided, maximum of one of either:
 
 Additional Images can be found here [Images](./images/README.md)
 
-The modified GAL can be found here ...
+The modified GAL can be found here [Open Collector GAL](https://github.com/maboytim/FreHDv1/tree/main/hw/gal-oc)
 
 ## Resources
 
