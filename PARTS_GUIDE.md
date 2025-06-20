@@ -12,10 +12,6 @@ https://www.aliexpress.com/item/1005006183714474.html
 
 https://www.aliexpress.com/item/1005003752108473.html
 
-Note: Starting from V2 the main board supports a standard crystal oscillator 
-in the DIP-14 Full Can form factor. This can be installed in place of the 74HCU04 (U50).
-This allows custom oscillators to be used instaed of the 74HCU04 circuit.
-
 ### Main System ROM
 
 Supports 27128, 27256, 27512 EPROM, or 28256 EEPROM - 28 pin devices
@@ -38,41 +34,7 @@ https://www.digikey.com.au/en/products/detail/alliance-memory-inc/AS6C1008-55PCN
 
 ### Video Memory
 
-1 KB Dual Port SRAM. There are 2 options:
-
-IDT7130 
-
-https://octopart.com/search?q=IDT7130
-https://www.renesas.com/en/products/memory-logic/multi-port-memory/asynchronous-dual-port-rams/7130-1k-x-8-dual-port-ram
-https://www.renesas.com/en/document/dst/713040-datasheet
-
-CY7C130-55PC (older part number)
-
-https://octopart.com/search?q=CY7C130-55PC
-https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
-
-Do Not Use IDT7140, CY7C140, CY7C141, these are Slave devices and NOT compatible
-
-#### Video Memory (V1)
-
 uDP2114LC or equivalent
-
-### Amplifier Module (v2)
-
-A small 6 pin module based on either LTK5128, or XPT8871 chipset.
-
-Googling these chip IDS you will find the modules themselves. There are three varients
-whih differ in pcb colour/size, pinout, and main capacitor size. 
-They are commony available from online chinese stores, ebay or amazon
-
-For more information about the chip itself. Noting datasheets are in chinese
-https://components101.com/ics/XPT8871-audio-amplifier-ic-pinout-datasheet-circuit
-
-### Joystick Port DB9 Cable
-
-Requires a straight thru DB9 cable. See for information on the cable: 
-
-https://www.scantips.com/serial-db9.html
 
 ### Cassette Relay
 
