@@ -45,6 +45,10 @@ See comments in the schematic for other modifications made.
 
 ## Building
 
+### Files
+
+The [pcb](./pcb) directory contains [PDF Schematics](./pcb/FreHD-SchematicV1.1.pdf), Gerber files, and Bill of Materials.
+
 ### Parts
 
 All parts (excepting PCB) are the same as the original excepting:
