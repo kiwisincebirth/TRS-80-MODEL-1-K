@@ -22,10 +22,9 @@ has been replaced with a small PCB module that provides level shifting and mount
 DIP package. This package provides the appropriate transistors and resistors in SMT components.
 
 The original design drove the WAIT bus signal (to high) preventing other peripherals to co-exist 
-on the bus. A modification to the design allows for Open Collector output on the WAIT signal to resolve this
-To provide open collector a revised version of the GAL firmware must be programmed, and Jumper J1 
-on the board switched from 1-2 , to 2-3. Note: only needed if issue with other WAIT from other peripials
-is known to exist.
+on the bus. A modification to the design allows for Open Collector output on the WAIT signal to resolve this.
+To provide open collector a revised (different) version of the GAL firmware must be programmed, and Jumper J1 
+on the board switched from 1-2 (default),to 2-3.
 
 General improvements include, an optional onboard PCB reset pushbutton, full GND and Power planes, 
 as well as more decoupling capacitors located (where possible) closer to chip VCC's
@@ -64,10 +63,13 @@ All parts (excepting PCB) are the same as the original excepting:
 
 ### Assembly
 
-The first step is probably to decide if you wan the open collector WAIT signal,
+The first step is probably to decide if you want the open collector WAIT signal,
 requiring a reprogrammed GAL, if so you need to Cut JP1 1,2 and solder 2 to 3
-If you think you may want to change this in the future, it may be easir to cut
-th trace and solder 1 to 2 now, making it easier to change in the future.
+If you think you may want to change this in the future, it may be easier to cut
+the trace and solder 1 to 2 now, making it easier to change in the future.
+
+Note: Unless you need this it may be safer to stick with the default, as may cause 
+confusion latter, if the GAL needs replacing, have to ensure the modified firmware is programmed.
 
 The next step is to solder the SMD SD card, followed by the through hole components.
 
