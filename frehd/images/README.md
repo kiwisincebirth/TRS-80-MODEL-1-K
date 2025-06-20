@@ -1,16 +1,16 @@
 # Images
 
-## Render
+## 3D Render
 
 ![3D Render](/frehd/images/Board3dRender.png)
 
-## Built Board
+## Built Board (for Model 1k)
 
 ![Detailed Top of Board](./IMG_9182.jpeg)
 
 ![Detailed Bottom of board](./IMG_9184.jpeg)
 
-## Model 1k
+## Running (on Model 1k)
 
 ![Running on the Model 1k](./IMG_9179.jpeg)
 

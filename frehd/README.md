@@ -12,7 +12,7 @@ or externally attached via appropriate 40 pin ribbon cable.
 The physical layout of the board while different still has the 
 power and IO connection is on one side, and SD card and LED's on the other.
 
-
+![3D Render](/frehd/images/Board3dRender.png)
 
 ### Improvements
 
@@ -27,19 +27,19 @@ on the board switched from 1-2 , to 2-3. Note: only needed if issue with other W
 is known to exist.
 
 The J1 header for external LED's and Reset, has the pinout adjusted for direct compatibility with 
-microchip programmer ICSP pinout. Also an onboard reset pushbutton is provided.
+microchip programmer ICSP pinout. Also, an onboard reset pushbutton is provided.
 
 Another improvement was the user of full GND and Power planes, as well as more decoupling capacitors. 
 
 ### Modifications
-
-The RS232 capability has been omitted from the board.
 
 The IOREQ signal provided to GAL has been removed and the GAL input tied to GND. 
 It was determined that this signal was not required, as it duplicated RW/WR 
 signals which were also present. This also mean that additional components
 found on the Model 1 Hard disk adapter (transistors/resistors) that generated
 this signal were also not required.
+
+The RS232 capability has been omitted from the board.
 
 See comments in the schematic for other modifications made.
 
@@ -90,7 +90,7 @@ Dual sets of onboard LED's are are provided, maximum of one of either:
 
 ## Additional
 
-Additional Images can be found here (Images)[./images/README.md]
+Additional Images can be found here [Images](./images/README.md)
 
 The modified GAL can be found here ...
 
