@@ -4,9 +4,15 @@
 
 ###  Crystal Oscillator (10.6445 Mhz)
 
+https://www.mutant-caterpillar.co.uk/shop/product_info.php?products_id=5174
+
 https://www.ebay.com/itm/195727646631\
 
-or 10.7 mhZ (closest)
+Mouser Stock 10.695Mhz crystals (as well as 10.7Mhz)
+
+https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGosgF2g%3D%3D
+
+or 10.7 mhZ (next closest) can come from China
 
 https://www.aliexpress.com/item/1005006183714474.html
 
