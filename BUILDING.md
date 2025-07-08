@@ -56,6 +56,9 @@ Configuration is provided by several jumper options
     return 0xFF so (if installed) a Level 2 ROM will not think a floppy controller is attached.
 - JP15 - Enable output of HDRV on Video DIN socket for RGBtoHDMI support (from 1.0a)
 - JP16 - Change the Reset switch from NMI (12) to full CPU reset (23)
+- JP17 - Selects CPU High speed when in Hig speed mode
+  - Note 1&2 are bridged by default and select 3.55 Mhz when in high speed mode
+  - Note 2&3 select 5.32 Mhz as the high speed mode. If bridging cut 1&2 first
 - JP19 - Provide +5V power to external monitor via DIN connector. Cut to disable 
 - JP21, JP27 - Configures the type and Page of the main ROM. 
   - Note : JP21 controls Pin 21, and JP27 controls Pin 27
@@ -66,7 +69,7 @@ Configuration is provided by several jumper options
 - SW10 - SW13 Configures the Character generator ROM
   - Note : See silkscreen for details of this.
   - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
-- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for 2x speed.
+- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for high speed.
   - This can be routed to a switch, which could use a small capacitor to avoid bounce
 - RV2 - configures the signal level (volume) sent to the audio amplifier
 
