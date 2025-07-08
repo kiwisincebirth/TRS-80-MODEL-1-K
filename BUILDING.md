@@ -60,6 +60,9 @@ Configuration is provided by several jumper options
 - JP21, JP27 - Configures the type and Page of the main ROM. 
   - Note : JP21 controls Pin 21, and JP27 controls Pin 27
   - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
+- JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
+  - Note : Pin 12 (default) disables Writes to EEPROM, deferring to setting on JP27 
+  - Note : Pin 23 enables Writes to EEPROM, ignoring setting on JP27
 - SW10 - SW13 Configures the Character generator ROM
   - Note : See silkscreen for details of this.
   - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
