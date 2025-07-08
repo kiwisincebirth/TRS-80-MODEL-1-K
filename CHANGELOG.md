@@ -8,12 +8,13 @@ Unreleased
 ### New Features
 
 * Dual port video SRAM, reducing RAM contention (snow) issues
-* Onboard Audio amplifier utilising small class D module.
+* Onboard Audio amplifier utilising small class D module, with space for PCB speaker
 * Alpha Joystick port (5 bit) with header to connect 9 Pin Connector
 * RGBtoHDMI full support by exposing HSYNC on video DIN
 * Added Tim Halloran's no chip VBLANK modification  
 * Added a pin Header (J19) next to CPU to expose /RD, /WR, and /M1 signals
   used for protocol decoding i.e. in Sigrok logic analyser
+* Added support for EEPROM in circuit programing, enabled via JP30
 
 ### Changed Features
 
@@ -30,7 +31,7 @@ Unreleased
 
 - CPU clock selector flip flop (Z63a) clocked at slowest rate.
 - Added resistor pull-ups on keyboard, prevent issues when no keyboard attached.
-- Inputs of spare gates are now tied to GND or VCC
+- Inputs of spare gates are now tied to GND or VCC, with easy trace cuts for future use.
 - Removed remnants of CAS and MUX signals from IO expansion.
 - Improved silkscreen for component IC identification
 - Improved component identification in Bill of Materials
@@ -46,23 +47,23 @@ April 2025
 
 ### New Features
 
-* Onboard Double Speed clock election (J18), auto fallback with cassette use
+* 48Kb RAM provided by a single static RAM chip (AS6C1008)
 * System ROM's have been replaced with standard 32 pin 27xxx EPROM's or 28xxx EEPROM's
 * System ROM's can be configured to occupy for 12 KB, 13 KB, or 14 KB of RAM.
-* Replace System RAM with a single static RAM chip (AS6C1008) providing 48KB of RAM
 * Video character generation is provided by standard 32 pin 27xxx EPROM's or 28xxx EEPROM's  
-* Video character generation supports full decender's, compatible with Gendon-3
-* internal 40pin Header, identical to and located just behind the main expansion port
+* Video character generation supports full (Gendon-3 compatible) descender's.
+* Composite Video can be provided via standard RCA connector, replacing DIN connector
+* All power regulation has been removed and requires an external regulated 5V DC power supply.
+* Internal 40pin Expansion IO Header, located just behind the main expansion port
+* Double Speed clock election (J18), auto fallback with cassette use
 
 ### Changed Features
 
-* This system is intended to be used (almost) exclusively with CMOS technology
-* Composite Video can optionally be provided via  standard RCA connector, replacing DIN connector
-* All power regulation has been removed and requires an external regulated 5V DC power supply.
-  Power connection is by the of a standard barrel jack replacing the DIN connector
-* Power (and Reset) buttons have been superseded with (optional) more available standardized components
+* Power (and Reset) buttons have been superseded with more available standardized components
+* Power connection is by the of a standard barrel jack replacing the DIN connector
 * Pin Header for internal audio amplifier, taken from cassette output
 * Pin Header for internal reset signal, mirroring the external reset switch
+* This system is intended to be used (almost) exclusively with CMOS technology
 
 ### Minor Improvements  
 
