@@ -19,7 +19,8 @@ Unreleased
 ### Changed Features
 
 - Changed crystal oscillator to parallel resonant circuit based on 74HCU04 chip, 
-  which has pin comparability with a Full Can (DIP14) oscillator.
+  which has pin comparability with a Full Can (DIP14) oscillator. 
+- Moved main 10.6Mhz oscilator to central location on main board for better stability 
 - The Video DIN socket now has Jumper (JP19) to disable external power
 - Moved main power switch (SW1) and connector (J11) slightly closer to other ports, for better case clearance
 - Added Solder Jumper (JP16) to change the main Reset switch function from NMI to full CPU reset.
