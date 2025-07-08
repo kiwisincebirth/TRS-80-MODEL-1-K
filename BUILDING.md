@@ -1,6 +1,8 @@
 
 # Builders Guide
 
+For V1 please see the [Builders Guide V1](/BUILDING-V1.md)
+
 ## Provided Files
 
 The files provided in this project are primarily:

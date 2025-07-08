@@ -9,7 +9,7 @@ The files provided in this project are primarily:
 - Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_Gerberv1.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1.csv)
 
-also see the parts guide [Parts Guide](PARTS_GUIDE.md)
+also see the parts guide [Parts Guide](PARTS_GUIDE-V1.md)
 
 ## Assembly Order
 
