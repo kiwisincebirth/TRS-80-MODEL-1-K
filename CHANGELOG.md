@@ -29,6 +29,7 @@ Unreleased
 ### Minor Improvements  
 
 - CPU clock selector flip flop (Z63a) clocked at slowest rate.
+- JP10 (and related circuit) used for video frequency was removed.
 - Added resistor pull-ups on keyboard, prevent issues when no keyboard attached.
 - Inputs of spare gates are now tied to GND or VCC
 - Removed remnants of CAS and MUX signals from IO expansion.

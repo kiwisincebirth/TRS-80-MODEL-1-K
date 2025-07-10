@@ -16,7 +16,7 @@ also see the parts guide [Parts Guide](PARTS_GUIDE.md)
 ## Assembly Order
 
 Typically, solder components in order of the lowest profile to the tallest components.
-- Solder jumpers for Video Frequency (JP6, JP7, JP8, JP10) and Rom Memory Size (J13, J14)
+- Solder jumpers for Video Frequency (JP6, JP7, JP8) and Rom Memory Size (J13, J14)
 - All resistors, these can be installed in any direction
 - Diodes, fitting CR5-CR8, and then CR4 last
 - Ceramic capacitors with specifiv values - C3, C13, C17, C18, C43, C48, C50, C57, C60
@@ -50,7 +50,7 @@ the boards design, and or the silkscreen.
 ## Configuration
 
 Configuration is provided by several jumper options
-- JP6, JP7, JP8, and JP10 - Used to configure video output to either 50Hz or 60Hz.
+- JP6, JP7, and JP8 - Used to configure video output to either 50Hz or 60Hz.
 - JP13, JP14 - Size of the main system ROM as either 12KB (standard), 13KB, or 14KB
   - Note : 1&2 are bridged by default and need to be cut for any change.
   - Note : Using a 14KB ROM size will prevent the use of Model 1 floppy controller or printer port which occupy
