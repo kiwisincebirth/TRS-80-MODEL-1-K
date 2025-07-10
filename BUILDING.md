@@ -16,7 +16,8 @@ also see the parts guide [Parts Guide](PARTS_GUIDE.md)
 ## Assembly Order
 
 Typically, solder components in order of the lowest profile to the tallest components.
-- Solder jumpers for Video Frequency (JP6, JP7, JP8) and Rom Memory Size (J13, J14)
+- All Solder Jumpers should be (re-)configured as appropriate, 
+  as easier to cut default traces if needed first, before installing other components
 - All resistors, these can be installed in any direction
 - Diodes, fitting CR5-CR8, and then CR4 last
 - Ceramic capacitors with specifiv values - C3, C13, C17, C18, C43, C48, C50, C57, C60
@@ -57,8 +58,9 @@ Configuration is provided by several jumper options
     memory in the 0x37E0 - 0x37FF range. If using a 14kb ROM the 0x37E0 - 0x37EF memory address should probably
     return 0xFF so (if installed) a Level 2 ROM will not think a floppy controller is attached.
 - JP15 - Enable output of HDRV on Video DIN socket for RGBtoHDMI support (from 1.0a)
-- JP16 - Change the Reset switch from NMI (12) to full CPU reset (23)
-- JP17 - Selects CPU High speed when in Hig speed mode
+  - Note : Only bridge this is installin DIN connector, and want support fro RGB2HDMI
+- JP16 - Change the Reset switch from NMI (12 - the default) to full CPU reset (23)
+- JP17 - Selects CPU High speed when in High speed mode
   - Note 1&2 are bridged by default and select 3.55 Mhz when in high speed mode
   - Note 2&3 select 5.32 Mhz as the high speed mode. If bridging cut 1&2 first
 - JP19 - Provide +5V power to external monitor via DIN connector. Cut to disable 
@@ -66,8 +68,8 @@ Configuration is provided by several jumper options
   - Note : JP21 controls Pin 21, and JP27 controls Pin 27
   - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
 - JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
-  - Note : Pin 12 (default) disables Writes to EEPROM, deferring to setting on JP27 
-  - Note : Pin 23 enables Writes to EEPROM, ignoring setting on JP27
+  - Note : Default of 12 disables Writes to EEPROM, deferring to setting on JP27 
+  - Note : Shorting 23 (cutting 12) enables Writes to EEPROM, ignoring setting on JP27
 - SW10 - SW13 Configures the Character generator ROM
   - Note : See silkscreen for details of this.
   - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
