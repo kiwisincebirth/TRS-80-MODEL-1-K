@@ -24,18 +24,16 @@ while still remaining faithful to the original technology (i.e. no emulation)
 
 ## Features
 
-This board started with the Japanese board as a base, because it is more modern than the US board with some notable 
-improvements:
+The board started with the Japanese board as a base, because it is slightly upgraded over the US board with some notable 
+improvements that carry over:
 - The Video sync has been upgraded with improved stability, and 50Hz support
-- It has been upgraded to use 2114 (8 bit) video RAM, offering full lower case
-- The cassette input has improved A/D design.
+- The cassette input has minor improvements in the A/D design.
 
-Unfortunately this mean the Japanese Service manual must be used for the basic schematic and component ID's as 
-they are quite different than the US Model 1 board.
+Unfortunately this means the Japanese Service manual has be used ss a base for the basic schematic and component ID's as 
+they are quite different than the US Model 1.
 
 The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the 
-keyboard and Kana character set support, including the second (Kana) character Rom, along with the supporting 
-logic that was used.
+keyboard and japaneese Kana character set support.
 
 This system is intended to be used (almost) exclusively with CMOS technology utilizing 74HCT (CMOS TTL compatible) parts.
 Noting traditional 74LS components should work, however this has not been tested
