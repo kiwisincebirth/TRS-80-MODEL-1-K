@@ -48,7 +48,7 @@ The use of a modern CMOS Z-80 CPU is preferable
 
 ### System ROM
 
-Uses a standard EPROM(s) rather than mask ROM. These are more readily available and easier to program. 
+Uses a standard 27xxx EPROM (or 28256 EEPROM) rather than mask ROM. These are more readily available and easier to program. 
 The two ROM's (Z42, Z43) have been replaced with a single 28 pin EPROM (U42) supporting 2x128 thru 2x512 chips. 
 The board has jumpers (JP21/JP27) to configure the ROM type, or 16kB page used for larger ROMS
 
