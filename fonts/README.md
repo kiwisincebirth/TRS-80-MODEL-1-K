@@ -28,7 +28,6 @@ The modified Final fonts have the following changes:
 * The punctuation characters  . , : ;  moved vertically down for correct alignment.
 * The lower case characters  g j p q y  are stretched to have 2 line decenders
 * All characters are moved down by 1 pixel, leaving a blank first raster line
-* The last character (hex 7F) expands to fill the entire 6 by 12 matrix
 
 The following shows how these changes apply differences
 
