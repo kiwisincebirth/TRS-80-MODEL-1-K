@@ -81,3 +81,14 @@ https://configured-product-images.s3.amazonaws.com/Datasheets/800.pdf
 https://www.altronics.com.au/p/s1495-salecom-spdt-mom.-90-deg.-pcb-sub-mini-pushbutton-switch/#/
 
 https://www.salecom.com/en/product/es-22a.html
+
+### DIN Connector
+
+The footprint for this type of connector seems fairly standardised
+
+https://www.digikey.com.au/en/products/detail/same-sky-formerly-cui-devices/SDS-50J/97033
+https://www.digikey.com.au/en/products/detail/switchcraft-inc/57PC5F/275385
+
+https://www.switchcraft.com/assets/1/24/57PC5F_CD.pdf?5023
+
+https://www.aliexpress.com/item/1005006314983600.html
