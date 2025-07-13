@@ -8,7 +8,7 @@ For V1 please see the [Builders Guide V1](/BUILDING-V1.md)
 The files provided in this project are primarily:
 
 - The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV2.pdf)
-- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_Gerberv2.zip)
+- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_GerberV2.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV2.csv)
 
 also see the parts guide [Parts Guide](PARTS_GUIDE.md)
@@ -95,7 +95,7 @@ Follow these steps
 - Powered on, use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
 - Connect a CRT (preferable) monitor, you should see a video raster.
 - Insert Video generation chips
-    - Static video RAM (Z9, Z10) - 2114.
+    - Static video RAM (U9) .
     - Insert character generator (U37). Ensure SW10 is configured for the the chip type, and character set.
 - When powered on you should see random but recognisable characters.
 - Insert CPU, RAM, and ROM
