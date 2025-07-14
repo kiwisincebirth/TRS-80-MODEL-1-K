@@ -61,6 +61,14 @@ All parts (excepting PCB) are the same as the original excepting:
 * (Sparkfun Quad Logic Level Converter Bidirectional)[https://www.sparkfun.com/sparkfun-logic-level-converter-bi-directional.html]
 * (Memory Protection Devices BS7 Batter Holder)[https://www.memoryprotectiondevices.com/datasheets/BS-7/BS-7.pdf]
 
+The other major original components are:
+
+* (J2 - SD Card Socket - Hirose DM1AA-SF-PEJ.82)[https://au.mouser.com/datasheet/2/185/DM1AA_SF_PEJ_252872_2529_CL0609_0004_8_72_Catalog_-2585902.pdf]
+* (U1 - PIC18F4620-IP microprocessor)
+* (U2 - GAL16V8 PLD)
+* (U4 - TS2950-3.3 voltage regulator)
+* (U7 - DS1307 realtime clock)
+
 ### Assembly
 
 The first step is probably to decide if you want the open collector WAIT signal,
@@ -84,7 +92,7 @@ The 12 pin level shifter can be soldered using small short pin headers.
 
 ### Optional Parts
 
-If required you can choose to solder either (not both) of the following options.
+If required you can choose to solder one of of the following options.
 The first option is typically the default. 
 
 Power connection is via 1 of 2 header sockets.
@@ -92,21 +100,33 @@ Power connection is via 1 of 2 header sockets.
 * J6 - Designed for use with the modern TRS-80 Model 1k (evolution) internal expansion port.
   Providing VCC only, GND comes from he 40 pin IO connector
 
-Reset for the PIC and optional external LED's:
-* J1 - for external reset and LED's. If using his don't solder onboard LED's
-* SW1 - for onboard reset pushbutton
-
-Dual sets of onboard LED's are are provided, maximum of one of either:
+Dual sets of onboard LED's are provided, maximum of one of either:
 * Populate - D11, D12, R33, R34 - for mounting on the front on the PCB
 * Populate - D1, D2, R13, R14 - for mounting on the rear on the PCB
+* External LED's via J1
+
+Optional external Programming Header:
+* J1 - for external PIC programming, OR external reset and LED's
+
+Optional reset for the PIC:
+* SW1 - for onboard reset pushbutton
+
+## Programming
+
+The PIC must be programmed. The latest release is 2.17 and is in the file "FATFS.HEX"
+* The original PIC [FreHD PIC](https://github.com/veco/FreHDv1/tree/main/sw/trs_hard)
+
+The GAL must be programmed. There are 2 versions
+* The original GAL [FreHD GAL](https://github.com/veco/FreHDv1/tree/main/hw/gal)
+* The modified GAL [Open Collector GAL](https://github.com/maboytim/FreHDv1/tree/main/hw/gal-oc)
 
 ## Additional
 
 Additional Images can be found here [Images](./images/README.md)
 
-The modified GAL can be found here [Open Collector GAL](https://github.com/maboytim/FreHDv1/tree/main/hw/gal-oc)
-
 ## Resources
+
+The use of the FreHD is not well documented, addition resources will be added here when they are found 
 
 ## Credits
 
