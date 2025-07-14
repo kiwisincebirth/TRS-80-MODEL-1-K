@@ -14,7 +14,8 @@ Unreleased
 * Added Tim Halloran's no chip VBLANK modification  
 * Added a pin Header (J19) next to CPU to expose /RD, /WR, and /M1 signals
   used for protocol decoding i.e. in Sigrok logic analyser
-* Added support for EEPROM in circuit programing, enabled via JP30
+* Added support for EEPROM in circuit programing, enabled via JP30,
+  this requires software which is not known to exist at present.
 
 ### Changed Features
 

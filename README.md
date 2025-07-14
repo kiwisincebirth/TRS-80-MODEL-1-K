@@ -18,9 +18,9 @@ while still remaining faithful to the original technology (i.e. no emulation)
 - Remains faithful to the use of traditional thru-hole parts, and discrete logic IC's
 
 ### What this isn't:
-- Is not a faithful recreation of the original Model 1, other projects exist for this.
 - Is not compatible with 32Kb external RAM expansion, external RAM will need to be disabled
 - Is not compatible with Model 1 unregulated power supply, requires regulated 5V power
+- Is not a faithful recreation of the original Model 1, other projects exist for this.
 
 ## Features
 
@@ -33,7 +33,7 @@ Unfortunately this means the Japanese Service manual has be used ss a base for t
 they are quite different than the US Model 1.
 
 The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the 
-keyboard and japaneese Kana character set support.
+keyboard and Japanese Kana character set support.
 
 This system is intended to be used (almost) exclusively with CMOS technology utilizing 74HCT (CMOS TTL compatible) parts.
 Noting traditional 74LS components should work, however this has not been tested
@@ -73,8 +73,6 @@ generated, and requires 16 bytes (only 12 are used) per character, for a total o
 Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by Switches SW1.
 Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
 The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. 
-
-A few fonts have been provided in this project see [Fonts](/fonts/README.md)
 
 Normal font ROM's are not compatible.
 
@@ -127,8 +125,6 @@ See the separate [Status and Future](/STATUS.md)
 ## Building
 
 See the separate [Builders Guide](/BUILDING-V1.md) for complete technical documentation
-
-See [TRS-80 Model 1 L2 Rom](https://github.com/kiwisincebirth/TRS-80) for customisable L2 ROM images 
 
 ## Credits
 

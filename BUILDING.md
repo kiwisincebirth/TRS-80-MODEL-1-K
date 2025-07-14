@@ -8,8 +8,11 @@ The files provided in this project are primarily:
 - The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1.pdf)
 - Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_GerberV1.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1.csv)
+- Also see the [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 
-also see the parts guide [Parts Guide](PARTS_GUIDE.md)
+And the following
+- A few compatible font have been provided in this project see [Fonts](/fonts/README.md)
+- Customisable L2 ROM Images can be found here [TRS-80 Model 1 L2 Rom](https://github.com/kiwisincebirth/TRS-80)
 
 ## Assembly Order
 
