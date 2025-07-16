@@ -51,6 +51,7 @@ the boards design, and or the silkscreen.
   available but is expensive.
 - Z50 should be a SN7404N, not a 74LS04 as labelled. Z50 acts as an amplifier and requires an unbuffered part.
 - Z65 should be a SN74LS92, not a 74HCT92 as labelled. The 7492 was never produced in HCT variant
+- Z32 can be a 74HCT00 just like other digital logic. Use of 74C00 is not required.
 - C51 (decoupling capacitor) duplicates C79. C51 can be omitted/removed as desired.
 
 ## Configuration
