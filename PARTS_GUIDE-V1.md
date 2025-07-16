@@ -92,3 +92,10 @@ https://www.digikey.com.au/en/products/detail/switchcraft-inc/57PC5F/275385
 https://www.switchcraft.com/assets/1/24/57PC5F_CD.pdf?5023
 
 https://www.aliexpress.com/item/1005006314983600.html
+
+### CMOS Part Usage
+
+This project has been built primarily with TTL compatible CMOS (74HCTxxx) components,
+with the following notable exclusions
+- Z50 should be a 7404N, it acts as an amplifier and requires an unbuffered part.
+- Z65 should be a 74LS92, the 7492 is only readily available in LS series
