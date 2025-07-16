@@ -134,6 +134,5 @@ https://www.aliexpress.com/item/1005006314983600.html
 
 This project has been built primarily with TTL compatible CMOS (74HCTxxx) components, 
 with the following notable exclusions
-- Z32 should be a 74C00, is in the video sync output section.
 - Z50 should be a 7404N, it acts as an amplifier and requires an unbuffered part.
 - Z65 should be a 74LS92, the 7492 is only readily available in LS series
