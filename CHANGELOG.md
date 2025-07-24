@@ -37,7 +37,8 @@ Unreleased
 - Removed remnants of CAS and MUX signals from IO expansion.
 - Improved silkscreen for component IC identification
 - Improved component identification in Bill of Materials
-- C19, and C70 now use small electrolytic footprints
+- Improved (modern) footprints for C19, C70, Q1, Q2, CR4.
+- Replaced several discrete resistors with small resistor packs.
 - Fixed multiple issues with small via's and thermal reliefs on power rails
 - Main power Capacitor C101 now has more space for horizontal mounting.
 
