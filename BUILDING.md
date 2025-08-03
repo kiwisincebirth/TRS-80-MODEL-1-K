@@ -1,13 +1,15 @@
 
 # Builders Guide
 
+For V1 please see the [Builders Guide V1](/BUILDING-V1.md)
+
 ## Provided Files
 
 The files provided in this project are primarily:
 
-- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1.pdf)
-- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_GerberV1.zip)
-- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1.csv)
+- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV2.pdf)
+- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_GerberV2.zip)
+- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV2.csv)
 - Also see the [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 
 And the following
@@ -17,7 +19,8 @@ And the following
 ## Assembly Order
 
 Typically, solder components in order of the lowest profile to the tallest components.
-- Solder jumpers for Video Frequency (JP6, JP7, JP8, JP10) and Rom Memory Size (J13, J14)
+- All Solder Jumpers should be (re-)configured as appropriate, 
+  as easier to cut default traces if needed first, before installing other components
 - All resistors, these can be installed in any direction
 - Diodes, fitting CR5-CR8, and then CR4 last
 - Ceramic capacitors with specifiv values - C3, C13, C17, C18, C43, C48, C50, C57, C60
@@ -33,6 +36,8 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Cassette Relay K1
 - Transistors Q1, Q2
 - Power barrel Jack J11
+- RV2 Trim resistor
+- U4/U5 audio amplifier module
 - Electrolytic Capacitors C19, C70, C101
 - Install remaining Electrolytic Capacitors. Make sure the orientation is correct.
 - Cassette DIN Socket J3
@@ -44,33 +49,36 @@ Typically, solder components in order of the lowest profile to the tallest compo
 
 The following patches should be noted for the board. These were discovered after initial PCB manufacture, and affect
 the boards design, and or the silkscreen.
-- The main power connector (J11) GND pins use thermal reliefs, ideally they shouldn't. To provide better GND connection, 
-  install wire from GND pin to the GND pins of the video connector.
-- To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50
-- For the main crystal oscillator (X1) the closest part I could find was a 10.7 Mhz crystal. the exact part is 
-  available but is expensive.
-- Z50 should be a SN7404N, not a 74LS04 as labelled. Z50 acts as an amplifier and requires an unbuffered part.
-- Z65 should be a SN74LS92, not a 74HCT92 as labelled. The 7492 was never produced in HCT variant
-- Z32 can be a 74HCT00 just like other digital logic. Use of 74C00 is not required.
-- C51 (decoupling capacitor) duplicates C79. C51 can be omitted/removed as desired.
+- nothing known at this time.
 
 ## Configuration
 
 Configuration is provided by several jumper options
-- JP6, JP7, JP8, and JP10 - Used to configure video output to either 50Hz or 60Hz.
+- JP6, JP7, and JP8 - Used to configure video output to either 50Hz or 60Hz.
 - JP13, JP14 - Size of the main system ROM as either 12KB (standard), 13KB, or 14KB
   - Note : 1&2 are bridged by default and need to be cut for any change.
   - Note : Using a 14KB ROM size will prevent the use of Model 1 floppy controller or printer port which occupy
     memory in the 0x37E0 - 0x37FF range. If using a 14kb ROM the 0x37E0 - 0x37EF memory address should probably
     return 0xFF so (if installed) a Level 2 ROM will not think a floppy controller is attached.
+- JP15 - Enable output of HDRV on Video DIN socket for RGBtoHDMI support (from 1.0a)
+  - Note : Only bridge this is installin DIN connector, and want support fro RGB2HDMI
+- JP16 - Change the Reset switch from NMI (12 - the default) to full CPU reset (23)
+- JP17 - Selects CPU High speed when in High speed mode
+  - Note 1&2 are bridged by default and select 3.55 Mhz when in high speed mode
+  - Note 2&3 select 5.32 Mhz as the high speed mode. If bridging cut 1&2 first
+- JP19 - Provide +5V power to external monitor via DIN connector. Cut to disable 
 - JP21, JP27 - Configures the type and Page of the main ROM. 
   - Note : JP21 controls Pin 21, and JP27 controls Pin 27
   - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
+- JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
+  - Note : Default of 12 disables Writes to EEPROM, deferring to setting on JP27 
+  - Note : Shorting 23 (cutting 12) enables Writes to EEPROM, ignoring setting on JP27
 - SW10 - SW13 Configures the Character generator ROM
   - Note : See silkscreen for details of this.
   - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
-- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for 2x speed.
+- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for high speed.
   - This can be routed to a switch, which could use a small capacitor to avoid bounce
+- RV2 - configures the signal level (volume) sent to the audio amplifier
 
 ## Testing
 
@@ -90,7 +98,7 @@ Follow these steps
 - Powered on, use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
 - Connect a CRT (preferable) monitor, you should see a video raster.
 - Insert Video generation chips
-    - Static video RAM (Z9, Z10) - 2114.
+    - Static video RAM (U9) .
     - Insert character generator (U37). Ensure SW10 is configured for the the chip type, and character set.
 - When powered on you should see random but recognisable characters.
 - Insert CPU, RAM, and ROM
