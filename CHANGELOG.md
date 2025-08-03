@@ -7,32 +7,32 @@ Unreleased
 
 ### New Features
 
-* Dual port video SRAM, reducing RAM contention (snow) issues
+* Dual port video SRAM, reducing contention (snow) issues with shared CPU access.
 * Onboard Audio amplifier utilising small class D module, with space for PCB speaker
-* Alpha Joystick port (5 bit) with header to connect 9 Pin Connector
+* Alpha Joystick port (6 bit) with header to connect 9 Pin DB9 Connector
 * New Video sync generation circuit, including Horizontal and Vertical Position.
-* RGBtoHDMI full support by exposing HSYNC on video DIN
+* Improved support for RGBtoHDMI by exposing HSYNC on Video DIN socket
 * Added Tim Halloran's no chip VBLANK modification, for improved video updating  
 * Added Jumper (JP16) to allow main Reset button to function as full CPU reset.
-* Added a pin Header (J19) to expose /RD, /WR, and /M1 signals
-  used for protocol decoding i.e. in Sigrok logic analyser
-* Added support for EEPROM in circuit programing, enabled via JP30,
-  this requires software which is not known to exist at present.
+* Added a pin Header (J19) to expose /RD, /WR, /MREQ, /IOREQ, and /M1 signals 
+  used for Z80 protocol decoding in Sigrok logic analyser
+* Added support for EEPROM in circuit flashing, requiring software support.
 
 ### Changed Features
 
 - Changed crystal oscillator to parallel resonant circuit based on 74HCU04 chip, 
   which has pin comparability with a Full Can (DIP14) oscillator. 
-- Moved main 10.6Mhz oscillator to central location on main board for better stability 
 - The Video DIN socket now has Jumper (JP19) to disable external power
 - Added PCB reset button (SW11) to allow full reset during diagnostics
 - CPU speedup offer fast speed as 5.3 (default 3.55) mhz via jumper (JP17)
 - Added Power LED indicator (D1) near to the main power switch.
 - Fixed issue with TEST signal immediately disconnecting CPU from BUS (Marcel Erz)
+- Added (back) software character set control (Port FF Bit 7), as per JP board.
 
 ### Minor Improvements  
 
-- CPU clock selector flip-flop (Z63a) clocked at slowest rate.
+- Moved main 10.6Mhz oscillator to central location, shorter signal paths.
+- CPU clock speed selector flip-flop (Z63a) clocked at slowest rate.
 - Inputs of spare gates are now tied to GND or VCC, with easy trace cuts for future use.
 - Added resistor pull-ups on address, data, and control busses, for CMOS stability.
 - Added (back) resistor pull-ups on keyboard, prevent issues when no keyboard attached.
@@ -43,7 +43,7 @@ Unreleased
 - Replaced several discrete resistors with small resistor packs.
 - Fixed multiple issues with small via's and thermal reliefs on power rails
 - Main power Capacitor C101 now has more space for horizontal mounting.
-- Improved silkscreen for component IC identification
+- Improved silkscreen for component identification, and configuration options
 - Improved component identification in Bill of Materials
 
 ## Version 1.0 (Current)
