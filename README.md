@@ -50,9 +50,9 @@ The use of a modern CMOS Z-80 CPU is preferable
 
 Uses a standard 27xxx EPROM (or 28256 EEPROM) rather than mask ROM. These are more readily available and easier to program. 
 The two ROM's (Z42, Z43) have been replaced with a single 28 pin EPROM (U42) supporting 2x128 thru 2x512 chips. 
-The board has jumpers (JP21/JP27) to configure the ROM type, or 16kB page used for larger ROMS
+The board has jumpers to configure the ROM type, and/or 16kB page used for larger ROMS
 
-An additional set of jumpers (JP13/JP14) allows the ROM to provide an addition 1 or 2kBytes in the memory address 
+An additional set of jumpers allows the ROM to provide an addition 1 or 2kBytes in the memory address 
 above the ROM (0x3000 - 0x37FF), allowing a total of 12,13, or 14 kBytes of ROM. This can be useful for ROM extensions, 
 commonly used on some Model 1 peripherals, or the Model 3.
 
