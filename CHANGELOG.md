@@ -37,8 +37,8 @@ Unreleased
 - Inputs of spare gates are now tied to GND or VCC, with easy trace cuts for future use.
 - Added resistor pull-ups on address, data, and control busses, for CMOS stability.
 - Added (back) resistor pull-ups on keyboard, prevent issues when no keyboard attached.
-- Removed remnants of CAS and MUX signals from IO expansion.
-- Moved main power switch (SW1) and socket(J11) closer to other ports, better clearance
+- Provided ability to use spare IO pins (CAS and MUX)  on IO expansion.
+- Moved main power switch (SW1) and socket (J11) closer to other ports, better clearance
 - Added several M3 mounting holes for internal expansion board mounting
 - Improved (more modern) footprints for C19, C70, Q1, Q2, CR4.
 - Replaced several discrete resistors with small resistor packs.
