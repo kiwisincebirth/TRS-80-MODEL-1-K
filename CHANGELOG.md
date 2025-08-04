@@ -17,6 +17,7 @@ Unreleased
 * Added a pin Header (J19) to expose /RD, /WR, /MREQ, /IOREQ, and /M1 signals 
   used for Z80 protocol decoding in Sigrok logic analyser
 * Added support for EEPROM in circuit flashing, requiring software support.
+* Can configure either RAM or ROM to occupy the 12kB to 14kB address space in memory.
 
 ### Changed Features
 
