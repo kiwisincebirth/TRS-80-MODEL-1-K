@@ -66,7 +66,7 @@ A small 6 pin module based on either LTK5128, or XPT8871 chipset.
 
 Googling these chip IDS you will find the modules themselves. There are three variants
 which differ in pcb colour/size, pinout, and main capacitor size. 
-They are commony available from online chinese stores, ebay or amazon.
+They are commonly available from online chinese stores, ebay or amazon.
 
 There are 2 pin outs supported, one of these offers a Mute function, which
 is activated when the cassette motor is on.
@@ -133,7 +133,17 @@ https://www.aliexpress.com/item/1005006314983600.html
 ### Discrete Components
 
 Some additional Notes about some components used:
-- C105, C106, C107, C108 used in the timing logic of Vide Sync generation should utilise high stability parts.
+- Except for R37 (a 1/2 watt resistor) all resistors are 1/4 watt, preferably metal film, 5% tolerance or better.
+- C105, C106, C107, C108 used in the timing logic of Video Sync generation should utilise high stability parts.
+- R21 and R22 are also used in the video sync, so high tolerance values should be used
+  or use a multimeter to find a resistor that is identical to what is specified.
+- Electrolytic capacitors should be rated to 16 volts, less is not advisable, more is not really required.
+
+### Trim Resistors
+
+Trim Resistors are Bourns multi turn vertical, with inline pin. These are identifiable by the marking "3296" on the side
+
+https://www.bourns.com/pdfs/3296.pdf
 
 ### CMOS Part Usage
 

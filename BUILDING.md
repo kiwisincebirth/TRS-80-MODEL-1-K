@@ -18,32 +18,69 @@ And the following
 
 ## Assembly Order
 
+Before starting need to look at the solder jumpers on the rear of the board.
+- JP6 on the rear of the board should be configured as appropriate for either
+  50Hz (PAL) or 60Hz (NTSC) video. Just need to solder a bridge on Pins 1&2 or 2&3
+- Other solder jumpers on the rear of the board can be changed at any time and have
+  reasonable default connections. If changing you will probably need to cut existing connection
+
+Most components are labeled on the PCB, as you install each component you should check its value
+against what is in the BOM, and cross it off. An interactive BOM is provided to aid in this process
+
+The PCB has clear instructions for components considered (Optional). If you don't need a feature
+or wish to install it latter you can. This includes many Pin Headers which are mostly for external connection
+
 Typically, solder components in order of the lowest profile to the tallest components.
-- All Solder Jumpers should be (re-)configured as appropriate, 
-  as easier to cut default traces if needed first, before installing other components
-- All resistors, these can be installed in any direction
-- Diodes, fitting CR5-CR8, and then CR4 last
-- Ceramic capacitors with specifiv values - C3, C13, C17, C18, C43, C48, C50, C57, C60
-- Decoupling (100nf) ceramic Capacitors, these are all remaining capacitors.
-- Install any IC sockets you want, don't insert IC's at this point. 
-  As a minimum you should be for CPU/RAM/ROM, but advisable to install for all.
-- Resistor Packs, RN1, RN2
-- Jumper Switch pack, SW10
-- Crystal Y1
+- All resistors, these can be installed in either direction as they do not have a polarity.
+  The values are clearly labelled on the PCB. Note R37 is a 1/2 watt resistor and slighly bigger
+- Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
+- Ceramic disc capacitors with specific values - C3, C13, C17, C18, C43, C48, C50, C57, C60, C61, C105, C105
+  These capacitors are labelled on the board in the standard 3 digit notation, 2 digit value, 1 digit exponent
+- Then all remaining (Decoupling) 100nf (104) ceramic disk capacitors. There are about 48 of these.
+- Next install IC sockets, preferably all IC's should be socketed. Dont install IC's at this point. 
+  As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc (U9, U15, U37, U42, Z48). 
+  U50 is also advisable to install a socket for.
+- All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
+- 4 way Jumper Switch pack, SW10
+- 10.6445 Mhz Crystal Y1. See Parts guide for more information.
+- Onboard Power LED D1, which needs to be installed in the correct polarity
 - Jumper J18 - Should be shorted for normal CPU frequency
-- Jumper JP21, JP27 - Set the ROM Chip Type
-- Jumper J15, J16, J17, J20, J21 are optional only solder if needed
+- Jumper JP21, JP27 - Needs to be jumpered to set the ROM Chip Type
+- Other Pin headers (J14, J15, J17, J19) are optional and can be installed on an as needed basis.
 - Cassette Relay K1
 - Transistors Q1, Q2
 - Power barrel Jack J11
-- RV2 Trim resistor
-- U4/U5 audio amplifier module
-- Electrolytic Capacitors C19, C70, C101
-- Install remaining Electrolytic Capacitors. Make sure the orientation is correct.
+- RV2, RV4, RV5 Trim resistors. The alignment should be clear on the silk screen. 
+- Electrolytic Capacitors C19, C70, C101. These need to be installed in the correct polarity
+- Install remaining Electrolytic Capacitors, these are all 10uF in value
 - Cassette DIN Socket J3
-- Video Output J2 or J12. If soldering DIN socket don't solder (remove) centre pin
-- Large Switches, noting solder either SW1 or S1, and SW2 or S2
+- Video Output J2 or J12. If soldering DIN socket don't solder (remove) centre pin.
+- Main power switches, solder either SW1 or S1, 
+- Main Reset switch solder either SW2 or S2
 - Keyboard header CN3, on front (or  rear) of the PCB.
+
+### CRYSTAL
+
+
+
+### AMPLIFIER and SPEAKER
+
+U4, U5, J8
+- U4/U5 audio amplifier module
+
+## Optional
+
+### JOYSTICK
+
+J9
+
+### EXPANSION
+
+J20, J21
+
+### Cassette Input
+
+### Cassette Relay
 
 ## Patches
 
