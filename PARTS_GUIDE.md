@@ -17,6 +17,7 @@ https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGo
 or 10.7 mhZ (next closest) can come from China
 
 https://www.aliexpress.com/item/1005006183714474.html
+
 https://www.aliexpress.com/item/1005003752108473.html
 
 The main board supports a standard crystal oscillator 
