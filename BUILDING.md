@@ -111,6 +111,8 @@ Configuration is provided by several jumper options
 - SW10 - SW13 Configures the Character generator ROM
   - Note : See silkscreen for details of this.
   - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
+- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for high speed.
+  - This can be routed to a switch, which could use a small capacitor to avoid bounce
 - RV2 - configures the signal level (volume) sent to the audio amplifier
 - RV4 - horizontal position of video image
 - RV5 - vertical position of video image
