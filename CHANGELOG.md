@@ -5,6 +5,8 @@
 
 Unreleased
 
+![MainboardFront](/pcb/TRS-80-MP-FrontV2.png)
+
 ### New Features
 
 * Dual port video SRAM, reducing contention (snow) issues with shared CPU access.

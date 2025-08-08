@@ -8,7 +8,7 @@ This project is an upgraded / evolved TRS-80 Model 1 main board replacement. It 
 compact, and modern replacement, removing some limitations of the original 1970's product, 
 while still remaining faithful to the original technology (i.e. no emulation) 
 
-![MainboardFrontBuiltK1](/images/IMG_8736.jpeg)
+![MainboardFront](/pcb/TRS-80-MP-FrontV2.png)
 
 ### What this is:
 - Drop in (mostly) replacement main board for existing TRS-80 Model 1
@@ -25,12 +25,8 @@ while still remaining faithful to the original technology (i.e. no emulation)
 ## Features
 
 The board started with the Japanese board as a base, because it is slightly upgraded over the US board with some notable 
-improvements that carry over:
-- The Video sync has been upgraded with improved stability, and 50Hz support
-- The cassette input has minor improvements in the A/D design.
-
-Unfortunately this means the Japanese Service manual has be used ss a base for the basic schematic and component ID's as 
-they are quite different than the US Model 1.
+minor improvements. This means the Japanese Service manual has be used as a base for the basic schematic and component ID's as 
+they are quite different from the US Model 1.
 
 The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the 
 keyboard and Japanese Kana character set support.
@@ -40,15 +36,15 @@ Noting traditional 74LS components should work, however this has not been tested
 
 ### CPU
 
-A double speed (3.56 Mhz) clock speedup mod has been applied. A jumper (J18) allows the clock to be slowed to normal. 
+A 2/3 clock speedup (3.5Mhz 5.3Mhz) mod has been applied. A jumper (J18) allows the clock to be slowed to normal. 
 This could be by external switch, or any future circuit potentially under software control. See U1, U2 in schematic.
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
-A pin Header (J19) next to CPU exposes /RD, /WR, and /M1, the essentuil signals used for Sigrok Z80 protocol decoding,
+A pin Header (J19) next to CPU exposes /RD, /WR, and /M1, the essential signals used for Sigrok Z80 protocol decoding,
 that are not exposed on the main expansion interface.
 Other signals such as address and data lines can be obtained from expansion IO header (J20)
 
-The Reset Switch can now be changed (JP16) from a soft NMI Reset to a hard CPU Reset. Also an onboard hard
+The Reset Switch can now be changed (JP16) from a soft NMI Reset to a hard CPU Reset. Also, an onboard hard
 reset is provided via pushbutton (SW11)
 
 The use of a modern CMOS Z-80 CPU is preferable
