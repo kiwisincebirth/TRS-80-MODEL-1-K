@@ -36,16 +36,16 @@ Noting traditional 74LS components should work, however this has not been tested
 
 ### CPU
 
-A 2/3 clock speedup (3.5Mhz 5.3Mhz) mod has been applied. A jumper (J18) allows the clock to be slowed to normal. 
-This could be by external switch, or any future circuit potentially under software control. See U1, U2 in schematic.
+A selectable 2/3 clock speedup (3.5Mhz/5.3Mhz) mod has been made. A jumper (J18) allows the clock to be slowed to normal. 
+This could be by external switch, or any future circuit potentially under software control.
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
-A pin Header (J19) next to CPU exposes /RD, /WR, and /M1, the essential signals used for Sigrok Z80 protocol decoding,
+A pin Header next to CPU exposes /RD, /WR, and /M1, the essential signals used for Sigrok Z80 protocol decoding,
 that are not exposed on the main expansion interface.
 Other signals such as address and data lines can be obtained from expansion IO header (J20)
 
-The Reset Switch can now be changed (JP16) from a soft NMI Reset to a hard CPU Reset. Also, an onboard hard
-reset is provided via pushbutton (SW11)
+The Reset Switch can now be changed from a soft NMI Reset to a hard CPU Reset. Also, an onboard hard
+reset is provided via pushbutton, for full reset during diagnostics
 
 The use of a modern CMOS Z-80 CPU is preferable
 
@@ -53,11 +53,11 @@ The use of a modern CMOS Z-80 CPU is preferable
 
 Uses a standard 27xxx EPROM (or 28256 EEPROM) rather than mask ROM. These are more readily available and easier to program. 
 The two ROM's (Z42, Z43) have been replaced with a single 28 pin EPROM (U42) supporting 2x128 thru 2x512 chips. 
-The board has jumpers to configure the ROM type, and/or 16kB page used for larger ROMS
+The board has jumpers to configure the ROM type, and/or 16kB page used for larger ROMS.
 
-An additional set of jumpers allows the ROM to provide an addition 1 or 2kBytes in the memory address 
-above the ROM (0x3000 - 0x37FF), allowing a total of 12,13, or 14 kBytes of ROM. This can be useful for ROM extensions, 
-commonly used on some Model 1 peripherals, or the Model 3.
+An additional set of jumpers allows either ROM (or RAM) to be mapped in the memory address 
+above the normal ROM (0x3000 - 0x37FF). This can be useful for custom ROM extensions, 
+commonly used on some Model 1 peripherals, or RAM for any purpose
 
 ### System RAM
 
@@ -86,13 +86,15 @@ All character generation (both alpha characters and graphics) has been replaced 
 that includes all 256 characters defined in ROM (U37). Each character defines the full 6x12 pixel matrix that is 
 generated, and requires 16 bytes (only 12 are used) per character, for a total of 4k bytes for the entire character set. 
 
-Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by Switches SW1.
-Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
-The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. 
+Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by DIP Switches.
+Also Port FF Bit 7 can be used to control the LSB of the character set selection 
 
-Normal font ROM's are not compatible.
+Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
+The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. Normal font ROM's are not compatible.
 
 ### Video Output
+
+A modern video sync generation circuit exists which allows the H and V positions to be adjusted
 
 Composite video output is via standard a RCA connector or the original DIN plug, you can solder either onto the board. 
 The RCA connector is provided to be compatible with a larger range of external monitors, potentially more reliable and 
@@ -128,6 +130,7 @@ The main board has an internal 40pin Header (J20) identical to and located just 
 This is primarily designed for an internal expansion board which sits inside the case. 
 The primary advantage being compactness. A optional second connector provides +5V in a four pin header (J21) for powering 
 a internal expansion board.
+A few additional mounting holds have been provided to support an addon board
 
 Routing an external 40 pin ribbon cable to the connector is also possible, bypassing the 'unreliable' card edge connector.
 
@@ -137,9 +140,10 @@ Also provided for expansion are:
 - Pin Headers (J17) for internal (un-switched) +5V (both pins) power, for any devices requiring constant power
 
 NOTE: The DRAM multiplexing signals CAS, and MUX are no longer generated, and have be removed on the main expansion connector.
+These two expansion pins can be re-used for any future purpose, they are exposed as solder pads on the PCB 
 
-A prototyping area is self explanatory, it has 12 chip supporting 14 or 16 pin power and locations for decoupling capacitors. 
-This was included to add minor new features without the fragility of piggy back boards, or IC's
+A prototyping area is self-explanatory, it has 11 chip supporting 14 or 16 pin power and locations for decoupling capacitors. 
+This was included to add minor new features without the fragility of piggyback boards, or IC's
 
 ### Power
 
