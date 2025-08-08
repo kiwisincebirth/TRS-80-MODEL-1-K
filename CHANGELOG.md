@@ -16,7 +16,7 @@ Unreleased
 * Improved support for RGBtoHDMI by exposing HSYNC on Video DIN socket
 * Added Tim Halloran's no chip VBLANK modification, for improved video updating  
 * Added Jumper (JP16) to allow main Reset button to function as full CPU reset.
-* Added a pin Header (J19) to expose /RD, /WR, /MREQ, /IOREQ, and /M1 signals 
+* Added a pin Header (J19) to expose /RD, /WR, /MREQ, /IOREQ, /BUSACK and /M1 signals 
   used for Z80 protocol decoding in Sigrok logic analyser
 * Added support for EEPROM in circuit flashing, requiring software support.
 * Can configure either RAM or ROM to occupy the 12kB to 14kB address space in memory.
