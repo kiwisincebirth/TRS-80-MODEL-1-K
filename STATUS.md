@@ -1,6 +1,11 @@
 
 # Project Status
 
+## Status July 2025
+
+Working on V2 of the board, this is an ongoing process. See the changelog for an updated 
+list of changes in V2
+
 ## Status June 2025
 
 "FreHD" is up and running using an internal plug in board, and is document on this Repository.
