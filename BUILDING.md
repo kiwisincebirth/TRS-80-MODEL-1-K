@@ -19,7 +19,7 @@ And the following
 ## Assembly Order
 
 Before starting need to look at the solder jumpers on the rear of the board.
-- JP6 on the rear of the board should be configured as appropriate for either
+- JP6 on the rear of the board is Required be configured as appropriate for either
   50Hz (PAL) or 60Hz (NTSC) video. Just need to solder a bridge on Pins 1&2 or 2&3
 - Other solder jumpers on the rear of the board can be changed at any time and have
   reasonable default connections. If changing you will probably need to cut existing connection
@@ -28,7 +28,9 @@ Most components are labeled on the PCB, as you install each component you should
 against what is in the BOM, and cross it off. An interactive BOM is provided to aid in this process
 
 The PCB has clear instructions for components considered (Optional). If you don't need a feature
-or wish to install it latter you can. This includes many Pin Headers which are mostly for external connection
+or wish to install it latter you can. This includes many Pin Headers which are mostly for external connection.
+If you do not intend to use the cassette for loading saving program then you can save
+considerable components, excluding these components does not prevent Audio output.
 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in either direction as they do not have a polarity.
@@ -59,28 +61,18 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Main Reset switch solder either SW2 or S2
 - Keyboard header CN3, on front (or  rear) of the PCB.
 
-### CRYSTAL
+What follows is specific guidance.
 
+### MAIN CLOCK CRYSTAL
 
+### VIDEO TIMING
+
+tbd - info on setting up the timing signal 
 
 ### AMPLIFIER and SPEAKER
 
 U4, U5, J8
 - U4/U5 audio amplifier module
-
-## Optional
-
-### JOYSTICK
-
-J9
-
-### EXPANSION
-
-J20, J21
-
-### Cassette Input
-
-### Cassette Relay
 
 ## Patches
 
