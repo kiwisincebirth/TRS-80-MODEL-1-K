@@ -105,6 +105,10 @@ pin 3 of the DIN socket. This is enabled by bridging jumper JP15. See below for 
 
 https://github.com/hoglet67/RGBtoHDMI/wiki/Cables#trs80-model-1-mono--video-genie
 
+For tear free video output Tim Halloran's no chip VBLANK modification is provided. See following for details:
+
+https://github.com/hallorant/bigmit/blob/master/ta19demo/README.md
+
 ### Sound Output (V2)
 
 Sockets (U4 and U5) provide a location to install a small audio amplifier module, 
@@ -117,12 +121,6 @@ If supported the amplifier will be muted when the cassette interface is active.
 An Alpha Joystick port (5 bit) on Ports 00h-0Fh. At this time 4 bit mode is not supported.
 
 http://www.trs-80.org/alpha-joystick/
-
-### Tim Halloran's VBLANK mod (V2)
-
-Tim Halloran's no chip VBLANK modification is provided. See following for details:
-
-https://github.com/hallorant/bigmit/blob/master/ta19demo/README.md
 
 ### Internal Expansion:
 
