@@ -124,7 +124,7 @@ See the separate [Status and Future](/STATUS.md)
 
 ## Building
 
-See the separate [Builders Guide](/BUILDING-V1.md) for complete technical documentation
+See the separate [Builders Guide](/BUILDING.md) for complete technical documentation
 
 ## Credits
 

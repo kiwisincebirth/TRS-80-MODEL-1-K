@@ -5,9 +5,9 @@
 
 The files provided in this project are primarily:
 
-- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1.pdf)
-- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_GerberV1.zip)
-- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1.csv)
+- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1a.pdf)
+- Gerber files for manufacture [Gerbers ZIP](/pcb/TRS-80-MP_GerberV1a.zip)
+- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1a.csv)
 - Also see the [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 
 And the following
@@ -43,7 +43,7 @@ Typically, solder components in order of the lowest profile to the tallest compo
 ## Patches
 
 The following patches should be noted for the board. These were discovered after initial PCB manufacture, and affect
-the boards design, and or the silkscreen.
+the boards design, and or the silkscreen. NOTE: The following have be fixed in V1a of the board.
 - The main power connector (J11) GND pins use thermal reliefs, ideally they shouldn't. To provide better GND connection, 
   install wire from GND pin to the GND pins of the video connector.
 - To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50
