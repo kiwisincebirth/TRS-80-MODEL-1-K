@@ -40,10 +40,6 @@ A selectable 2/3 clock speedup (3.5Mhz/5.3Mhz) mod has been made. A jumper (J18)
 This could be by external switch, or any future circuit potentially under software control.
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
-A pin Header next to CPU exposes /RD, /WR, and /M1, the essential signals used for Sigrok Z80 protocol decoding,
-that are not exposed on the main expansion interface.
-Other signals such as address and data lines can be obtained from expansion IO header (J20)
-
 The Reset Switch can now be changed from a soft NMI Reset to a hard CPU Reset. Also, an onboard hard
 reset is provided via pushbutton, for full reset during diagnostics
 

@@ -48,7 +48,7 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Onboard Power LED D1, which needs to be installed in the correct polarity
 - Jumper J18 - Should be shorted for normal CPU frequency
 - Jumper JP21, JP27 - Needs to be jumpered to set the ROM Chip Type
-- Other Pin headers (J14, J15, J17, J19) are optional and can be installed on an as needed basis.
+- Other Pin headers (J14, J15, J17) are optional and can be installed on an as needed basis.
 - Cassette Relay K1
 - Transistors Q1, Q2
 - Power barrel Jack J11
