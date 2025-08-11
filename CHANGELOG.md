@@ -47,13 +47,21 @@ Unreleased
 - Improved silkscreen for component identification, and configuration options
 - Improved component identification in Bill of Materials
 
+## Version 1.0b (unreleased)
+
+Unreleased
+
+This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
+ 
+- Z6 component part numbers have been updated throughout the project.
+
 ## Version 1.0a (Current)
 
 August 2025
 
 ![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1a.png)
 
-This is a patch version of the 1.0 board with the following issue (discoverd during build) resolved
+This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
 
 - An optional C61 (100pf) has been added connecting pins 5 to 7 of Z50. 
   It was discovered during testng to be needed get the main crystal oscillator to function.
