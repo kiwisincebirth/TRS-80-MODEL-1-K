@@ -16,8 +16,16 @@ And the following
 
 ## Assembly Order
 
+Before starting need to look at the solder jumpers on the the board.
+- JP6, JP7, JP8, JP10 on the board is Required be configured as appropriate for either
+  50Hz (PAL) or 60Hz (NTSC) video. Just need to solder a bridge on Pins 1&2 or 2&3
+- Other solder jumpers on the board can be changed at any time and have
+  reasonable default connections. If changing you will probably need to cut existing connection
+
+Most components are labeled on the PCB, as you install each component you should check its value
+against what is in the BOM, and cross it off. An interactive BOM is provided to aid in this process
+
 Typically, solder components in order of the lowest profile to the tallest components.
-- Solder jumpers for Video Frequency (JP6, JP7, JP8, JP10) and Rom Memory Size (J13, J14)
 - All resistors, these can be installed in any direction
 - Diodes, fitting CR5-CR8, and then CR4 last
 - Ceramic capacitors with specifiv values - C3, C13, C17, C18, C43, C48, C50, C57, C60
