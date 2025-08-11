@@ -47,9 +47,9 @@ https://www.digikey.com.au/en/products/detail/alliance-memory-inc/AS6C1008-55PCN
 
 1 KB Dual Port SRAM. There are 2 options:
 
-IDT7130 
+IDT7130LA55P 
 
-https://octopart.com/search?q=IDT7130
+https://octopart.com/search?q=IDT7130LA55P
 https://www.renesas.com/en/products/memory-logic/multi-port-memory/asynchronous-dual-port-rams/7130-1k-x-8-dual-port-ram
 https://www.renesas.com/en/document/dst/713040-datasheet
 
