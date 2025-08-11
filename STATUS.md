@@ -1,6 +1,10 @@
 
 # Project Status
 
+## Update 9th August 2025
+
+I have now published a V1a of the board that fixes the minor issues found in V1 of the board
+
 ## Status July 2025
 
 Working on V2 of the board, this is an ongoing process. See the changelog for an updated 
