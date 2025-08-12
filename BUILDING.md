@@ -16,7 +16,7 @@ And the following
 
 ## Assembly Order
 
-Before starting need to look at the solder jumpers on the the board.
+Before starting need to look at the solder jumpers on the board.
 - JP6, JP7, JP8, JP10 on the board is Required be configured as appropriate for either
   50Hz (PAL) or 60Hz (NTSC) video. Just need to solder a bridge on Pins 1&2 or 2&3
 - Other solder jumpers on the board can be changed at any time and have
