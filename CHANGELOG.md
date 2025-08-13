@@ -54,6 +54,11 @@ Unreleased
 This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
  
 - Z6 component part numbers have been updated throughout the project.
+- Moved IC designations on silkscreen for easier reading under socket
+- enlarged a few vias on the power planes
+- added thermal reliefs of 7400 series IC power planes
+- tied all unused gate inputs to a logic level.
+- Fixed issue with Excluded items in BOM JP21 JP27 J20
 
 ## Version 1.0a (Current)
 
