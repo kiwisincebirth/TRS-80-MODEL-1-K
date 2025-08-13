@@ -87,6 +87,10 @@ Configuration is provided by several jumper options
 - JP10 - Configure how character generator selects its page number (LSB), switch vs software. 
   - Note : 1&2 are bridged by default, using SW13 to select the LSB char generator page
   - Note : Setting 2&3 enable software selection using (Port FF Bit 7), ignoring SW13. 
+- JP12 - Configure the use of an all RAM machine, replacing the use of ROM. This is provided 
+  as an experimental feature, a boostrap process will be needed to initialise the computer
+  - Note : If shorting this the ROM chip itself should be removed.
+  - Note : If shorting this JP14 (1&2) cannot be bridged, instead (2&3) must be used.
 - JP13, JP14 - Configure either RAM or ROM to be mapped into the 12-13kb and 13-14kb address space
   - Note : Using the 13-14kb address space will prevent the use of Floppy disk 
     or printer which occupy memory in the 0x37E0 - 0x37FF range. 

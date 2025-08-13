@@ -17,7 +17,7 @@ Unreleased
 * Added Tim Halloran's no chip VBLANK modification, for improved video updating  
 * Added Jumper (JP16) to allow main Reset button to function as full CPU reset.
 * Added support for EEPROM in circuit flashing, requiring software support.
-* Can configure either RAM or ROM to occupy the 12kB to 14kB address space in memory.
+* Can configure either ROM or RAM to occupy the first 14kB address space in memory.
 
 ### Changed Features
 
