@@ -21,7 +21,11 @@ https://www.aliexpress.com/item/1005003752108473.html
 
 The main board supports a standard crystal oscillator 
 in the DIP-14 Full Can form factor. This can be installed in place of the 74HCU04 (U50).
-This allows custom oscillators to be used instead of the 74HCU04 circuit.
+This allows custom oscillators to be used instead of the 74HCU04 circuit. e.g.
+
+https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
+or
+https://github.com/schlae/ClockInACan
 
 ### Main System ROM
 
