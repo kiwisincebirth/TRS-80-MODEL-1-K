@@ -46,19 +46,21 @@ Unreleased
 - Main power Capacitor C101 now has more space for horizontal mounting.
 - Improved silkscreen for component identification, and configuration options
 - Improved component identification in Bill of Materials
+- Major improvement in the Schematic diagram quality.
 
 ## Version 1.0b (unreleased)
 
 Unreleased
 
-This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
- 
-- Z6 component part numbers have been updated throughout the project.
-- Moved IC designations on silkscreen for easier reading under socket
-- enlarged a few vias on the power planes
-- added thermal reliefs of 7400 series IC power planes
-- tied all unused gate inputs to a logic level.
+This is a patch version of the 1.0a board with the items back-ported from V2
+- Inputs of spare gates are now tied a logic level, not left floating.
+- Improved (more modern) footprints for C19, C70, Q1, Q2, CR4.
+- Fixed multiple issues with small via's and thermal reliefs on power rails
+- Improved silkscreen for component identification, by moving labels under sockets
+
+Also made following improvements, which were also included in V2
 - Fixed issue with Excluded items in BOM JP21 JP27 J20
+- Z6 component part numbers have been updated HCT -> LS throughout the project.
 
 ## Version 1.0a (Current)
 
