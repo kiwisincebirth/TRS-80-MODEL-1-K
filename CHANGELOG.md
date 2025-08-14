@@ -12,17 +12,17 @@ Unreleased
 * Dual port video SRAM, reducing contention (snow) issues with shared CPU access.
 * Onboard Audio amplifier utilising small class D module, with space for PCB speaker
 * Alpha Joystick port (6 bit) with header to connect 9 Pin DB9 Connector
+* Changed crystal oscillator to parallel resonant circuit based on 74HCU04 chip,
+  which has pin comparability with a Full Can (DIP14) oscillator.
 * New Video sync generation circuit, including Horizontal and Vertical Position.
 * Improved support for RGBtoHDMI by exposing HSYNC on Video DIN socket
 * Added Tim Halloran's no chip VBLANK modification, for improved video updating  
 * Added Jumper (JP16) to allow main Reset button to function as full CPU reset.
-* Added support for EEPROM in circuit flashing, requiring software support.
-* Can configure either ROM or RAM to occupy the first 14kB address space in memory.
+* Can configure either RAM or ROM to occupy the 12kB to 14kB address space in memory.
+* Added support for EEPROM in circuit writing (requires software support).
 
 ### Changed Features
 
-- Changed crystal oscillator to parallel resonant circuit based on 74HCU04 chip, 
-  which has pin comparability with a Full Can (DIP14) oscillator. 
 - The Video DIN socket now has Jumper (JP19) to disable external power
 - Added PCB reset button (SW11) to allow full reset during diagnostics
 - CPU speedup offer fast speed as 5.3 (default 3.55) mhz via jumper (JP17)
@@ -37,7 +37,7 @@ Unreleased
 - JP10 (and related circuit) used for video frequency was removed.
 - Inputs of spare gates are now tied to GND or VCC, with easy trace cuts for future use.
 - Added resistor pull-ups on address, data, and control busses, for CMOS stability.
-- Added (back) resistor pull-ups on keyboard, prevent issues when no keyboard attached.
+- Added resistor pull-ups on keyboard, prevent issues when no keyboard attached.
 - Provided ability to use spare IO pins (CAS and MUX)  on IO expansion.
 - Moved main power switch (SW1) and socket (J11) closer to other ports, better clearance
 - Added several M3 mounting holes for internal expansion board mounting
@@ -47,14 +47,21 @@ Unreleased
 - Main power Capacitor C101 now has more space for horizontal mounting.
 - Improved silkscreen for component identification, and configuration options
 - Improved component identification in Bill of Materials
+- Major improvement in the Schematic diagram quality.
 
 ## Version 1.0b (unreleased)
 
 Unreleased
 
-This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
- 
-- Z6 component part numbers have been updated throughout the project.
+This is a patch version of the 1.0a board with the items back-ported from V2
+- Inputs of spare gates are now tied a logic level, not left floating.
+- Improved (more modern) footprints for C19, C70, Q1, Q2, CR4.
+- Fixed multiple issues with small via's and thermal reliefs on power rails
+- Improved silkscreen for component identification, by moving labels under sockets
+
+Also made following improvements, which were also included in V2
+- Fixed issue with Excluded items in BOM JP21 JP27 J20
+- Z6 component part numbers have been updated HCT -> LS throughout the project.
 
 ## Version 1.0a (Current)
 
