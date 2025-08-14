@@ -18,6 +18,8 @@ https://www.aliexpress.com/item/1005006183714474.html
 
 https://www.aliexpress.com/item/1005003752108473.html
 
+https://www.alibaba.com/product-detail/QZ-new-high-quality-10-7M_1601237726803.html
+
 ### Main System ROM
 
 Supports 27128, 27256, 27512 EPROM, or 28256 EEPROM - 28 pin devices
