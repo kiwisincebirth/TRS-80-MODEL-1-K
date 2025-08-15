@@ -15,10 +15,18 @@ https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGo
 or 10.7 mhZ (next closest) can come from China
 
 https://www.aliexpress.com/item/1005006183714474.html
-
 https://www.aliexpress.com/item/1005003752108473.html
-
 https://www.alibaba.com/product-detail/QZ-new-high-quality-10-7M_1601237726803.html
+
+The main board (V1-RevB) supports a standard crystal oscillator
+in the DIP-14 Full Can form factor. This can be installed in place of the SN7404N (Z50).
+This allows custom oscillators to be used instead of the SN7404N circuit. e.g.
+
+https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
+or
+https://github.com/schlae/ClockInACan
+or
+https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
 
 ### Main System ROM
 
