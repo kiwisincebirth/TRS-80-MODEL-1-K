@@ -27,7 +27,9 @@ This allows custom oscillators to be used instead of the 74HCU04 circuit. e.g.
 https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
 or
 https://github.com/schlae/ClockInACan
-
+or
+https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
+https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
 
 ### Main System ROM
 
@@ -153,7 +155,7 @@ https://www.bourns.com/pdfs/3296.pdf
 
 ### CMOS Part Usage
 
-This project has been built primarily with TTL compatible CMOS (74HCTxxx) components, 
+This project has been built primarily with CMOS (TTL compatible) 74HCTxxx components, 
 with the following notable exclusions
 - U50 should be a SN7404HCU, it acts as an amplifier and requires an unbuffered part.
-- Z65 should be a SN74LS92, the 7492 is only readily available in LS series
+- Z6, and Z65 should be a SN74LS92, the x92 was never produced in HCT variant
