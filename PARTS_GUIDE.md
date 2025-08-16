@@ -51,7 +51,18 @@ https://www.digikey.com.au/en/products/detail/alliance-memory-inc/AS6C1008-55PCN
 
 ### Video Memory
 
-uDP2114LC or equivalent
+TMS2114L-15 or uPD2114LC-5 or equivalent
+
+https://www.rocelec.com/part/01t4w00000PQTxNAAX-TMS2114L15NL
+https://www.silicon-ark.co.uk/mm2114-15l-static-ram-by-national-semiconductor?search=2114
+https://www.scribblygum.com.au/index.php?route=product/product&product_id=229
+https://www.arcadepartsandrepair.com/store/integrated-circuits/ram-memory/2114-ram/
+https://twistywristarcade.com/ram/43-2114-ram.html
+
+datasheet
+
+https://www.lcsc.com/datasheet/C20918461.pdf
+https://www.silicon-ark.co.uk/datasheets/uPD2114l-datasheet-nec.pdf
 
 ### Cassette Relay
 
