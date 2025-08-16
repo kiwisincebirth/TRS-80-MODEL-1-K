@@ -27,6 +27,7 @@ or
 https://github.com/schlae/ClockInACan
 or
 https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
+https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
 
 ### Main System ROM
 
@@ -104,7 +105,8 @@ https://www.aliexpress.com/item/1005006314983600.html
 
 ### CMOS Part Usage
 
-This project has been built primarily with TTL compatible CMOS (74HCTxxx) components, 
+This project has been built primarily with CMOS (TTL compatible) 74HCTxxx components, 
 with the following notable exclusions
-- Z50 should be a 7404N, it acts as an amplifier and requires an unbuffered part.
-- Z65 should be a 74LS92, the 7492 is only readily available in LS series
+- Z50 should be a SN7404N, it acts as an amplifier and requires an unbuffered part.
+- Z6, and Z65 should be a 74LS92, the x92 was never produced in HCT variant
+- The Video RAM chips 2114 are obsolete and only available in TTL
