@@ -64,7 +64,9 @@ https://www.renesas.com/en/document/dst/713040-datasheet
 CY7C130-55PC (older part number)
 
 https://octopart.com/search?q=CY7C130-55PC
+https://www.rocelec.com/part/01t4w00000POumrAAD-CY7C13055PC
 https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
+https://www.silicon-ark.co.uk/datasheets/CY7C131-datasheet-cypress.pdf
 
 Do Not Use IDT7140, CY7C140, CY7C141, these are Slave devices and NOT compatible
 
@@ -142,6 +144,7 @@ https://www.aliexpress.com/item/1005006314983600.html
 
 Some additional Notes about some components used:
 - Except for R37 (a 1/2 watt resistor) all resistors are 1/4 watt, preferably metal film, 5% tolerance or better.
+- All ceramic capacitors are 100V tolerance 10% unless otherwise specified
 - C105, C106, C107, C108 used in the timing logic of Video Sync generation should utilise high stability parts.
 - R21 and R22 are also used in the video sync, so high tolerance values should be used
   or use a multimeter to find a resistor that is identical to what is specified.

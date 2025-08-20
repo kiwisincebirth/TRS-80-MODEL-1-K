@@ -34,16 +34,17 @@ considerable components, excluding these components does not prevent Audio outpu
 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in either direction as they do not have a polarity.
-  The values are clearly labelled on the PCB. Note R37 is a 1/2 watt resistor and slighly bigger
+  The values are clearly labelled on the PCB. Note R37 is a 1/2 watt resistor and slightly bigger
+  than the other resistors.
 - Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
 - Ceramic disc capacitors with specific values - C3, C13, C17, C18, C43, C48, C50, C57, C60, C61, C105, C105
   These capacitors are labelled on the board in the standard 3 digit notation, 2 digit value, 1 digit exponent
-- Then all remaining (Decoupling) 100nf (104) ceramic disk capacitors. There are about 48 of these.
-- Next install IC sockets, preferably all IC's should be socketed. Dont install IC's at this point. 
+- Then all remaining (Decoupling) 100nf (104) ceramic disk capacitors. There are approximately 50 of these.
+- Next install IC sockets, preferably all IC's should be socketed. Don't install IC's at this point. 
   As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc (U9, U15, U37, U42, Z48). 
   U50 is also advisable to install a socket for.
 - All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
-- 4 way Jumper Switch pack, SW10
+- 4 way DIP Jumper Switch pack, SW10
 - 10.6445 Mhz Crystal Y1. See Parts guide for more information.
 - Onboard Power LED D1, which needs to be installed in the correct polarity
 - Jumper J18 - Should be shorted for normal CPU frequency
@@ -64,6 +65,8 @@ Typically, solder components in order of the lowest profile to the tallest compo
 What follows is specific guidance.
 
 ### MAIN CLOCK CRYSTAL
+
+tbd info on alternate installation
 
 ### VIDEO TIMING
 
