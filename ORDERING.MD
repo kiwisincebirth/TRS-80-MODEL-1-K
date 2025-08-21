@@ -47,6 +47,7 @@ and remove the primary component from the BOM prior to ordering
 * Modern Power Switch (SW1) -> vs optional traditional locking pushbutton (S1) 
 * Modern Reset Button (SW2) -> vs optional traditional pushbutton (S2)
 * Video Output 5 Pin DIN" Connector (2) -> vs optional RCA connector (J12)
+* Crystal Oscillator -> See Notes Additional below. 
 
 ### Optional Components
 
@@ -72,15 +73,15 @@ as it is expected these components be installed manually possibly by the end use
 * Power LED (V2 Only) - May not be wanted, nor is it really necessary
 * Pin Jumpers - For shorting config Pins are included but not mounted
 
-## FOR CONSIDERATION
+## Additional Notes
 
-The following is not accounted for in the BOM
+### Crystal Oscillator
 
-### CRYSTAL OSCILLATOR
-
-2 options are possible - 74HCU04 (curent approach in BOM) or using a Dip 14 CAN.
-Noting the 74HCU04 pinout was designed to be compatible with Can oscillator (Pins 1,7,8,14)
-and thus can be replaced directly, then all discrete components removed.
+2 options are possible - 74HCU04 (default approach in BOM) with a quart crystal, 
+or using a Dip 14 CAN oscillator.
+Noting the 74HCU04 pinout was designed to be pin (1,7,8,14) compatible with a CAN oscillator 
+and thus can be replaced directly, then all discrete components (including crystal) removed.
 
 A programmable oscillator is available from DigiKey, ("ECS-P145") and can exactly match 
 the expected frequency, this should improve reliability, the part itself has not been tested.
+Owing to height restrictions it is unlikely the oscillator could be socketed.
