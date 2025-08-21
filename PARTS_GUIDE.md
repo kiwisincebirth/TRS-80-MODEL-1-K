@@ -29,6 +29,12 @@ or
 https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
 https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
 
+### Z80 CPU
+
+The part is no longer in production, and needs to obtained seperatly. Preference if for: 
+* CMOS variant, but this is not critical since older NMOS TTL is compatible 
+* 6MHz since it is possible to overclock the computer to 5.3Mhz  
+
 ### Main System ROM
 
 Supports 27128, 27256, 27512 EPROM, or 28256 EEPROM - 28 pin devices

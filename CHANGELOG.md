@@ -60,6 +60,8 @@ This is a patch version of the 1.0a board with the items back-ported from V2
 Also made following improvements, which were also included in V2
 - Fixed issue with Excluded items in BOM JP21 JP27 J20
 - Z6 component part numbers have been updated HCT -> LS throughout the project.
+- Z31 component part numbers have been updated LS -> HCT throughout the project.
+- Completed the BOM, with full part numbers.
 
 ## Version 1.0a (Current)
 
