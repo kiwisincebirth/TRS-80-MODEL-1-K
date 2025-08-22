@@ -26,10 +26,11 @@ The BOM contains the following important fields
 * MP - The manufacturers part number
 * Qty - Quantity
 
-### Not Included
+### Hard to Find
 
-The following components are not included in the BOM and need to be sourced separately. These are required
-but no off the shelf modern component exists. See the Parts Guide for further info:
+The following components are Included in the BOM but are considered obsolete/hard to find and may 
+need to be sourced separately as mainstream suppliers dont necessarily hold them in stock.
+See the Parts Guide for further info on suitable replacements and where they may be ordered:
 * Z80 CPU (Z48)
 * Video Memory Chip(s)
 * 10.6445 Mhz Crystal Oscillator (Y1)
