@@ -35,9 +35,6 @@ See the Parts Guide for further info on suitable replacements and where they may
 * Video Memory Chip(s)
 * 10.6445 Mhz Crystal Oscillator (Y1)
 
-The following need to be ordered on an as needed basis, and are not part of the BOM
-* IC Sockets - recommended for all, but as minimum the large scale components, e.g. CPU, RAM, ROM.
-
 ### Component Choice
 
 The board offers several choices on several connectors between a primary modern 
@@ -51,6 +48,10 @@ and remove the primary component from the BOM prior to ordering
 * Crystal Oscillator -> See Notes Additional below. 
 
 ### Optional Components
+
+IC Sockets are not included in the BOM. While optional they are highly recommended for all IC's, 
+and should be considered mandatory for all large scale components, e.g. CPU,
+RAM (including Video RAM), and ROM (including Character Generator). 
 
 Several optional Pin Headers have not been included in the BOM as
 they are not necessary in a standard configuration, and can be added at a latter date

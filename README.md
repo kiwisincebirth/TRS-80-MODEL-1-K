@@ -22,6 +22,11 @@ while still remaining faithful to the original technology (i.e. no emulation)
 - Is not compatible with Model 1 unregulated power supply, requires regulated 5V power
 - Is not a faithful recreation of the original Model 1, other projects exist for this.
 
+### Provided with this Project:
+- All required materials and guides to order and assemble this project
+- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally 
+- A selection of [fonts files](/fonts/README.md) for use with this project.
+
 ## Features
 
 The board started with the Japanese board as a base, because it is slightly upgraded over the US board with some notable 
@@ -126,6 +131,8 @@ The primary advantage being compactness. A optional second connector provides +5
 a internal expansion board.
 A few additional mounting holds have been provided to support an addon board
 
+See the [FreHD folder](/frehd/README.md) for a 40 pin FreHD that connects directly to this header.
+
 Routing an external 40 pin ribbon cable to the connector is also possible, bypassing the 'unreliable' card edge connector.
 
 Also provided for expansion are:
@@ -157,7 +164,7 @@ Additional changes have been made too numerous to mention please see [Changelog]
 
 ## Status / Future
 
-See the separate [Status and Future](/STATUS.md) 
+See the separate [Status and Future](/STATUS.md) which provides a mini update blog for this project
 
 ## Building
 
@@ -169,5 +176,6 @@ See the separate [Builders Guide](/BUILDING.md) for complete technical documenta
     - https://github.com/Board-Folk/TRS80IJP
 - Glens stuff TRS-80 Model 1 clone, of which some inspiration was taken.
     - https://www.glensstuff.com/trs80/trs80.htm
-- VCF Forums for some help and guidence
+- VCF Forums for some help and guidance
     - https://forum.vcfed.org/index.php?threads/trs-80-model-1-board-design.1251905/
+- The Tandy Discord Channel for help and support
