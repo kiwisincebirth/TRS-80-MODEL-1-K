@@ -10,6 +10,8 @@ while still remaining faithful to the original technology (i.e. no emulation)
 
 ![MainboardFrontBuiltK1](/images/IMG_8736.jpeg)
 
+For more images [See Here](./images/README.md)
+
 ### What this is:
 - Drop in (mostly) replacement main board for existing TRS-80 Model 1
 - Modernised using larger density (memory) components to reduce component count
@@ -26,6 +28,7 @@ while still remaining faithful to the original technology (i.e. no emulation)
 - All required materials and guides to order and assemble this project.
 - A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally. 
 - A selection of [fonts files](/fonts/README.md) for use with this project.
+- Customisable L2 ROM Images can be found here [TRS-80 Model 1 L2 Rom](https://github.com/kiwisincebirth/TRS-80)
 
 ## Features
 
