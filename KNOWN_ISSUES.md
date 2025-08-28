@@ -4,8 +4,6 @@ The following known issues were an the specific board versions. Note: If indicat
 in prior versions. Typically these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
 for the actual changes made.
 
-## Patches
-
 ## V1b
 
 I have found an issue on the silkscreen for Character Generator Dip Switch settings SW10-13 which affects
