@@ -5,10 +5,12 @@
 
 The files provided in this project are primarily:
 
-- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1a.pdf)
-- Gerber files for manufacture [JLCPCB ZIP](/pcb/TRS-80-MP_JLCPCBV1a.zip) and [PCBWAY ZIP](/pcb/TRS-80-MP_PCBWayV1a.zip)
-- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1a.csv)
+- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1b.pdf)
+- Gerber files for manufacture [JLCPCB ZIP](/pcb/TRS-80-MP_JLCPCBV1b.zip) and [PCBWAY ZIP](/pcb/TRS-80-MP_PCBWayV1b.zip)
+- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1b.csv)
+- A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV1b.html)
 - Also see the [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
+- Also see the [Ordering](ORDERING.MD) guide for how to place a component order
 
 And the following
 - A few compatible font have been provided in this project see [Fonts](/fonts/README.md)

@@ -46,9 +46,9 @@ Unreleased
 - Improved component identification in Bill of Materials
 - Major improvement in the Schematic diagram quality.
 
-## Version 1.0b (unreleased)
+## Version 1.0b (Current)
 
-Unreleased
+![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1b.png)
 
 This is a patch version of the 1.0a board with the items back-ported from V2
 - Z50 is now pin compatible with a Full Can (DIP14) oscillator.
@@ -63,11 +63,9 @@ Also made following improvements, which were also included in V2
 - Z31 component part numbers have been updated LS -> HCT throughout the project.
 - Completed the BOM, with full part numbers.
 
-## Version 1.0a (Current)
+## Version 1.0a (Past)
 
-August 2025
-
-![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1a.png)
+8th August 2025
 
 This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
 
@@ -81,8 +79,6 @@ This is a patch version of the 1.0 board with the following issue (discovered du
 ## Version 1.0 (Past)
 
 April 2025
-
-![MainboardFrontBuiltK1](/images/IMG_8736.jpeg)
 
 ### New Features
 

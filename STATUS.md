@@ -1,6 +1,11 @@
 
 # Project Status
 
+## Update 28th August 2025
+
+I have now published a V1b of the board that fixes some additional minor issues in V1.
+This also improves the BOM to include full component identifiers suitable for ordering from
+
 ## Update 9th August 2025
 
 I have now published a V1a of the board that fixes the minor issues found in V1 of the board
