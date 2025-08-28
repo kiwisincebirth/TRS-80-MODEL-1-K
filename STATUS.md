@@ -6,6 +6,17 @@
 I have now published a V1b of the board that fixes some additional minor issues in V1.
 This also improves the BOM to include full component identifiers suitable for ordering from
 
+Noting I think there is an issue in the silkscreen for Character Generator Dip Switches
+the silkscreen should read.
+
+```
+PROM TYPE  SW10  SW11  SW12  SW13
+28256      OFF   A14   A13   A12
+27512      A14   A15   A13   A12
+27256      A14   OFF   A13   A12
+27128      OFF   OFF   A13   A12
+```
+
 ## Update 9th August 2025
 
 I have now published a V1a of the board that fixes the minor issues found in V1 of the board
