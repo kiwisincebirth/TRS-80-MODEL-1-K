@@ -22,20 +22,21 @@ while still remaining faithful to the original technology (i.e. no emulation)
 - Is not compatible with Model 1 unregulated power supply, requires regulated 5V power
 - Is not a faithful recreation of the original Model 1, other projects exist for this.
 
-### Provided with this Project:
-- All required materials and guides to order and assemble this project
-- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally 
+### What is provided:
+- All required materials and guides to order and assemble this project.
+- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally. 
 - A selection of [fonts files](/fonts/README.md) for use with this project.
 
 ## Features
 
-The board started with the Japanese board as a base, because it is slightly upgraded over the US board with some notable 
-improvements that carry over:
+The board started with the Japanese board as a base, because it is slightly upgraded over the US board 
+with some minor improvements that carry over:
 - The Video sync has been upgraded with improved stability, and 50Hz support
 - The cassette input has minor improvements in the A/D design.
 
-Unfortunately this means the Japanese Service manual has be used ss a base for the basic schematic and component ID's as 
-they are quite different than the US Model 1.
+This means the Japanese Service manual has be used as a base for the basic schematic and component ID's as 
+they are quite different to the US Model 1. Having said this the board itself has deviated
+significantly so the provided schematics should be used.
 
 The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the 
 keyboard and Japanese Kana character set support.
@@ -73,17 +74,17 @@ If you intend to connect an expansion interface then the RAM in the interface wi
 
 All character generation (both alpha characters and graphics) has been replaced with a single character set 
 that includes all 256 characters defined in ROM (U37). Each character defines the full 6x12 pixel matrix that is 
-generated, and requires 16 bytes (only 12 are used) per character, for a total of 4k bytes for the entire character set. 
+generated. This approach is identical to the Gendon3 Model 1 font upgrade, and supports full lower case descenders.
+The fonts used are compatible with Glens Stuff TRS-80 Model 1 Clone.
 
-Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by Switches SW1.
-Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
-The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. 
+Each character requires 16 bytes (12 bytes used) per character, for a total of 4k bytes for the entire 256 character set.
+Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by onboard dip switches.
 
-Normal font ROM's are not compatible.
+A selection of [fonts files](/fonts/README.md) for use with this project. Normal font ROM's are not compatible.
 
 ### Video Output
 
-Composite video output is via standard a RCA connector or the original DIN plug, you can solder either onto the board. 
+Composite video output is via the original DIN plug, or an optional RCA connector, you can solder either onto the board. 
 The RCA connector is provided to be compatible with a larger range of external monitors, potentially more reliable and 
 less subject to noise.
 
