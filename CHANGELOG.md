@@ -53,7 +53,7 @@ Unreleased
 This is a patch version of the 1.0a board with the items back-ported from V2
 - Z50 is now pin compatible with a Full Can (DIP14) oscillator.
 - Inputs of spare gates are now tied a logic level, not left floating.
-- Improved (more modern) footprints for C19, C70, Q1, Q2, CR4.
+- Improved (more modern) footprints for C19, Q1, Q2, CR4.
 - Fixed multiple issues with small via's and thermal reliefs on power rails
 - Improved silkscreen for component identification, by moving labels under sockets
 

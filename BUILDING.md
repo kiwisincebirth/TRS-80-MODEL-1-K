@@ -36,7 +36,7 @@ Typically, solder components in order of the lowest profile to the tallest compo
   As a minimum you should be for CPU/RAM/ROM, but advisable to install for all.
 - Resistor Packs, RN1, RN2
 - Jumper Switch pack, SW10
-- Crystal Y1
+- Crystal Y1 - I used a 10.7 Mhz crystal without any issues
 - Jumper J18 - Should be shorted for normal CPU frequency
 - Jumper JP21, JP27 - Set the ROM Chip Type
 - Jumper J15, J16, J17, J20, J21 are optional only solder if needed
@@ -54,15 +54,10 @@ Typically, solder components in order of the lowest profile to the tallest compo
 
 The following patches should be noted for the board. These were discovered after initial PCB manufacture, and affect
 the boards design, and or the silkscreen. NOTE: The following have be fixed in V1a of the board.
-- The main power connector (J11) GND pins use thermal reliefs, ideally they shouldn't. To provide better GND connection, 
-  install wire from GND pin to the GND pins of the video connector.
 - To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50
-- For the main crystal oscillator (X1) the closest part I could find was a 10.7 Mhz crystal. the exact part is 
-  available but is expensive.
-- Z50 should be a SN7404N, not a 74LS04 as labelled. Z50 acts as an amplifier and requires an unbuffered part.
-- Z6, and Z65 should be a SN74LS92, not a 74HCT92 as labelled. The 7492 was never produced in HCT variant
-- Z32 can be a 74HCT00 just like other digital logic. Use of 74C00 is not required.
-- C51 (decoupling capacitor) duplicates C79. C51 can be omitted/removed as desired.
+
+Additionally, please see the [Known Issues](./KNOWN_ISSUES.md) which describe issues with the board design itself,
+that should also be addressed during build.
 
 ## Configuration
 
