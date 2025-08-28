@@ -1,5 +1,11 @@
 # Images
 
+## Renders of V1b
+
+![Front of Board](../pcb/TRS-80-MP-FrontV1b.png)
+
+![Back of Board](../pcb/TRS-80-MP-BackV1b.png)
+
 ## The Whole Board
 
 ![Detailed Top of Board](./IMG_8736.jpeg)
