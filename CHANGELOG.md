@@ -27,6 +27,7 @@ Unreleased
 - Added Power LED indicator (D1) near to the main power switch.
 - Fixed issue with TEST signal immediately disconnecting CPU from BUS (Marcel Erz)
 - Added (back) software character set control (Port FF Bit 7), as per JP board.
+- Changed meaning of SW10-SW13. Now ON => Logic 1, and OFF => 0 (rather than reverse)
 
 ### Minor Improvements  
 
