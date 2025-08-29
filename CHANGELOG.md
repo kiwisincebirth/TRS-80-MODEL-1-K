@@ -63,6 +63,7 @@ Also made following improvements, which were also included in V2
 - Z6 component part numbers have been updated HCT -> LS throughout the project.
 - Z31 component part numbers have been updated LS -> HCT throughout the project.
 - Completed the BOM, with full part numbers.
+- Improved edgecuts, especially around edge connector to support bevel
 
 ## Version 1.0a (Past)
 
