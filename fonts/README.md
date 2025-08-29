@@ -80,6 +80,8 @@ In this font, we assign all 256 characters to be graphics characters to render g
 This means each graphic pixel is a 3x3 actual raster pixels on the screen, with a total resolution of
 128 x 64 pixels, a 33% improvement over stand trs-80 graphics
 
+![8Bit Grahics Font](./Font-Graphics.png)
+
 This is an experimental font, not much use at present as it contains no regular characters
 In future a software controllable Bit to select this font is being implemented
 
