@@ -84,25 +84,28 @@ You will need to power on to perform necessary tests
 
 Follow these steps
 - Don't install any socketed IC's yet
-- Connect a regulated 5V supply
-- Using multimeter test for +5V on J17
-- With power turned On
-- Test for +5V on a few IC sockets Pin 14 or 16 around the board.
-- with Power disconnected Insert all simple socketed logic chips
+- Connect a regulated 5V supply to the board.
+- With power turned off, test for +5V on J17, located just behind the barrel jack.
+- With power turned on, test for +5V on a few IC sockets Pin 14 or 16 around the board.
+- Insert all simple socketed logic chips
     - Including all 74xx series logic
     - Including Z3 (SN75452), and Z25 (LM3900)
     - Do not insert the CPU, ROMs, character generator, and RAMs for now.
-- Powered on, use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
+- Use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
 - Connect a CRT (preferable) monitor, you should see a video raster.
-- Insert Video generation chips
-    - Static video RAM (Z9, Z10) - 2114.
-    - Insert character generator (U37). Ensure SW10 is configured for the the chip type, and character set.
+- Insert video generation chips
+    - Static video RAM (2114) chips.
+    - Insert character generator Rom. 
+- Ensure SW10 is configured for the chip type, and character set.
 - When powered on you should see random but recognisable characters.
-- Insert CPU, RAM, and ROM
-    - Insert CPU (Z48) Z-80
-    - Insert RAM (U15)
-    - Install ROM. Preferably use the latest 1.3 version. Ensure JP21, JP27 are configured for the chip type
-- You should see a prompt showing "MEM SIZE?" (if it is the normal system ROM). You should see random characters being input, this is normal
+- Program the main system ROM chip. Preferably use the latest 1.3 version.
+- With Power disconnected, Insert the main computer chips
+    - Insert Z-80 CPU chip
+    - Insert main RAM chip
+    - Install main ROM chip
+- Ensure JP21, JP27 are configured for the ROM chip type you are using
+- When powered on, you should see a prompt showing "MEM SIZE?" (if it is the normal system ROM). 
+    - You may see random characters being input, this is expected since keyboard is no connected
 - Install the keyboard with the IDC cable (if you installed a header).
 - Now, you should be able to use the system.
 

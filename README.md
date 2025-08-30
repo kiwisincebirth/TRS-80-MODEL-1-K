@@ -50,7 +50,7 @@ Noting traditional 74LS components should work, however this has not been tested
 ### CPU
 
 A double speed (3.56 Mhz) clock speedup mod has been applied. A jumper (J18) allows the clock to be slowed to normal. 
-This could be by external switch, or any future circuit potentially under software control. See U1, U2 in schematic.
+This could be by external switch, or any future circuit potentially under software control.
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
 The use of a modern CMOS Z-80 CPU is preferable
@@ -67,7 +67,7 @@ commonly used on some Model 1 peripherals, or the Model 3.
 
 ### System RAM
 
-The 4116 16kb DRAM has been replaced with a single static RAM chip (AS6C1008) U15 providing 48KB of RAM without the 
+The 4116 16kb DRAM has been replaced with a single static RAM chip (AS6C1008) providing 48KB of RAM without the 
 need for an external expansion interface or other add on card. Note this chip is 128 kBytes in size, but only 48kB 
 is being used. No provision for RAM paging has been made.
 
