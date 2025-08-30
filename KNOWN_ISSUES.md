@@ -18,6 +18,7 @@ Char   SW10  SW11  SW12  SW13
 27512   A14   A15   A13   A12
 27256   A14   OFF   A13   A12
 27128   OFF   OFF   A13   A12
+OFF = Logic 1 ; ON = Logic 0
 ```
 
 Previously it (*Incorrectly*) stated.
@@ -45,3 +46,10 @@ the boards design, and or the silkscreen. NOTE: The following have be fixed in V
 - Z32 can be a 74**HCT**00 just like other digital logic. The specific use of 74**C**00 is not required.
 - C51 (decoupling capacitor) duplicates C79 and is not required. While it does no harm it we be removed in future. 
 
+And the following issues were fixed from V1b and latter revisions
+- Thermal reliefs are missing on power rails connecting to most IC's. When soldering you need to use a higher
+  temperature soldering iron for these pins, and ensure the soldering iron comes into direct contact with the pcb pad
+- The footprints for C19 (capacitor), Q1, Q2 (transistors) is not modern, the legs of the components 
+  will need to be bent outwards and the component mounted higher to fit correctly 
+- The footprint for CR4 diode is too small making the diode harder to fit, you will need to bend the legs
+  exactly to fit, and possibly sanding the legs may make it easier to mount
