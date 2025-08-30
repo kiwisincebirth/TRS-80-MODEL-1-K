@@ -24,7 +24,7 @@ Before starting need to look at the solder jumpers on the rear of the board.
 - JP6 on the rear of the board is Required be configured as appropriate for either
   50Hz (PAL) or 60Hz (NTSC) video. Just need to solder a bridge on Pins 1&2 or 2&3
 - Other solder jumpers on the rear of the board can be changed at any time and have
-  reasonable default connections. If changing you will probably need to cut existing connection
+  reasonable default connections. If changing you may need to cut the existing connection
 
 Most components are labeled on the PCB, as you install each component you should check its value
 against what is in the BOM, and cross it off. An interactive BOM is provided to aid in this process
@@ -39,12 +39,12 @@ Typically, solder components in order of the lowest profile to the tallest compo
   The values are clearly labelled on the PCB. Note R37 is a 1/2 watt resistor and slightly bigger
   than the other resistors.
 - Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
-- Ceramic disc capacitors with specific values - C3, C13, C17, C18, C43, C48, C50, C57, C60, C61, C105, C105
+- Ceramic disc capacitors with specific values - C3, C13, C17, C18, C43, C48, C50, C57, C60, C61, C105, C106
   These capacitors are labelled on the board in the standard 3 digit notation, 2 digit value, 1 digit exponent
 - Then all remaining (Decoupling) 100nf (104) ceramic disk capacitors. There are approximately 50 of these.
 - Next install IC sockets, preferably all IC's should be socketed. Don't install IC's at this point. 
-  As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc (U9, U15, U37, U42, Z48). 
-  U50 is also advisable to install a socket for.
+  As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc, 
+  and some other more sensitive components Z3 (SN75452), Z25 (LM3900), U60 (74HCU04)
 - All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
 - 4 way DIP Jumper Switch pack, SW10
 - 10.6445 Mhz Crystal Y1. See Parts guide for more information.
@@ -76,7 +76,7 @@ tbd - info on setting up the timing signal
 
 ### AMPLIFIER and SPEAKER
 
-U4, U5, J8
+M1, M2, J8
 - U4/U5 audio amplifier module
 
 ## Patches
@@ -122,9 +122,7 @@ Configuration is provided by several jumper options
   - Note : This requires software to perform the programming.
 - SW10 - SW13 Configures the Character generator ROM
   - Note : See silkscreen for details of this.
-  - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
-- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for high speed.
-  - This can be routed to a switch, which could use a small capacitor to avoid bounce
+  - Note : Switched On = Logic 1, Switched Off = Logic 0
 - RV2 - configures the signal level (volume) sent to the audio amplifier
 - RV4 - horizontal position of video image
 - RV5 - vertical position of video image
