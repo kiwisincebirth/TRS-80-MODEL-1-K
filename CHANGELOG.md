@@ -49,6 +49,7 @@ Unreleased
 - Improved silkscreen for component identification, and configuration options
 - Improved component identification in Bill of Materials
 - Major improvement in the Schematic diagram quality.
+- Many component designators have changed from V1, so some V1 docs may not be accurate
 
 ## Version 1.0b (Current)
 
