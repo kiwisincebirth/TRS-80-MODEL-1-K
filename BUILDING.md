@@ -85,6 +85,9 @@ The following patches should be noted for the board. These were discovered after
 the boards design, and or the silkscreen.
 - nothing known at this time.
 
+Additionally, please see the [Known Issues](./KNOWN_ISSUES.md) which describe issues with the board design itself,
+that should also be addressed during build.
+
 ## Configuration
 
 Configuration is provided by several jumper options

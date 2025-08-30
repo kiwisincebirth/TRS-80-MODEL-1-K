@@ -10,6 +10,8 @@ while still remaining faithful to the original technology (i.e. no emulation)
 
 ![MainboardFront](/pcb/TRS-80-MP-FrontV2.png)
 
+For more images [See Here](./images/README.md)
+
 ### What this is:
 - Drop in (mostly) replacement main board for existing TRS-80 Model 1
 - Modernised using larger density (memory) components to reduce component count
@@ -22,10 +24,11 @@ while still remaining faithful to the original technology (i.e. no emulation)
 - Is not compatible with Model 1 unregulated power supply, requires regulated 5V power
 - Is not a faithful recreation of the original Model 1, other projects exist for this.
 
-### Provided with this Project:
-- All required materials and guides to order and assemble this project
-- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally 
+### What is provided:
+- All required materials and guides to order and assemble this project.
+- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally. 
 - A selection of [fonts files](/fonts/README.md) for use with this project.
+- Customisable L2 ROM Images can be found here [TRS-80 Model 1 L2 Rom](https://github.com/kiwisincebirth/TRS-80)
 
 ## Features
 
@@ -85,13 +88,14 @@ Dual Port SRAM
 
 All character generation (both alpha characters and graphics) has been replaced with a single character set 
 that includes all 256 characters defined in ROM (U37). Each character defines the full 6x12 pixel matrix that is 
-generated, and requires 16 bytes (only 12 are used) per character, for a total of 4k bytes for the entire character set. 
+generated. This approach is identical to the Gendon3 Model 1 font upgrade, and supports full lower case descenders.
+The fonts used are compatible with Glens Stuff TRS-80 Model 1 Clone.
 
-Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by DIP Switches.
-Also Port FF Bit 7 can be used to control the LSB of the character set selection 
+Each character requires 16 bytes (12 bytes used) per character, for a total of 4k bytes for the entire 256 character set.
+Multiple character sets  can be defined (depending on ROM size), the character set chosen is configured by onboard dip switches.
+Also Port FF Bit 7 can be used to control the LSB of the character set selection
 
-Since characters sets can control all lines of the raster true lower case descender's can be defined i.e. Gendon3.
-The fonts are compatible with Glens Stuff TRS-80 Model 1 Clone. Normal font ROM's are not compatible.
+A selection of [fonts files](/fonts/README.md) for use with this project. Normal font ROM's are not compatible.
 
 ### Video Output
 
@@ -143,7 +147,7 @@ Also provided for expansion are:
 NOTE: The DRAM multiplexing signals CAS, and MUX are no longer generated, and have be removed on the main expansion connector.
 These two expansion pins can be re-used for any future purpose, they are exposed as solder pads on the PCB 
 
-A prototyping area is self-explanatory, it has 11 chip supporting 14 or 16 pin power and locations for decoupling capacitors. 
+A prototyping area is self-explanatory, supports 14 or 16 pin power and locations for decoupling capacitors. 
 This was included to add minor new features without the fragility of piggyback boards, or IC's
 
 ### Power

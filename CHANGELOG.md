@@ -29,6 +29,7 @@ Unreleased
 - Added Power LED indicator (D1) near to the main power switch.
 - Fixed issue with TEST signal immediately disconnecting CPU from BUS (Marcel Erz)
 - Added (back) software character set control (Port FF Bit 7), as per JP board.
+- Changed meaning of SW10-SW13. Now ON => Logic 1, and OFF => 0 (rather than reverse)
 
 ### Minor Improvements  
 
@@ -56,7 +57,7 @@ Unreleased
 This is a patch version of the 1.0a board with the items back-ported from V2
 - Z50 is now pin compatible with a Full Can (DIP14) oscillator.
 - Inputs of spare gates are now tied a logic level, not left floating.
-- Improved (more modern) footprints for C19, C70, Q1, Q2, CR4.
+- Improved (more modern) footprints for C19, Q1, Q2, CR4.
 - Fixed multiple issues with small via's and thermal reliefs on power rails
 - Improved silkscreen for component identification, by moving labels under sockets
 
@@ -65,6 +66,7 @@ Also made following improvements, which were also included in V2
 - Z6 component part numbers have been updated HCT -> LS throughout the project.
 - Z31 component part numbers have been updated LS -> HCT throughout the project.
 - Completed the BOM, with full part numbers.
+- Improved edgecuts, especially around edge connector to support bevel
 
 ## Version 1.0a (Past)
 
