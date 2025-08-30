@@ -145,4 +145,5 @@ See the separate [Builders Guide](/BUILDING.md) for complete technical documenta
     - https://www.glensstuff.com/trs80/trs80.htm
 - VCF Forums for some help and guidance
     - https://forum.vcfed.org/index.php?threads/trs-80-model-1-board-design.1251905/
-- The Tandy Discord Channel for help and support
+- The Tandy Discord Channel for feedback, help and support
+    - Marcel Erz, Maboytim, MSly, Tuc
