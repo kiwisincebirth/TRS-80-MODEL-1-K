@@ -1,6 +1,10 @@
 
 # Project Status
 
+## Update 1 September 2025
+
+Added a new Folder "Roms" to the project.
+
 ## Update 28th August 2025
 
 I have now published a V1b of the board that fixes some additional minor issues in V1.
