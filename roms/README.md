@@ -2,23 +2,24 @@
 
 ## Introduction
 
-The following are some ROM images provided for use in the Model 1k project
+The following are some ROM images provided for use in the Model 1k project.
+You will need a (E)EPROM programmer to program your ROM
 
-Each ROM file is 16Kb in length, and can be appended and written into a paged ROM.
+Each individual ROM file is 16Kb in length, and can be appended and written into a paged ROM.
 
 If programming the larger (E)EPROM's you can have 2 or 4 different (paged) ROM images on the same Chip.
-When programming each page is 16kB in size, so a 12Kb ROM image needs to padded to 16kB then appended
+When programming each page is 16kB in size, so a 12Kb ROM image is padded to 16kB then appended
 with the other ROM images you want on the Chip.
 
-For convenience all ROM's included here are 16KB in length
+For convenience all ROM's included here are a multiple of 16KB in length
 
 ### Level 2 Basic
 
 Two variants are provided
 - Level 2 Basic V1.3
-- Level 2 Basic V1.3 Patched
+- Level 2 Basic V1.3 (Patched)
 
-The patched version contains the following enhancements
+The Patched version contains the following enhancements:
 - FreHD Autoboot support.
 - Lower Case Mod support. This means that when displaying a character on the screen alphabetic
   character A-Z and a-z are not translated to the 0 - 31 characters. This means that lower case is 
@@ -37,7 +38,8 @@ See [TRS-80 Diagnostic ROM](https://github.com/misterblack1/trs80-diagnosticrom)
 
 ## Combinations
 
-I have included 4 combinations for 32kb and 64 kb ROMS, so including all the files we have the following:
+I have included 4 combinations for 32kb and 64kb ROMS, so including all the files
+we have the following images that can be download:
 
 | File             | Bank 1            | Bank 2            | Bank 3            | Bank 4     | Size |
 |------------------|-------------------|-------------------|-------------------|------------|------|
@@ -49,4 +51,4 @@ I have included 4 combinations for 32kb and 64 kb ROMS, so including all the fil
 | PatchedDiag      | Level 2 (Patched) | Diagnostic        | -                 | -          | 32k  |
 | trs80m13diag     | Diagnostic        | -                 | -                 | -          | 16k  |
 
-
+Note: you can write a smaller file to a larger ROM, but not the other way round!

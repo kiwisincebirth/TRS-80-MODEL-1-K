@@ -102,15 +102,9 @@ See the [FreHD folder](/frehd/README.md) for a 40 pin FreHD that connects direct
 
 Routing an external 40 pin ribbon cable to the connector is also possible, bypassing the 'unreliable' card edge connector.
 
-Also provided for expansion are:
-- Pin Header (J13) for internal audio amplifier, taken from cassette output
-- Pin Header (J14) for internal reset signal, mirroring the external reset switch
-- Pin Headers (J15,J16) are for internal 5V power for any other devices
-- Pin Headers (J17) for internal (un-switched) +5V (both pins) power, for any devices requiring constant power
-
 NOTE: The DRAM multiplexing signals CAS, and MUX are no longer generated, and have be removed on the main expansion connector.
 
-A prototyping area is self explanatory, it has 12 chip supporting 14 or 16 pin power and locations for decoupling capacitors. 
+A prototyping area is provided, it supports 14 or 16 pin power and locations for decoupling capacitors. 
 This was included to add minor new features without the fragility of piggy back boards, or IC's
 
 ### Power

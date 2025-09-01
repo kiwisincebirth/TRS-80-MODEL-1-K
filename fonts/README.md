@@ -9,7 +9,7 @@ into a paged character generator ROM.
 
 The system can accept ROM of 128 to 512 kBit, affording between 4 and 16 fonts.
 
-### General Character Sets
+### Character Sets
 
 Provided are six traditional TRS-80 font sets (including 2 derivatives).
 
@@ -24,6 +24,10 @@ In Summary:
 * 15 - duplicates AZ, ↑ ↓ ← → £/¥
 * 17 - no duplicates, ↑ ↓ ← → ` ~ (derivative)
 * 18 - duplicates AZ, ↑ ↓ ← → ` ~ (derivative)
+
+In referance to Duplicates vs No Duplicates
+* No Duplictaes - refers to the first 32 characters containing special Gliphs (see screenshots below)
+* Duplicates - refers to the uppercase characters being duplicated into the first 32 characters of the font. 
 
 Each font has 2 versions
 * Original - Is the original font, converted to 4KB format, but otherwise unmodified.
@@ -64,13 +68,13 @@ See The following discussion:
 
 [GENDON3 improved character generator for the Model I](https://forum.vcfed.org/index.php?threads/gendon3-improved-character-generator-for-the-model-i-discussion.59498)
 
-### Glens Character Rom
+### Glens Stuff M1 Character Set
 
 This is an unmodified copy (which is fully compatible) of the font file used in the following project
 
 [Glens Stuff TRS-80 Clone](https://www.glensstuff.com/trs80/trs80.htm)
 
-### Graphics 8 bit Font
+### Graphics 8 Bit Only Font
 
 In a regular TRS-80 64 characters of the regular font are assigned to represent graphic pixels in a 2 x 3 matrix.
 This gives a total of 6 pixels per character, each pixel utilises 3 horizontal and 4 vertical raster sub-pixels
