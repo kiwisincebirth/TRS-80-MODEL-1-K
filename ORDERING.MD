@@ -31,9 +31,9 @@ The BOM contains the following important fields
 The following components are Included in the BOM but are considered obsolete/hard to find and may 
 need to be sourced separately as mainstream suppliers dont necessarily hold them in stock.
 See the Parts Guide for further info on suitable replacements and where they may be ordered:
-* Z80 CPU (Z48)
+* The main Z80 CPU
 * Video Memory Chip(s)
-* 10.6445 Mhz Crystal Oscillator (Y1)
+* 10.6445 Mhz Crystal Oscillator
 
 ### Component Choice
 
@@ -49,9 +49,13 @@ and remove the primary component from the BOM prior to ordering
 
 ### Optional Components
 
-IC Sockets are not included in the BOM. While optional they are highly recommended for all IC's, 
+IC Sockets are not included in the BOM. While optional, they are highly recommended for all IC's, 
 and should be considered mandatory for all large scale components, e.g. CPU,
 RAM (including Video RAM), and ROM (including Character Generator). 
+
+IC sockets typically come in two types, traditional with square/flat holes, and the newer rounded
+machine pins. In my experience I have found the traditional square sockets to be more forgiving
+and are probably better for the larger IC's.
 
 Several optional Pin Headers have not been included in the BOM as
 they are not necessary in a standard configuration, and can be added at a latter date

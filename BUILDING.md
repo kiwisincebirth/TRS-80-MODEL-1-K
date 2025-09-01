@@ -30,7 +30,7 @@ against what is in the BOM, and cross it off. An interactive BOM is provided to 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in any direction
 - Diodes, fitting CR5-CR8, and then CR4 last
-- Ceramic capacitors with specifiv values - C3, C13, C17, C18, C43, C48, C50, C57, C60
+- Ceramic capacitors with specific values - C3, C13, C17, C18, C43, C48, C50, C57, C60
 - Decoupling (100nf) ceramic Capacitors, these are all remaining capacitors.
 - Install any IC sockets you want, don't insert IC's at this point. 
   As a minimum you should be for CPU/RAM/ROM, but advisable to install for all.
