@@ -100,15 +100,13 @@ Typically, solder components in order of the lowest profile to the tallest compo
 
 What follows is specific guidance.
 
+### Traditional vs Modern Connectors
+
+tbd info on installing traditional vs modern connections
+
 ### Main Clock
 
-tbd info on alternate installation
-
-M1, M2, J8
-
-### Legacy Connectors
-
-tbd info on installing modern vs legacy connections
+tbd info on alternate clock installation
 
 ### Power Connector
 

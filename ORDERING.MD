@@ -80,13 +80,31 @@ as it is expected these components be installed manually possibly by the end use
 
 ## Additional Notes
 
-### Crystal Oscillator
+### Alternate Main Clock
 
-2 options are possible - 74HCU04 (default approach in BOM) with a quart crystal, 
-or using a Dip 14 CAN oscillator.
-Noting the 74HCU04 pinout was designed to be pin (1,7,8,14) compatible with a CAN oscillator 
-and thus can be replaced directly, then all discrete components (including crystal) removed.
+The main board (V1-RevB and latter) supports two types of main Clock
+* A standard quartz crystal with 7404 circuit (the traditional design)
+* A modern DIP-14 Can oscillator (discussed below)
 
-A programmable oscillator is available from DigiKey, ("ECS-P145") and can exactly match 
-the expected frequency, this should improve reliability, the part itself has not been tested.
+A DIP-14 Can oscillator is a self-contained metal package (similar to normal quarts crystal) 
+that comes in a DIP-14 pinout, but only has 4 pins exposed.
+* Pin 1 Enable
+* Pin 7 Ground
+* Pin 8 Main Clock TTL Level Output
+* Pin 14 VCC
+
+This component outputs a TTL level clock which is directly usable, without the need for any 
+external components. The existing circuit (and the 7404 pinout) has been designed so
+the Oscillator can be installed in place of the 7404.
+This means all the supporting circuitry (including the quartz crystal) can be removed.
+
+A programmable oscillator is available from DigiKey, ("ECS-P145") and can exactly match
+the required frequency, improving reliability, the part itself has not been tested.
 Owing to height restrictions it is unlikely the oscillator could be socketed.
+
+* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
+* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
+* https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
+
+Also the following, (more a curiosity)
+* https://github.com/schlae/ClockInACan

@@ -1,10 +1,14 @@
 # Parts Guide
 
+This guide serves as a parts reference, providing additional details for some of the
+more difficult or optional parts of the build. Please refer to the BOM for the official part list,
+and the [Ordering Guide](./ORDERING.MD) which explains how to place an order
+
 ## Hard to Find Parts
 
-### Z80 CPU
+### ZILOG Z80 CPU
 
-The part is no longer in production, and needs to obtained seperatly. Preference if for:
+The part is no longer in production, and needs to obtained separately. Preference is for:
 * CMOS variant, but this is not critical since older NMOS TTL is compatible
 * 6MHz since it is possible to overclock the computer to 5.3Mhz
 
@@ -22,9 +26,9 @@ Mouser Stock 10.695Mhz crystals (as well as 10.7Mhz)
 * https://www.aliexpress.com/item/1005003752108473.html
 * https://www.alibaba.com/product-detail/QZ-new-high-quality-10-7M_1601237726803.html
 
-### Video Memory
+### Video Memory (V1)
 
-1k x 4 bit SRAM - TMS2114L-15 or uPD2114LC-5 or equivalent
+Dual 1k x 4 bit SRAM - TMS2114L-15 or uPD2114LC-5 or equivalent
 
 Several Providers of this component have been identified
 * https://www.rocelec.com/part/01t4w00000PQTxNAAX-TMS2114L15NL
@@ -37,6 +41,24 @@ Datasheet's
 * https://www.lcsc.com/datasheet/C20918461.pdf
 * https://www.silicon-ark.co.uk/datasheets/uPD2114l-datasheet-nec.pdf
 
+### Video Memory (V2)
+
+Single 1k x 8 bit Dual Port SRAM. There are 2 options, either IDT7130LA55P 
+or a CY7C130-55PC (older part number). Both are identical and are available on the 
+secondary market.
+Do Not Use IDT7140, CY7C140, CY7C141, these are Slave devices and NOT compatible
+
+IDT7130LA55P
+* https://octopart.com/search?q=IDT7130LA55P
+* https://www.renesas.com/en/products/memory-logic/multi-port-memory/asynchronous-dual-port-rams/7130-1k-x-8-dual-port-ram
+* https://www.renesas.com/en/document/dst/713040-datasheet
+
+CY7C130-55PC
+* https://octopart.com/search?q=CY7C130-55PC
+* https://www.rocelec.com/part/01t4w00000POumrAAD-CY7C13055PC
+* https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
+* https://www.silicon-ark.co.uk/datasheets/CY7C131-datasheet-cypress.pdf
+
 ## Alternate Part Usage
 
 The design of the board allows for several components to be chosen as either Traditional
@@ -44,9 +66,11 @@ or a more modern component, this is typically the external connectors and switch
 
 ### Video Connector
 
-The RCA video connector can be obtained easily on Ali express, just search for "RCA PCB"
-The datasheet for the part is provided here.
+The RCA video connector can be obtained easily on Ebay or Ali express, just search for "gold plated RCA connector"
+the socket is fairly distinctive. Below are a couple of links for normal online sellers
+* https://partsconnexion.com/vampire-connector-pcb2f-a-series-right-angled-rca-female-jack-pc-mount-black-red/
 * https://neurochrome.com/products/rca-connectors
+* https://www.elecbee.com/en-4039-pcb-connector-rca-female-angled-gold-plated-with-washer-and-nuts
 
 The traditional (DIN) video connector is described below
 
@@ -58,7 +82,7 @@ Modern Power Switch
 * https://www.altronics.com.au/p/s1360-salecom-dpdt-horizontal-action-pcb-mount-mini-toggle-switch/
 * https://www.salecom.com/en/product/t8021.html
 
-Traditional Power Switch can be sourced from
+The traditional Power Switch can be sourced from...
 
 ### Reset Switch
 
@@ -68,22 +92,7 @@ The modern Reset Pushbutton
 * https://www.altronics.com.au/p/s1495-salecom-spdt-mom.-90-deg.-pcb-sub-mini-pushbutton-switch/#/
 * https://www.salecom.com/en/product/es-22a.html
 
-### Alternate Main Clock
-
-The main board (V1-RevB and latter) supports two types of main Clock
-* A standard quartz crystal with 7404 circuit
-* A modern DIP-14 self-contained oscillator
-
-The advantage of the self-contained oscillator is that it replaces the
-entire close circuit with a single module which is installed in place of the 7404
-and all the supporting circuitry can be removed. Digikey provide a programmable
-module which can re-produce the clock frequency to a high accuracy
-* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
-* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
-* https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
-
-Also the following, (more a curiosity)
-* https://github.com/schlae/ClockInACan
+The traditional Reset button can be sourced from...
 
 ## Parts Reference
 
