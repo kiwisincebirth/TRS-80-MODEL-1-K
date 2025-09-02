@@ -10,6 +10,7 @@ Added a new Folder "Roms" to the project.
 I have now published a V1b of the board that fixes some additional minor issues in V1.
 This also improves the BOM to include full component identifiers suitable for ordering.
 There is also some improvements backported from V2 - Please see the [Changelog](CHANGELOG.md)
+This release also includes the Kicad files, since this is the last V1 release I intend to make.
 
 Noting I think there is an issue in the silkscreen for Character Generator Dip Switches
 the silkscreen should read.
