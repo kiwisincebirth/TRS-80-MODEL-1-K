@@ -1,7 +1,7 @@
 # Known Issues
 
-The following known issues were an the specific board versions. Note: If indicated the issues may also exist
-in prior versions. Typically these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
+The following known issues were found on the specific board versions. Note: If indicated the issues may also exist
+in prior versions. Typically, these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
 for the actual changes made.
 
 ## V1b

@@ -45,7 +45,6 @@ and remove the primary component from the BOM prior to ordering
 * Modern Power Switch (SW1) -> vs optional traditional locking pushbutton (S1) 
 * Modern Reset Button (SW2) -> vs optional traditional pushbutton (S2)
 * Video Output 5 Pin DIN" Connector (2) -> vs optional RCA connector (J12)
-* Crystal Oscillator -> See Notes Additional below. 
 
 ### Optional Components
 
