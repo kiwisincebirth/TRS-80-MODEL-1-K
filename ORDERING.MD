@@ -29,8 +29,8 @@ The BOM contains the following important fields
 ### Hard to Find
 
 The following components are Included in the BOM but are considered obsolete/hard to find and may 
-need to be sourced separately as mainstream suppliers dont necessarily hold them in stock.
-See the Parts Guide for further info on suitable replacements and where they may be ordered:
+need to be sourced separately as mainstream suppliers don't necessarily hold them in stock.
+See the [Parts Guide](PARTS_GUIDE.md) for further info on suitable replacements and where they may be ordered:
 * The main Z80 CPU
 * Video Memory Chip(s)
 * 10.6445 Mhz Crystal Oscillator
@@ -38,9 +38,9 @@ See the Parts Guide for further info on suitable replacements and where they may
 ### Component Choice
 
 The board offers several choices on several connectors between a primary modern 
-vs optional traditional part.  Noting the BOM includes the primary component, 
+vs optional traditional part.  Noting the BOM **includes** the primary component, 
 so if you intend to use the optional component you need to source it separately, 
-and remove the primary component from the BOM prior to ordering
+and **remove the primary component** from the BOM prior to ordering
 
 * Modern Power Switch (SW1) -> vs optional traditional locking pushbutton (S1) 
 * Modern Reset Button (SW2) -> vs optional traditional pushbutton (S2)
@@ -63,20 +63,17 @@ For V2 of the board an optional onboard Audio Amplifier Module and Speaker can b
 installed. This requires specific sourcing and mounting and thus excluded from the BOM.
 See Parts Guide for more information
 
-## Manufacturing
+## Also Required
 
-### Unmounted Components
+This project only includes the components to produce the mainboard, you also need:
 
-A few components have been included in the BOM but will not be installed by a manufacturing process
-as it is expected these components be installed manually possibly by the end user.
-
-* Keyboard Pin Header (CN3) - Should be mounted according to your preference.
-* Large Power Capacitor (C101) - Mount Horizontally to reduce height
-* 10.6445 Mhz Crystal Oscillator (Y1) - Must be mounted horizontally for height clearance
-* C61 Patch - Mount only if necessary to make main oscillator run.
-* 40 Pin Internal IO Pin Header (J20, J21) - Should be mounted when and only IF needed.
-* Power LED (V2 Only) - May not be wanted, nor is it really necessary
-* Pin Jumpers - For shorting config Pins are included but not mounted
+* Power Supply - A 5V regulated power supply with barrel jack (centre positive).
+* Keyboard - A TRS-80 Model 1 keyboard with 20 pin connector  
+* Monitor -  A monitor capable of displaying NTSC (or PAL) composite, non interlaced, monochrome video. Options:
+  * An original TRS-80 Model 1 monitor, or compatible CRT monitor
+  * Alternately many modern LCD monitors / TV's do support a composite input
+  * Or an external converter that converts to modern standard e.g. RGB2HDMI
+* Case - A standard TRS-80 Model 1 case is required
 
 ## Additional Notes
 

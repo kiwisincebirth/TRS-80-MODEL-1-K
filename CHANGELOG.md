@@ -73,8 +73,8 @@ Also made following improvements, which were also included in V2
 This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
 
 - An optional C61 (100pf) has been added connecting pins 5 to 7 of Z50. 
-  It was discovered during testng to be needed get the main crystal oscillator to function.
-  NOTING however this may not be required in all circumstances
+  It was discovered during initial testing (V1) to be needed get the main crystal oscillator to function.
+  NOTE This **may not be required** in all circumstances.
 - The main power connector (J11) GND pin thermal reliefs have been removed.
 - Z32, Z50, and Z65 component part numbers have been updated throughout the project.
 - C51 (duplicates C79) was removed.

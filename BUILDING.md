@@ -46,9 +46,9 @@ and choose which font via DIP switches. See the FONTS folder for these images
 ### Solder Jumpers
 
 Before starting need to look at the solder jumpers on the board.
-- JP6, JP7, JP8, JP10 on the board are required be configured as appropriate for either
-  50Hz (PAL) or 60Hz (NTSC) video. You just need to solder a bridge on Pins 1&2 or 2&3
-- Other solder jumpers on the board can be changed at any time and have
+- JP6, JP7, JP8, JP10 are required be configured as appropriate for either
+  50Hz (PAL) or 60Hz (NTSC) video. You just need to solder a bridge on Pins 1&2 (NTSC) or 2&3 (PAL)
+- Other solder jumpers can be changed at any time and have
   reasonable default connections. If changing you will probably need to cut existing connection
 
 ### Patches
@@ -58,6 +58,7 @@ Before beginning the main assembly you should understand the following limitatio
 The following patches should be noted for the board. These were discovered after initial PCB manufacture, and affect
 the boards design, and or the silkscreen. NOTE: The following have be fixed in V1a of the board.
 - To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50
+  - In latter revisions of the board C61 was added to the board to simplify this installation.
 
 Additionally, please see the [Known Issues](./KNOWN_ISSUES.md) which describe issues with the board design itself,
 that should also be addressed during build.
@@ -73,44 +74,70 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
 - Ceramic disk capacitors with specific values 
   - C3, C13, C17, C18, C43, C48, C50, C57, C60
-- Then all remaining (Decoupling) 100nf (104) ceramic disk capacitors. 
+- Then all remaining ceramic disk capacitors.
+  - These should all be 100nf (104) in value
   - There are approximately 50 of these.
+  - While installing (using a Multimeter), please check the power rail is not shorted
 - Install any IC sockets, preferably all IC's should be socketed. Don't install IC's at this point.
   - As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc,
   - Some other more sensitive components Z3 (SN75452), Z25 (LM3900), Z50 (SN7404N)
 - All Resistor Networks. These are labelled as RN1, RN2 on the PCB
 - 4 way DIP Jumper Switch pack, SW10
-- Main 10.6445 Mhz Crystal Y1. (See Below).
+- Main 10.6445 Mhz Quartz Crystal Y1.
+  - If installing a tall component it must be mounted horizontally for height clearance
+  - See section below additional/alternate installation.
 - Jumper J18 - Should be shorted for normal CPU frequency
 - Jumper JP21, JP27 - Needs to be jumpered to set the main ROM Chip Type
 - Solder any optional Pin Headers (See Below)
 - Cassette Relay K1
 - Transistors Q1, Q2
 - Power barrel Jack J11
-- Electrolytic Capacitors C19, C70, C101. 
+- Electrolytic Capacitors C19, C70, and C101. 
   - These need to be installed in the correct polarity
-- Install remaining Electrolytic Capacitors, these are all 10uF in value
+  - The large capacitor (C101) should be mounted horizontally to reduce height
+- Install all remaining electrolytic capacitors
+  - These are all 10uF in value, and most are power decoupling
+  - After installing (using a Multimeter), please check the power rails are not shorted
 - Cassette DIN Socket J3
-- Video Output J2 or J12. If soldering DIN socket, don't solder (remove) the centre pin.
-- Main power switches, solder either SW1 or S1,
-- Main Reset switch solder either SW2 or S2
-- Keyboard header CN3, on front (or  rear) of the PCB.
+- Video output connector J2 (DIN) or J12 (RCA). 
+  - If soldering DIN socket, don't solder (remove) the centre pin from the socket
+- Main Power switch, solder either S1 (Traditional) or SW1 (Modern Toggle) switch.
+- Main Reset switch, solder either S2 (Traditional) or SW2 (Modern) push button switch.
+- Keyboard header CN3, Can be mounted on front (or  rear) of the PCB.
+  - Should be mounted carefully depending on the cable connecting to the keyborard
+
 
 ## Assembly Options
 
 What follows is specific guidance.
 
-### Traditional vs Modern Connectors
-
-tbd info on installing traditional vs modern connections
-
 ### Main Clock
 
-tbd info on alternate clock installation
+### Alternate Main Clock
 
-### Power Connector
+The main board (V1-RevB and latter) supports two types of main Clock
+* A standard quartz crystal with 7404 circuit (the traditional design)
+* A modern DIP-14 Can oscillator (discussed below)
 
-tbd info on regulated PSU and cable, maybe about using USB
+A DIP-14 Can oscillator is a self-contained metal package (similar to normal quarts crystal)
+that comes in a DIP-14 pinout, but only has 4 pins exposed.
+* Pin 1 Enable
+* Pin 7 Ground
+* Pin 8 Main Clock TTL Level Output
+* Pin 14 VCC
+
+This component outputs a TTL level clock which is directly usable, without the need for any
+external components. The existing circuit (and the 7404 pinout) has been designed so
+the Oscillator can be installed in place of the 7404.
+This means all the supporting circuitry (including the quartz crystal) can be removed.
+
+A programmable oscillator is available from DigiKey, ("ECS-P145") and can exactly match
+the required frequency, improving reliability, the part itself has not been tested.
+Owing to height restrictions it is unlikely the oscillator could be socketed.
+
+* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
+* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
+* https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
 
 ## Configuration
 
@@ -137,16 +164,24 @@ The following optional headers Pins are provided, you can choose to install or n
 - J14 - Used to connect an external reset button, mirroring the external reset switch
 - J15, J16 - are pin headers that provide 5v power for any internal board or accessory
 - J17 - an alternate way to supply (or use) 5V power (both pins) to the board. This is before the power switch
-- J20 - Used for installing an internal expansion card or ribbon cable. J21 provides power to an internal card.
+- J20 - Used for installing an internal expansion card or ribbon cable. 
+- J21 - Used to provide power to an internal expansion card.
 
 ## Testing
+
+Before testing you will need a regulated power supply that provides 5V. The connector is a center positive
+barrel jack, and is quite common to find this connection in 12V power supplies, however these are not
+compatable. The board performs no power regulation so a good quality power source is required.
+
+**WARNING!!** - Connecting a 12V Power supply will probably **damage several components on the board**.
+Please **test the power supply** for correct voltage and polarity **before connecting**.
 
 For each of the step (when inserting components) ensure power is turned off and disconnected.
 You will need to power on to perform necessary tests
 
 Follow these steps
 - Don't install any socketed IC's yet
-- Connect a regulated 5V supply to the board.
+- Connect the power supply to the board.
 - With power turned off, test for +5V on J17, located just behind the barrel jack.
 - With power turned on, test for +5V on a few IC sockets Pin 14 or 16 around the board.
 - Insert all simple socketed logic chips
@@ -154,7 +189,9 @@ Follow these steps
   - Including Z3 (SN75452), and Z25 (LM3900)
   - Do not insert the CPU, ROMs, character generator, and RAMs for now.
 - Use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
-- Connect a CRT (preferable) monitor, you should see a video raster.
+  - If not found then need to trace back to main oscillator
+  - Consider installing C61 (Patch) to make main oscillator run.
+- Connect a monitor (CRT preferable), you should see a video raster.
 - Insert video generation chips
   - Static video RAM chips.
   - Insert character generator ROM.
@@ -166,7 +203,7 @@ Follow these steps
   - Install main ROM chip
 - Ensure JP21, JP27 are configured for the ROM chip type you are using
 - When powered on, you should see a prompt showing "MEM SIZE?" (if it is the normal system ROM).
-  - You may see random characters being input, this is expected since keyboard is no connected
+  - You may see random characters being input, this is expected since keyboard is not connected
 - Install the keyboard with the IDC cable (if you installed a header).
 - Now, you should be able to use the system.
 
