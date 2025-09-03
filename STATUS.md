@@ -1,7 +1,11 @@
 
 # Project Status
 
-## Update 1 September 2025
+## Update 3 Sept 2025
+
+An individual PCB can now be ordered from [Tuc's Workbench](https://shop.tucs-workbench.com/products/trs-80-model-i-revision-k)
+
+## Update 1 Sept 2025
 
 Added a new Folder "Roms" to the project.
 

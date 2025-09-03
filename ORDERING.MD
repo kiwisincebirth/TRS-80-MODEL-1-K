@@ -11,6 +11,8 @@ For JLCPCB The following notes apply when ordering
 For PCBWAY the following notes apply when ordering
 * tbd
 
+An individual PCB can be ordered from [Tuc's Workbench](https://shop.tucs-workbench.com/products/trs-80-model-i-revision-k)
+
 ## Ordering Parts
 
 ### Digikey
