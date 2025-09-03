@@ -35,9 +35,10 @@ For more images [See Here](./images/README.md)
 - Multiple character sets can be defined, the character set chosen is by dip switches.
 - The Video sync has been upgraded with improved stability, and 50Hz PAL support.
 - Video Output is via traditional DIN, or optional RCA socket.
-- An internal 40 pin expansion header is provided, and a FreHD plug in card is provided.
+- An internal 40 pin header is provided for plug in expansion cards
+- A [FreHD board](./frehd/README.md) has been developed primarily for internal expansion.
 - Power and Reset switches can be either traditional or modern components. 
-- The cassette input has minor improvements in the A/D design. (Japan Model 1)
+- The cassette input has minor improvements in the A/D design.
 - All internal power regulation circuitry has been removed, now externally provided.
 - Overall modernisation, including full GND planes, decoupling capacitors, silkscreen. 
 - A prototyping area is provided on the board, for user provided enhancements.
