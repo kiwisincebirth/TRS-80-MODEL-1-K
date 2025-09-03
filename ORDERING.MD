@@ -1,17 +1,17 @@
 
 # Ordering Guide
 
-## Ordering PCB 
+## Ordering the PCB 
 
-Either PCBWAY or JLCPCB can be used, and specific output files have been generated for each supplier.
+An individual PCB can be ordered from [Tuc's Workbench](https://shop.tucs-workbench.com/products/trs-80-model-i-revision-k)
+
+If you want to get manufactured yourself. Either PCBWAY or JLCPCB can be used, and specific output files have been generated for each supplier.
 
 For JLCPCB The following notes apply when ordering
 * tbd
 
 For PCBWAY the following notes apply when ordering
 * tbd
-
-An individual PCB can be ordered from [Tuc's Workbench](https://shop.tucs-workbench.com/products/trs-80-model-i-revision-k)
 
 ## Ordering Parts
 
