@@ -181,6 +181,8 @@ You will need to power on to perform necessary tests
 
 Follow these steps
 - Don't install any socketed IC's yet
+- Before connecting power (using a multimeter) ensure the 5V and GND rails are not shorted
+  - This can be done on any IC socket generally Pin's 14/16 and Pin's 7/8.  
 - Connect the power supply to the board.
 - With power turned off, test for +5V on J17, located just behind the barrel jack.
 - With power turned on, test for +5V on a few IC sockets Pin 14 or 16 around the board.
