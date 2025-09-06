@@ -20,8 +20,8 @@ For more images [See Here](./images/README.md)
 - Remains faithful to the use of traditional thru-hole parts, and discrete logic IC's
 
 ### What this isn't:
-- Is not compatible with 32Kb external RAM expansion, external RAM will need to be disabled
-- Is not compatible with Model 1 unregulated power supply, requires regulated 5V power
+- Is not compatible with 32Kb external RAM expansion, external RAM will need to be disabled.
+- Is not compatible with Model 1 power supply. It requires a fully regulated 5V DC power supply.
 - Is not a faithful recreation of the original Model 1, other projects exist for this.
 
 ### Features at a Glance
@@ -43,23 +43,21 @@ For more images [See Here](./images/README.md)
 - Overall modernisation, including full GND planes, decoupling capacitors, silkscreen. 
 - A prototyping area is provided on the board, for user provided enhancements.
 
-### What is provided:
-- All required materials and guides to order and assemble this project.
-- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally. 
-- A selection of [Font Files](/fonts/README.md) for use with this project.
-- A selection of [ROM Images](/roms/README.md) for use with this project.
-
-## Design & Features
-
-See the separate [Features](./FEATURES.md) for the overall design and full list of features 
-
-## Status / Future
-
-See the separate [Status and Future](/STATUS.md) which provides a mini update blog for this project
+See the separate [Features](./FEATURES.md) for the overall design and full list of features
 
 ## Building
 
 See the separate [Builders Guide](/BUILDING.md) for complete technical documentation
+
+Included with this project are:
+- All required materials and guides to order and assemble this project.
+- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
+- A selection of [Font Files](/fonts/README.md) for use with this project.
+- A selection of [ROM Images](/roms/README.md) for use with this project.
+
+## Status / Future
+
+See the separate [Status and Future](/STATUS.md) which provides a mini update blog for this project
 
 ## Credits
 
@@ -70,4 +68,4 @@ See the separate [Builders Guide](/BUILDING.md) for complete technical documenta
 - VCF Forums for some help and guidance
     - https://forum.vcfed.org/index.php?threads/trs-80-model-1-board-design.1251905/
 - The Tandy Discord Channel for feedback, help and support
-    - Marcel Erz, Maboytim, MSly, Tuc
+    - MSly, Marcel Erz, Maboytim, Tuc

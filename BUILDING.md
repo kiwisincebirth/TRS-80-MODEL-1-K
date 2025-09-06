@@ -16,6 +16,7 @@ The files provided in this project are primarily:
 And the following
 - A few compatible font have been provided in this project see [Fonts](/fonts/README.md)
 - A few ROM image files have been provided in this project see [ROMS](/roms/README.md)
+- A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
 
 ## Introduction
 
@@ -111,8 +112,6 @@ Typically, solder components in order of the lowest profile to the tallest compo
 
 What follows is specific guidance.
 
-### Main Clock
-
 ### Alternate Main Clock
 
 The main board (V1-RevB and latter) supports two types of main Clock
@@ -169,9 +168,9 @@ The following optional headers Pins are provided, you can choose to install or n
 
 ## Testing
 
-Before testing you will need a regulated power supply that provides 5V. The connector is a center positive
+Before testing, you will need a regulated power supply that provides 5V. The connector is a center positive
 barrel jack, and is quite common to find this connection in 12V power supplies, however these are not
-compatable. The board performs no power regulation so a good quality power source is required.
+compatible. The board performs no power regulation so a good quality power source is required.
 
 **WARNING!!** - Connecting a 12V Power supply will probably **damage several components on the board**.
 Please **test the power supply** for correct voltage and polarity **before connecting**.
@@ -216,3 +215,29 @@ Additional Testing to consider:
 - 32 character mode PRINT CHR$(xx) or right arrow and clear on the keyboard
 - Another program to try ; 10 PRINT MEM;:IF MEM >100 GOSUB 10 ELSE RUN
 
+## Usage Notes
+
+### FreHD
+
+Consider building the separate [FreHD board](/frehd/README.md) for use with this board.
+
+### Expansion Interface
+
+When connecting the Expansion interface (EI) its internal RAM needs to be disabled.
+Noting: It is not good enough to remove the RAM chips themselves, as regardless of the
+presence of RAM, the EI buffers the output of RAM back to main databus.
+
+There are 2 approaches
+
+Remove (de-solder) the 74LS244 buffer chips Z29, and Z31. This completely isolates the RAM
+from the databus and is easily reversible by installing "socketed" chips. This makes it easier
+to change going forward.
+
+Disable the buffers from outputting back to the bus. There are 2 options that I can suggest
+but without access to an expansion interface I am not sure which is easier;
+* Cut trace leading out of Z28 Pin 6, and bridge Pin 19 of either Z29, or Z31 to Pin 20 (vcc)
+* Cut trace leading into Z28 Pin 5, (or out of Z32 Pin 2) and bridge Z28 Pin 5 to Pin 7 (gnd)
+
+There are probably other ways to achieve the same thing.
+* The first approach requires more work, but simple to change on the fly.
+* The second approach requires less overall work, but is harder to revert
