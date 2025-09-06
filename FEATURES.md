@@ -4,6 +4,7 @@ The board started with the Japanese board as a base, because it is slightly upgr
 with some minor improvements that carry over:
 - The Video sync has been upgraded with improved stability, and 50Hz support
 - The cassette input has minor improvements in the A/D design.
+- The video RAM was upgrade to full 8 bits using 2 x 2114 SRAM Chips
 
 The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the
 keyboard and Japanese Kana character set support.
