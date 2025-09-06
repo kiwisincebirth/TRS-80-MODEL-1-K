@@ -1,162 +1,163 @@
 # Parts Guide
 
-For V1 please see the [Parts Guide V1](/PARTS_GUIDE-V1.md)
+This guide serves as a parts reference, providing additional details for some of the
+more difficult or optional parts of the build. Please refer to the BOM for the official part list,
+and the [Ordering Guide](./ORDERING.MD) which explains how to place an order
 
-## Specific Parts Used
+## Hard to Find Parts
+
+### ZILOG Z80 CPU
+
+The part is no longer in production, and needs to obtained separately. Preference is for:
+* CMOS variant, but this is not critical since older NMOS TTL is compatible
+* 6MHz since it is possible to overclock the computer to 5.3Mhz
 
 ###  Crystal Oscillator (10.6445 Mhz)
 
-https://www.mutant-caterpillar.co.uk/shop/product_info.php?products_id=5174
-
-https://www.ebay.com/itm/195727646631\
+An exact replacement part is available, for a high cost
+* https://www.mutant-caterpillar.co.uk/shop/product_info.php?products_id=5174
+* https://www.ebay.com/itm/195727646631\
 
 Mouser Stock 10.695Mhz crystals (as well as 10.7Mhz)
+* https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGosgF2g%3D%3D
 
-https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGosgF2g%3D%3D
+10.7 mhZ (next closest) can come from China
+* https://www.aliexpress.com/item/1005006183714474.html
+* https://www.aliexpress.com/item/1005003752108473.html
+* https://www.alibaba.com/product-detail/QZ-new-high-quality-10-7M_1601237726803.html
 
-or 10.7 mhZ (next closest) can come from China
+### Video Memory (V1)
 
-https://www.aliexpress.com/item/1005006183714474.html
+Dual 1k x 4 bit SRAM - TMS2114L-15 or uPD2114LC-5 or equivalent
 
-https://www.aliexpress.com/item/1005003752108473.html
+Several Providers of this component have been identified
+* https://www.rocelec.com/part/01t4w00000PQTxNAAX-TMS2114L15NL
+* https://www.silicon-ark.co.uk/mm2114-15l-static-ram-by-national-semiconductor?search=2114
+* https://www.scribblygum.com.au/index.php?route=product/product&product_id=229
+* https://www.arcadepartsandrepair.com/store/integrated-circuits/ram-memory/2114-ram/
+* https://twistywristarcade.com/ram/43-2114-ram.html
 
-https://www.alibaba.com/product-detail/QZ-new-high-quality-10-7M_1601237726803.html
+Datasheet's
+* https://www.lcsc.com/datasheet/C20918461.pdf
+* https://www.silicon-ark.co.uk/datasheets/uPD2114l-datasheet-nec.pdf
 
-The main board supports a standard crystal oscillator
-in the DIP-14 Full Can form factor. This can be installed in place of the 74HCU04 (U50).
-This allows custom oscillators to be used instead of the 74HCU04 circuit. e.g.
+### Video Memory (V2)
 
-https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
-
-https://github.com/schlae/ClockInACan
-
-https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
-
-https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
-
-## Z80 CPU
-
-The part is no longer in production, and needs to obtained seperatly. Preference if for: 
-* CMOS variant, but this is not critical since older NMOS TTL is compatible 
-* 6MHz since it is possible to overclock the computer to 5.3Mhz  
-
-## Main System ROM
-
-Supports 27128, 27256, 27512 EPROM, or 28256 EEPROM - 28 pin devices
-
-I would recommend using a Microchip Technology AT28C256-15PU
-This gives 2 16KB ROM banks and is electrically erasable.
-
-https://octopart.com/at28c256-15pu-microchip-77758240
-
-## Character Generator ROM
-
-Same as main system ROM
-
-## Main System RAM
-
-Alliance Memory AS6C1008-55PCN 
-
-https://octopart.com/search?q=AS6C1008-55PCN&currency=USD&specs=0
-
-https://www.digikey.com.au/en/products/detail/alliance-memory-inc/AS6C1008-55PCN/4234576
-
-## Video Memory
-
-1 KB Dual Port SRAM. There are 2 options:
-
-IDT7130LA55P 
-
-https://octopart.com/search?q=IDT7130LA55P
-
-https://www.renesas.com/en/products/memory-logic/multi-port-memory/asynchronous-dual-port-rams/7130-1k-x-8-dual-port-ram
-
-https://www.renesas.com/en/document/dst/713040-datasheet
-
-CY7C130-55PC (older part number)
-
-https://octopart.com/search?q=CY7C130-55PC
-
-https://www.rocelec.com/part/01t4w00000POumrAAD-CY7C13055PC
-
-https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
-
-https://www.silicon-ark.co.uk/datasheets/CY7C131-datasheet-cypress.pdf
-
+Single 1k x 8 bit Dual Port SRAM. There are 2 options, either IDT7130LA55P 
+or a CY7C130-55PC (older part number). Both are identical and are available on the 
+secondary market.
 Do Not Use IDT7140, CY7C140, CY7C141, these are Slave devices and NOT compatible
 
-### Amplifier Module
+IDT7130LA55P
+* https://octopart.com/search?q=IDT7130LA55P
+* https://www.renesas.com/en/products/memory-logic/multi-port-memory/asynchronous-dual-port-rams/7130-1k-x-8-dual-port-ram
+* https://www.renesas.com/en/document/dst/713040-datasheet
+
+CY7C130-55PC
+* https://octopart.com/search?q=CY7C130-55PC
+* https://www.rocelec.com/part/01t4w00000POumrAAD-CY7C13055PC
+* https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
+* https://www.silicon-ark.co.uk/datasheets/CY7C131-datasheet-cypress.pdf
+
+### Amplifier Module (V2)
 
 A small 6 pin module based on either LTK5128, or XPT8871 chipset.
 
 Googling these chip IDS you will find the modules themselves. There are three variants
-which differ in pcb colour/size, pinout, and main capacitor size. 
+which differ in pcb colour/size, pinout, and main capacitor size.
 They are commonly available from online chinese stores, ebay or amazon.
 
 There are 2 pin outs supported, one of these offers a Mute function, which
 is activated when the cassette motor is on.
 
 For more information about the chip itself. Noting datasheets are in chinese
-https://components101.com/ics/XPT8871-audio-amplifier-ic-pinout-datasheet-circuit
+* https://components101.com/ics/XPT8871-audio-amplifier-ic-pinout-datasheet-circuit
 
-### Joystick Port DB9 Cable
+### Joystick Port DB9 Cable (V2)
 
-Requires a straight thru DB9 cable. See for information on the cable: 
+Requires a straight thru DB9 cable. See for information on the cable:
+* https://www.scantips.com/serial-db9.html
 
-https://www.scantips.com/serial-db9.html
+## Alternate Part Usage
 
-## Cassette Relay
+The design of the board allows for several components to be chosen as either Traditional
+or a more modern component, this is typically the external connectors and switches
 
-Omron G5V-1
+### Video Connector
 
-https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_1.pdf
+The RCA video connector can be obtained easily on Ebay or Ali express, just search for "gold plated RCA connector"
+the socket is fairly distinctive. Below are a couple of links for normal online sellers
+* https://partsconnexion.com/vampire-connector-pcb2f-a-series-right-angled-rca-female-jack-pc-mount-black-red/
+* https://neurochrome.com/products/rca-connectors
+* https://www.elecbee.com/en-4039-pcb-connector-rca-female-angled-gold-plated-with-washer-and-nuts
 
-## RCA Video Connector
+The traditional (DIN) video connector is described below
 
-https://neurochrome.com/products/rca-connectors
+### Power Switch
 
-can be obtained easily on Ali express.
+Modern Power Switch
+* https://www.digikey.com.au/en/products/detail/e-switch/100AWDP1T1B4M6QE/1803008
+* https://configured-product-images.s3.amazonaws.com/Datasheets/100A.pdf
+* https://www.altronics.com.au/p/s1360-salecom-dpdt-horizontal-action-pcb-mount-mini-toggle-switch/
+* https://www.salecom.com/en/product/t8021.html
 
-## Power Connector
+The traditional Power Switch can be sourced from...
 
-https://core-electronics.com.au/dc-barrel-power-jack-connector.html
+### Reset Switch
 
-can be obtained fairly easily from multiple sources, these usually come in either 2.1 or 2.5mm 
+The modern Reset Pushbutton
+* https://www.digikey.com.au/en/products/detail/e-switch/800SP8B6M6RE/502075
+* https://configured-product-images.s3.amazonaws.com/Datasheets/800.pdf
+* https://www.altronics.com.au/p/s1495-salecom-spdt-mom.-90-deg.-pcb-sub-mini-pushbutton-switch/#/
+* https://www.salecom.com/en/product/es-22a.html
+
+The traditional Reset button can be sourced from...
+
+## Parts Reference
+
+### System and Character ROM
+
+Supports 27128, 27256, 27512 EPROM, or 28256 EEPROM - 28 pin devices. I would recommend
+using a Microchip Technology AT28C256-15PU. This gives 2 16KB ROM banks and is
+electrically erasable.
+* https://octopart.com/at28c256-15pu-microchip-77758240
+* https://www.digikey.com.au/en/products/detail/microchip-technology/AT28C256-15PU/1008506
+
+### Main System RAM
+
+Main System RAM is provided by a 128KB SRAM Chip - Alliance Memory AS6C1008-55PCN
+* https://octopart.com/search?q=AS6C1008-55PCN
+* https://www.digikey.com.au/en/products/detail/alliance-memory-inc/AS6C1008-55PCN/4234576
+
+## Trim Resistors
+
+Trim Resistors are Bourns multi turn vertical, with inline pin. These are identifiable by the marking "3296" on the side
+* https://www.bourns.com/pdfs/3296.pdf
+
+### Cassette Relay
+
+The cassette Relay is an Omron "G5V-1 DC5"
+* https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_1.pdf
+* https://www.digikey.com.au/en/products/detail/omron-electronics-inc-emc-div/G5V-1-DC5/87831
+
+### Power Connector
+
+It can be obtained fairly easily from multiple sources, these usually come in either 2.1 or 2.5mm
 you need to choose the best one based on the power brick you intend to use.
+However, 2.1mm seems to be the more common one in use.
+* https://core-electronics.com.au/dc-barrel-power-jack-connector.html
 
-## Power Switch
+### DIN Connector
 
-https://www.digikey.com.au/en/products/detail/e-switch/100AWDP1T1B4M6QE/1803008
+The footprint for this type of connector seems fairly standardised and freely available
+* https://www.digikey.com.au/en/products/detail/same-sky-formerly-cui-devices/SDS-50J/97033
+* https://www.digikey.com.au/en/products/detail/switchcraft-inc/57PC5F/275385
+* https://www.switchcraft.com/assets/1/24/57PC5F_CD.pdf?5023
+* https://www.aliexpress.com/item/1005006314983600.html
 
-https://configured-product-images.s3.amazonaws.com/Datasheets/100A.pdf
+## General Notes
 
-https://www.altronics.com.au/p/s1360-salecom-dpdt-horizontal-action-pcb-mount-mini-toggle-switch/
-
-https://www.salecom.com/en/product/t8021.html
-
-## Reset Switch
-
-https://www.digikey.com.au/en/products/detail/e-switch/800SP8B6M6RE/502075
-
-https://configured-product-images.s3.amazonaws.com/Datasheets/800.pdf
-
-https://www.altronics.com.au/p/s1495-salecom-spdt-mom.-90-deg.-pcb-sub-mini-pushbutton-switch/#/
-
-https://www.salecom.com/en/product/es-22a.html
-
-## DIN Connector
-
-The footprint for this type of connector seems fairly standardised
-
-https://www.digikey.com.au/en/products/detail/same-sky-formerly-cui-devices/SDS-50J/97033
-
-https://www.digikey.com.au/en/products/detail/switchcraft-inc/57PC5F/275385
-
-https://www.switchcraft.com/assets/1/24/57PC5F_CD.pdf?5023
-
-https://www.aliexpress.com/item/1005006314983600.html
-
-## Discrete Components
+### Discrete Components
 
 Some additional Notes about some components used:
 - Except for R37 (a 1/2 watt resistor) all resistors are 1/4 watt, preferably metal film, 5% tolerance or better.
@@ -166,13 +167,7 @@ Some additional Notes about some components used:
   or use a multimeter to find a resistor that is identical to what is specified.
 - Electrolytic capacitors should be rated to 16 volts, less is not advisable, more is not really required.
 
-## Trim Resistors
-
-Trim Resistors are Bourns multi turn vertical, with inline pin. These are identifiable by the marking "3296" on the side
-
-https://www.bourns.com/pdfs/3296.pdf
-
-## CMOS Part Usage
+### CMOS Part Usage
 
 This project has been built primarily with CMOS (TTL compatible) 74HCTxxx components, 
 with the following notable exclusions

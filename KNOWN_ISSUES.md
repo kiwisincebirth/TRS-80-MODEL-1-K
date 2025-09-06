@@ -1,7 +1,7 @@
 # Known Issues
 
-The following known issues were an the specific board versions. Note: If indicated the issues may also exist
-in prior versions. Typically these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
+The following known issues were found on the specific board versions. Note: If indicated the issues may also exist
+in prior versions. Typically, these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
 for the actual changes made.
 
 ## V1b
@@ -48,7 +48,7 @@ the boards design, and or the silkscreen. NOTE: The following have be fixed in V
 
 And the following issues were fixed from V1b and latter revisions
 - Thermal reliefs are missing on power rails connecting to most IC's. When soldering you need to use a higher
-  temperature soldering iron for these pins, and ensure the soldering iron comes into direct contact with the pcb pad
+  temperature soldering iron. Also ensure the soldering iron comes into direct contact with the pcb pad
 - The footprints for C19 (capacitor), Q1, Q2 (transistors) is not modern, the legs of the components 
   will need to be bent outwards and the component mounted higher to fit correctly 
 - The footprint for CR4 diode is too small making the diode harder to fit, you will need to bend the legs
