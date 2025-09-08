@@ -217,7 +217,7 @@ Additional Testing to consider:
 
 ## Troubleshooting
 
-Some General notes on troubleshooting
+General Assembly
 * Ensure all Components are correctly soldered.
   * It is not uncommon to find components installed without all pins soldered.
   * Look for any dry solder joints.
@@ -229,24 +229,28 @@ Some General notes on troubleshooting
   * Possibly remove and reseat if in doubt
 
 Relating to Power
-* Check voltage and polarity of power supply
-  * Check power is being transferred through the barrel jack
-  * Check the main switch is switching power on and off 
-* Ensure Power is getting to all components
-  * Check voltages across power pins of all IC's are showing 5V
-  * Alternately check for continuity of VCC, and GND pins to known pins
-* Check electrolytic capacitors are installed with correct polarity
+* Check the input power supply.
+  * Check voltage (5V) and polarity (centre positive) of power supply. 
+  * Check the power supply is well regulated, with  little noise.
+  * Potentially try a different power supply to see if this works. 
+* Ensure Power is getting to all components.
+  * Check power is being transferred through the barrel jack.
+  * Check the main switch is switching power on and off.
+  * Check voltages across power pins of all IC's are showing 5V.
+  * Alternately check for continuity of VCC, and GND pins to known pins.
+* Check electrolytic capacitors are installed with correct polarity.
 
 Configuration
 * Check solder jumpers are bridged correctly
-  * For 3 pin umpers, ensure no continuity between soldered and the unsoldered Pads
+  * For 3 pin jumpers, ensure no continuity between soldered and un-soldered pads.
 * Check all required jumpers are correctly installed.
 
-Clock
+Main Clock
 * Ensure main crystal oscillator is generating 10.6445 Mhz
+  * If not consider installing patch capacitor
 
 Video/CPU
-* This is a much bigger topic, follow other TRS-80 troubleshooting guides
+* This is a much bigger topic, follow other TRS-80 troubleshooting guides.
 
 ## Usage Notes
 

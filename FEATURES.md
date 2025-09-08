@@ -72,7 +72,7 @@ This was included to add minor new features without the fragility of piggy back 
 
 ### Power
 
-Replacing the RAM means the computer does not requires 12V and -5V power, only 5V is required.
+Replacing the DRAM means the computer does not require -5V or 12V power, only 5V is required.
 This has driven the transformation of the power system for the computer by moving the power regulation off the PCB itself,
 and instead requires a external 5V DC regulated power supply. The external TRS-80 power brick is no longer supported.
 Power connection is by the of a standard barrel jack replacing the DIN connector.
