@@ -28,7 +28,7 @@ even though typically only the first 12 KB is actually usable by the CPU
 
 The mapping of the address line(s) is covered below.
 
-### Char Font Rom
+### Char Font ROM
 
 Since a character font ROM occupies 4 KB it uses A0-A11 
 to address its data, leaving A12-A15 (depending on chip) for page control
@@ -48,9 +48,9 @@ Notes:
   - This was corrected in V2 and latter revisions, ie. ON=1, OFF=0
 - The above table is specifically for V1. For V2 ON should be replaced with OFF
 
-### System Rom
+### System ROM
 
-Since a System Rom occupies 16 KB (typically 12 KB used) it uses A0-A13
+Since a System ROM occupies 16 KB (typically 12 KB used) it uses A0-A13
 to address its data, leaving A14-A15 (depending on chip) for page control.
 
 | PROM TYPE | JP21 | JP27 |
@@ -75,7 +75,7 @@ This leaves the (E)EPROM effectively un-programmed in this area.
 Also (if enabled in future) extending the ROM into the 12KB - 14KB area,
 `FFh` gives the maximum backward compatibility, with unoccupied memory.
 
-## Combining Rom Images
+## Combining ROM Images
 
 The following describes how to combine ROM images at the command line
 
