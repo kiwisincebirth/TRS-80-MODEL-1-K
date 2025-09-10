@@ -10,18 +10,19 @@ Depending on the ROM chosen and the use (Char Font/System) multiple pages can be
 The following table shows for each combination, the maximum number of pages
 that can be programmed and the address bits used for the control of page selection
 
-| Feature                  | Char Font ROM | System ROM |
-|--------------------------|---------------|------------|
-| Base Image Size          | 4 KB          | 16 KB (*1) |
-| Base Address Lines Used  | A0 - A11      | A0 - A13   |
-| **Available Pages**      |               |            |
-| Max Pages (512 KBit)     | 16            | 4          |
-| Max Pages (256 KBit)     | 8             | 2          |
-| Max Pages (128 KBit)     | 4             | 1          |
-| **Page Addressing**      |               |            |
-| Address Lines (512 KBit) | A12 - A15     | A14 - A15  |
-| Address Lines (256 KBit) | A12 - A14     | A14        |
-| Address Lines (128 KBit) | A12 - A13     | n/a        |
+|                      | Char Font ROM | System ROM |
+|----------------------|---------------|------------|
+| **Base Image**       |               |            |
+| Base Image Size      | 4 KB          | 16 KB (*1) |
+| Address Lines Used   | A0 - A11      | A0 - A13   |
+| **Available Pages**  |               |            |
+| Max Pages (512 KBit) | 16            | 4          |
+| Max Pages (256 KBit) | 8             | 2          |
+| Max Pages (128 KBit) | 4             | 1          |
+| **Page Addressing**  |               |            |
+| Address Lines (512)  | A12 - A15     | A14 - A15  |
+| Address Lines (256)  | A12 - A14     | A14        |
+| Address Lines (128)  | A12 - A13     | n/a        |
 
 **NOTE 1:** System ROM's require the use of 16 KB, i.e. to be exact power of 2, 
 even though typically only the first 12 KB is actually usable by the CPU 
@@ -65,19 +66,21 @@ Notes:
 - Bridging 2&3 Provides Logic Level 0
 - JP21 controls Pin 1, and JP27 Pin 27 of the IC
 
-When combining ROM images they must be **padded to exactly
+## Combining ROM Images
+
+The following describes how to combine ROM images at the command line
+
+### Padding System ROM's
+
+When combining System ROM images they must be **padded to exactly
 16,384 bytes in length**. There are two ways to do this.
 * Append a 4 KB file to each ROM image before combining them into final image
 * Simply reuse a 4 KB padding file in-between each image in a single copy command.
 
 While not essential I suggest the padding is done with the `FFh` byte.
-This leaves the (E)EPROM effectively un-programmed in this area. 
+This leaves the (E)EPROM effectively un-programmed in this area.
 Also (if enabled in future) extending the ROM into the 12KB - 14KB area,
 `FFh` gives the maximum backward compatibility, with unoccupied memory.
-
-## Combining ROM Images
-
-The following describes how to combine ROM images at the command line
 
 ### Windows
 
