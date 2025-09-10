@@ -1,4 +1,4 @@
-## Features
+# Features
 
 The board started with the Japanese board as a base, because it is slightly upgraded over the US board
 with some minor improvements that carry over:
@@ -12,13 +12,13 @@ keyboard and Japanese Kana character set support.
 This system is intended to be used (almost) exclusively with CMOS technology utilizing 74HCT (CMOS TTL compatible) parts.
 Noting traditional 74LS components should work, however this has not been tested
 
-### CPU
+## CPU
 
 A double speed (3.56 Mhz) clock speedup mod has been applied. A jumper (J18) allows the clock to be slowed to normal.
 This could be by external switch, or any future circuit potentially under software control.
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
-### System ROM
+## System ROM
 
 Uses a standard 27xxx EPROM (or 28256 EEPROM) rather than mask ROM. These are more readily available and easier to program.
 The two ROM's (Z42, Z43) have been replaced with a single 28 pin EPROM (U42) supporting 2x128 thru 2x512 chips.
@@ -28,7 +28,7 @@ An additional set of jumpers allows the ROM to provide an addition 1 or 2kBytes 
 above the ROM (0x3000 - 0x37FF), allowing a total of 12,13, or 14 kBytes of ROM. This can be useful for ROM extensions,
 commonly used on some Model 1 peripherals, or the Model 3.
 
-### System RAM
+## System RAM
 
 The 4116 16kb DRAM has been replaced with a single static RAM chip (AS6C1008) providing 48KB of RAM without the
 need for an external expansion interface or other add on card. Note this chip is 128 kBytes in size, but only 48kB
@@ -36,7 +36,7 @@ is being used. No provision for RAM paging has been made.
 
 If you intend to connect an expansion interface then the RAM in the interface will have to be disabled to prevent conflict.
 
-### Character Generation
+## Character Generation
 
 All character generation (both alpha characters and graphics) has been replaced with a single character set
 that includes all 256 characters defined in ROM (U37). Each character defines the full 6x12 pixel matrix that is
@@ -48,13 +48,13 @@ Multiple character sets  can be defined (depending on ROM size), the character s
 
 A selection of [fonts files](/fonts/README.md) for use with this project. Normal font ROM's are not compatible.
 
-### Video Output
+## Video Output
 
 Composite video output is via the original DIN plug, or an optional RCA connector, you can solder either onto the board.
 The RCA connector is provided to be compatible with a larger range of external monitors, potentially more reliable and
 less subject to noise.
 
-### Internal Expansion:
+## Internal Expansion:
 
 The main board has an internal 40pin Header (J20) identical to and located just behind the main 40 pin expansion port.
 This is primarily designed for an internal expansion board which sits inside the case.
@@ -70,7 +70,7 @@ NOTE: The DRAM multiplexing signals CAS, and MUX are no longer generated, and ha
 A prototyping area is provided, it supports 14 or 16 pin power and locations for decoupling capacitors.
 This was included to add minor new features without the fragility of piggy back boards, or IC's
 
-### Power
+## Power
 
 Replacing the DRAM means the computer does not require -5V or 12V power, only 5V is required.
 This has driven the transformation of the power system for the computer by moving the power regulation off the PCB itself,
@@ -82,6 +82,6 @@ This leaves substantial PCB real-estate, which is available for future use and e
 The Power (and Reset) buttons have been superseded with more available standardized components.
 The original component footprints have still been left so can still install the original parts.
 
-### Additionally
+## Additionally
 
 Additional changes have been made too numerous to mention please see [Changelog](/CHANGELOG.md) for details
