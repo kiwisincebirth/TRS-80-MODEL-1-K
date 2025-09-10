@@ -7,6 +7,7 @@ A couple of items to report
 * Just had a report of a an independent build of the board by "MSly" - reported on Tandy Discord
 * I have added a coupe of new documents 
   * Troubleshooting, which aims to give some guidence of things to check if not working
+  * Config, showing a bit about how to program ROMS.
   * Compatability, showing things that have been tested and know to work (or not)
 
 ## Update 3 Sept 2025
