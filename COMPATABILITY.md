@@ -14,8 +14,8 @@ Apart from the recommended AT28C256, the following ROM's have been tested
 * 27128
 
 ### Video Memory
-The following video memory chips are known to work.
-* 
+The following video memory chips have been tested and are known to work.
+* uPD2114LC (NEC)
 
 ### IO Connectors
 
@@ -29,9 +29,7 @@ Following connectors have specifically been tested
 
 ### Configuration
 
-Video Frequencies Tested
-* NTSC 60Hz
-* PAL 50Hz
+Both NTSC (60Hz), and PAL (50Hz) have been tested and are known to work.
 
 ## Expansion Devices
 

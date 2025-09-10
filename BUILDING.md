@@ -198,13 +198,10 @@ Follow these steps
   - Insert character generator ROM.
 - Ensure SW10 is configured for the chip type, and character set.
 - When powered on you should see random but recognisable characters.
-- With Power disconnected, Insert the main computer chips
-  - Insert Z-80 CPU chip
+- With Power disconnected, Insert the main Z80 processor chip.
 - When powered on you should see the display fill up with repeating `@9`characters
   - This indicates the CPU is functioning and executing code.
-- With Power disconnected, Insert the other chips
-  - Insert main RAM chip
-  - Install main ROM chip
+- With Power disconnected, Insert the main system RAM, and ROM chip's
 - Ensure JP21, JP27 are configured for the ROM chip type you are using
 - When powered on, you should see a prompt showing "MEM SIZE?" (if it is the normal system ROM).
   - You may see random characters being input, this is expected since keyboard is not connected
