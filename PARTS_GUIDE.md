@@ -59,25 +59,6 @@ CY7C130-55PC
 * https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
 * https://www.silicon-ark.co.uk/datasheets/CY7C131-datasheet-cypress.pdf
 
-### Amplifier Module (V2)
-
-A small 6 pin module based on either LTK5128, or XPT8871 chipset.
-
-Googling these chip IDS you will find the modules themselves. There are three variants
-which differ in pcb colour/size, pinout, and main capacitor size.
-They are commonly available from online chinese stores, ebay or amazon.
-
-There are 2 pin outs supported, one of these offers a Mute function, which
-is activated when the cassette motor is on.
-
-For more information about the chip itself. Noting datasheets are in chinese
-* https://components101.com/ics/XPT8871-audio-amplifier-ic-pinout-datasheet-circuit
-
-### Joystick Port DB9 Cable (V2)
-
-Requires a straight thru DB9 cable. See for information on the cable:
-* https://www.scantips.com/serial-db9.html
-
 ## Alternate Part Usage
 
 The design of the board allows for several components to be chosen as either Traditional
