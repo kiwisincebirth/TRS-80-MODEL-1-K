@@ -131,9 +131,24 @@ tbd - info on setting up the timing signal's
 
 ### Joystick Port
 
-In V2 (and latter) of the board 
+In V2 (and latter) of the board a TRStick (Alpha) 5 bit Joystick Port was added. 
+Note the port also supports a second fire button (6th bit),
+but this would require a specific Joystick and software to use it.
 
-J9 and specific cable
+The most important aspect is that the appropriate DB9 to 10 Pin header cable 
+is ordered and attached as there are 2 incompatible types:
+* Cross Wired (Correct)
+* Straight Through (Incompatible)
+
+You must use a Cross Wired cable, which maps the pins on the DB9 connector
+based on the relative position, not the actual DB-9 pins. The easiest way to identify 
+the correct cable is to purchase a cable with a DB-9 IDC connector. 
+Cables that have a soldered connection (typically covered in a shroud)
+can be wired in either configuration, and must be checked for compatability,
+typically by removing the shroud.
+
+See this guide which highlights the difference.
+[Internal Serial Cables for COM2 Port](https://www.scantips.com/serial-db9.html)
 
 ### Amplifier and Speaker
 
