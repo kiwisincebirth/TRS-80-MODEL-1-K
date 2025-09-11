@@ -14,6 +14,7 @@ The files provided in this project are primarily:
 - Also see the [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 - Also see the [Ordering](ORDERING.MD) guide for how to place a component order
 - Also see the [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
+- The [Compatability Guide](COMPATABILITY.md) which identifies tested components and additions.
 
 And the following
 - A few compatible font have been provided in this project see [Fonts](/fonts/README.md)
@@ -121,48 +122,11 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Keyboard header CN3, Can be mounted on front (or  rear) of the PCB.
   - Should be mounted carefully depending on the cable connecting to the keyborard
 
-
 ## Assembly Options
 
-What follows is specific guidance.
-
-### Alternate Main Clock
-
-The main board (V1-RevB and latter) supports two types of main Clock
-* A standard quartz crystal with 7404 circuit (the traditional design)
-* A modern DIP-14 Can oscillator (discussed below)
-
-A DIP-14 Can oscillator is a self-contained metal package (similar to normal quarts crystal)
-that comes in a DIP-14 pinout, but only has 4 pins exposed.
-* Pin 1 Enable
-* Pin 7 Ground
-* Pin 8 Main Clock TTL Level Output
-* Pin 14 VCC
-
-This component outputs a TTL level clock which is directly usable, without the need for any
-external components. The existing circuit (and the 7404 pinout) has been designed so
-the Oscillator can be installed in place of the 7404.
-This means all the supporting circuitry (including the quartz crystal) can be removed.
-
-A programmable oscillator is available from DigiKey, ("ECS-P145") and can exactly match
-the required frequency, improving reliability, the part itself has not been tested.
-Owing to height restrictions it is unlikely the oscillator could be socketed.
-
-* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
-* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
-* https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
-
-### Video Timing
-
-tbd - info on setting up the timing signal
-
-### Amplifier and Speaker
-
-M1, M2, J8
-
-### Joystick Port
-
-J9 and cable
+Please see the Section [Advanced Feature](./FEATURES.md#advanced-features) 
+which describes some additional assembly information, and includes some information 
+about additional parts that may be required.
 
 ## Configuration
 
@@ -244,10 +208,10 @@ Follow these steps
   - Insert character generator ROM.
 - Ensure SW10 is configured for the chip type, and character set.
 - When powered on you should see random but recognisable characters.
-- With Power disconnected, Insert the main computer chips
-  - Insert Z-80 CPU chip
-  - Insert main RAM chip
-  - Install main ROM chip
+- With Power disconnected, Insert the main Z80 processor chip.
+- When powered on you should see the display fill up with repeating `@9`characters
+  - This indicates the CPU is functioning and executing code.
+- With Power disconnected, Insert the main system RAM, and ROM chip's
 - Ensure JP21, JP27 are configured for the ROM chip type you are using
 - When powered on, you should see a prompt showing "MEM SIZE?" (if it is the normal system ROM).
   - You may see random characters being input, this is expected since keyboard is not connected
@@ -261,6 +225,10 @@ Additional Testing to consider:
 - 32 character mode PRINT CHR$(xx) or right arrow and clear on the keyboard
 - Another program to try ; 10 PRINT MEM;:IF MEM >100 GOSUB 10 ELSE RUN
 
+## Troubleshooting
+
+See [Troubleshooting Guide](./TROUBLESHOOT.md) for more information 
+
 ## Usage Notes
 
 ### FreHD
@@ -273,17 +241,19 @@ When connecting the Expansion interface (EI) its internal RAM needs to be disabl
 Noting: It is not good enough to remove the RAM chips themselves, as regardless of the
 presence of RAM, the EI buffers the output of RAM back to main databus.
 
-There are 2 approaches
+There are 2 approaches:
 
-Remove (de-solder) the 74LS244 buffer chips Z29, and Z31. This completely isolates the RAM
-from the databus and is easily reversible by installing "socketed" chips. This makes it easier
-to change going forward.
+(1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets. 
+This completely isolates the RAM from the data-bus and is easily reversible by installing chips. 
+The approach requires more work, but simple to change on the fly, and doesn't affect the circuit itself.
+A future user will notice the missing chips and can simply install them to restore to factory
+configuration.
 
-Disable the buffers from outputting back to the bus. There are 2 options that I can suggest
+(2) Disable the buffers from outputting back to the bus. There are 2 options that I can suggest
 but without access to an expansion interface I am not sure which is easier;
 * Cut trace leading out of Z28 Pin 6, and bridge Pin 19 of either Z29, or Z31 to Pin 20 (vcc)
 * Cut trace leading into Z28 Pin 5, (or out of Z32 Pin 2) and bridge Z28 Pin 5 to Pin 7 (gnd)
 
-There are probably other ways to achieve the same thing.
-* The first approach requires more work, but simple to change on the fly.
-* The second approach requires less overall work, but is harder to revert
+The second approach requires less overall work, but is harder to revert. A future user will have
+to trace out what was changed, and have skill to revert it.
+

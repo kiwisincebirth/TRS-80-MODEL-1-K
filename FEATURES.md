@@ -1,9 +1,12 @@
-## Features
+# Features
+
+## Base Features
 
 The board started with the Japanese board as a base, because it is slightly upgraded over the US board
 with some minor improvements that carry over:
 - The Video sync has been upgraded with improved stability, and 50Hz support
 - The cassette input has minor improvements in the A/D design.
+- The video RAM was upgrade to full 8 bits using 2 x 2114 SRAM Chips
 
 The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the
 keyboard and Japanese Kana character set support.
@@ -117,7 +120,7 @@ This was included to add minor new features without the fragility of piggy back 
 
 ### Power
 
-Replacing the RAM means the computer does not requires 12V and -5V power, only 5V is required.
+Replacing the DRAM means the computer does not require -5V or 12V power, only 5V is required.
 This has driven the transformation of the power system for the computer by moving the power regulation off the PCB itself,
 and instead requires a external 5V DC regulated power supply. The external TRS-80 power brick is no longer supported.
 Power connection is by the of a standard barrel jack replacing the DIN connector.
@@ -130,3 +133,57 @@ The original component footprints have still been left so can still install the 
 ### Additionally
 
 Additional changes have been made too numerous to mention please see [Changelog](/CHANGELOG.md) for details
+
+## Advanced Features
+
+What follows is specific guidance about certain features which come with consideration for
+* The actual parts used that will need to be ordered
+* The assembly of the components on the board itself 
+
+### Alternate Main Clock
+
+In V1-RevB (and latter) of the board, there is support for two types of main Clock
+* A standard quartz crystal with 7404 circuit (the traditional design)
+* A modern DIP-14 Can oscillator (discussed below)
+
+A DIP-14 Can oscillator is a self-contained metal package (similar to normal quarts crystal)
+that comes in a DIP-14 pinout, but only has 4 pins exposed.
+* Pin 1 Enable
+* Pin 7 Ground
+* Pin 8 Main Clock TTL Level Output
+* Pin 14 VCC
+
+This component outputs a TTL level clock which is directly usable, without the need for any
+external components. The existing circuit (and the 7404 pinout) has been designed so
+the Oscillator can be installed in place of the 7404.
+This means all the supporting circuitry (including the quartz crystal) can be removed.
+
+A programmable oscillator is available from DigiKey, ("ECS-P145") and can exactly match
+the required frequency, improving reliability, the part itself has not been tested.
+Owing to height restrictions it is unlikely the oscillator could be socketed.
+
+* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-AN/502317
+* https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
+* https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
+
+### Video Sync Timing
+
+In V2 (and latter) of the board Video sync generation logic changed.
+
+When assembling **maybe don't** install R16 and R18 until latter as these can be used 
+to fine tune the Horizontal and vertical sync pulse durations.
+
+tbd - info on setting up the timing signal's
+
+### Joystick Port
+
+In V2 (and latter) of the board 
+
+J9 and specific cable
+
+### Amplifier and Speaker
+
+In V2 (and latter) of the board
+
+M1, M2, J8
+
