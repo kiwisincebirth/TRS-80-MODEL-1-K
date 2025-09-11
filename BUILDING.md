@@ -11,9 +11,9 @@ The files provided in this project are primarily:
 - Gerber files for manufacture [JLCPCB ZIP](/pcb/TRS-80-MP_JLCPCBV2.zip) and [PCBWAY ZIP](/pcb/TRS-80-MP_PCBWayV2.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV2.csv)
 - A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV2.html)
-- Also see the [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
-- Also see the [Ordering](ORDERING.MD) guide for how to place a component order
-- Also see the [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
+- The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
+- The [Ordering](ORDERING.MD) guide for how to place a component order
+- The [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
 - The [Compatability Guide](COMPATABILITY.md) which identifies tested components and additions.
 
 And the following
@@ -81,7 +81,8 @@ against what is in the BOM, and cross it off. An interactive BOM is provided to 
 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in either direction as they do not have a polarity.
-  - Note R37 is a 1/2 watt resistor and slightly bigger than the other resistors.
+  - R16 and R18 should maybe be installed latter See [Sync Timing](./FEATURES.md#video-sync-timing)
+  - R37 is a 1/2 watt resistor and slightly bigger than the other resistors.
   - Resistor values are labelled on the board using R (ohms) K (kOhms) M (mOhms)
 - Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
 - Ceramic disc capacitors with specific values
@@ -124,8 +125,8 @@ Typically, solder components in order of the lowest profile to the tallest compo
 
 ## Assembly Options
 
-Please see the Section [Advanced Feature](./FEATURES.md#advanced-features) 
-which describes some additional assembly information, and includes some information 
+Please see the Section [Advanced Feature](./FEATURES.md#advanced-features)
+which describes some additional assembly information, and includes some information
 about additional parts that may be required.
 
 ## Configuration
@@ -192,7 +193,7 @@ You will need to power on to perform necessary tests
 Follow these steps
 - Don't install any socketed IC's yet
 - Before connecting power (using a multimeter) ensure the 5V and GND rails are not shorted
-  - This can be done on any IC socket generally Pin's 14/16 and Pin's 7/8.  
+  - This can be done on any IC socket generally Pin's 14/16 and Pin's 7/8.
 - Connect the power supply to the board.
 - With power turned off, test for +5V on J17, located just behind the barrel jack.
 - With power turned on, test for +5V on a few IC sockets Pin 14 or 16 around the board.
@@ -227,7 +228,7 @@ Additional Testing to consider:
 
 ## Troubleshooting
 
-See [Troubleshooting Guide](./TROUBLESHOOT.md) for more information 
+See [Troubleshooting Guide](./TROUBLESHOOT.md) for more information
 
 ## Usage Notes
 
@@ -243,8 +244,8 @@ presence of RAM, the EI buffers the output of RAM back to main databus.
 
 There are 2 approaches:
 
-(1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets. 
-This completely isolates the RAM from the data-bus and is easily reversible by installing chips. 
+(1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets.
+This completely isolates the RAM from the data-bus and is easily reversible by installing chips.
 The approach requires more work, but simple to change on the fly, and doesn't affect the circuit itself.
 A future user will notice the missing chips and can simply install them to restore to factory
 configuration.
@@ -256,4 +257,3 @@ but without access to an expansion interface I am not sure which is easier;
 
 The second approach requires less overall work, but is harder to revert. A future user will have
 to trace out what was changed, and have skill to revert it.
-
