@@ -16,5 +16,8 @@
 
 ![Top of Board on the Model 1K](./IMG_9180.jpeg)
 
+## Installed
+
+![Installed Rear View](./IMG_9187.jpeg)
 
 

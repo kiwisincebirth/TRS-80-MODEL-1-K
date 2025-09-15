@@ -26,8 +26,10 @@ Unreleased
 - CPU speedup offer fast speed as 5.3 (default 3.55) mhz via jumper (JP17)
 - Added Power LED indicator (D1) near to the main power switch.
 - Fixed issue with TEST signal immediately disconnecting CPU from BUS (Marcel Erz)
+- Fixed Issue with Bus control for interrupt Mode 0 and 2 where external device places data on bus
 - Added (back) software character set control (Port FF Bit 7), as per JP board.
 - Changed meaning of SW10-SW13. Now ON => Logic 1, and OFF => 0 (rather than reverse)
+- RAM is configurable from $48k (default) down to 16k for compatability with external RAM.
 
 ### Minor Improvements  
 
@@ -47,6 +49,13 @@ Unreleased
 - Improved component identification in Bill of Materials
 - Major improvement in the Schematic diagram quality.
 - Many component designators have changed from V1, so some V1 docs may not be accurate
+
+## Version 1.0c (Future)
+
+Unreleased
+
+This release fixes minor Issues
+- Silkscreen for character generator SW10-SW13 has been corrected
 
 ## Version 1.0b (Current)
 
