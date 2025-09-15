@@ -5,13 +5,13 @@
 Some useful links from the author:
 * The [authors main website](https://www.vecoven.com/trs80/trs80.html), historical information
 * The [authors downloads](https://www.vecoven.com/trs80/trs80/download.html), which are a bit legacy
-* The [authors GITHUB repo](https://www.vecoven.com/trs80/trs80.html), 
+* The [authors GITHUB repo](https://www.vecoven.com/trs80/trs80.html), seems to have most upto date software
 
 The GIT Hub Repo contains some important software locations
 * HW/GAL - The coded deployed on GAL chip
 * SW/TRS_HARD - The PIC microcontroller Software
 * SW/FREHD_ROM - The software that build the FREHHD.ROM loader installed on SD Card
-* SW/FREHD_ROM/PATCHES - Chnages to TRS-80 Rom images, for autoboot
+* SW/FREHD_ROM/PATCHES - Changes to TRS-80 Rom images, for autoboot
 * SW/Z80/UTILS - The Z80 utility applications that run on TRS-80
 
 Important Links from Ian M's site
@@ -35,6 +35,8 @@ paste it into browser and change, make sure it says HTTPS
 
 Cards must be formatted on a PC in FAT32 only.
 Card must have a volume name, leaving the name blank will result in a card which will not mount.
+
+See `Downloading` below for obtaining the files.
 
 ### FREHD.ROM
 
@@ -67,7 +69,7 @@ normal floppy drives.
  
 ## OS's
 
-On a Model 1 there appear to only be 2 OS 
+On a Model 1 there appear to only be 2 OS the boot
 * NEWDOS/80 2.5
 * LDOS 5.3.1
 
@@ -98,7 +100,7 @@ The current version of these is 2.05, whereas hard drive images generally have 2
 | FUPDATE  | Firmware Update for the PIC microcontroller.                   |
 | EUPDATE  | EEPROM Update ?                                                |
 
-This document describes the utilities
+This document (from Ian M's site) describes use of these utilities
 * [FreHD Utilities](https://trs-80.com.au/trs80/FreHD%20Utilities.docx)
 
 
