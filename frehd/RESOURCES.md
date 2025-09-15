@@ -38,8 +38,17 @@ Card must have a volume name, leaving the name blank will result in a card which
 
 ### FREHD.ROM
 
-There seem to be a couple of versions of this, if downloading from Ian's Site, I suggest you use
-the combined ZIP files that contain disk images, they seem to have a newer version.
+There seem to be a couple of versions of this, the Header/banner appears differently 
+Suggest use the download links below
+
+### Downloading
+
+If downloading from Ian's Site, I suggest you use the combined ZIP files 
+that contain disk images, they seem to have a newer version.
+
+There are 2 disk Images for primary download
+* [SD Card Model 1 - Floppy](https://trs-80.com.au/downloads/SDcardM1auto.zip) - 
+* [Quinerface - No Floppy](https://trs-80.com.au/downloads/Quinnterface.zip) - 
 
 ## Operation
 
