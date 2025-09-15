@@ -10,6 +10,7 @@ Following Quartz Crystal's have been tested
 
 ### ROM's
 Apart from the recommended AT28C256, the following ROM's have been tested
+* 27C512
 * 27C256
 * 27128
 
@@ -74,3 +75,9 @@ Hard reset requires a patched ROM, that forces a hard reset when reset button is
 ### MIRE / MISE
 
 Works with some minor issues.
+
+### TRS-IO
+
+Unknown
+
+
