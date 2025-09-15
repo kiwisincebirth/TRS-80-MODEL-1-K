@@ -16,20 +16,20 @@ The GIT Hub Repo contains some important software locations
 
 Important Links from Ian M's site
 * [FreHD Hard Drive Emulator](https://trs-80.com.au/trs80/emulator.htm)
-* [Clearly Superior](https://trs-80.com.au/trs80/clearlysuperior.htm)
-* [Downloads](https://trs-80.com.au/trs80/downloads.htm)
+* [Downloads](https://trs-80.com.au/trs80/downloads.htm) - Links may appear broken
 
-Note: The download links on the the above site are HTTP and need to be changed
-to HTTPS (manually) as modern browsers will not download from HTTP
+Note: The download links on the above site are HTTP and need to be changed
+to HTTPS (manually) as modern browsers will not download from HTTP. Copy the link, 
+paste it into browser and change, make sure it says HTTPS
 
 ## Firmware Versions
 
-| Version | Descripton                                                          |
-|---------|---------------------------------------------------------------------|
-| 2.13    | Is still listed on on Ian M's downloads Page                        |
-| 2.14    | The last version the author seemed actively involved with           |
-| 2.15    | Seems to be the main one currently distributed with Purchased FreHD | 
-| 2.17    | Latest On Github, contains some more recent fixes                   |
+| Version | Description                                                    |
+|---------|----------------------------------------------------------------|
+| 2.13    | Is still listed on on Ian M's downloads Page                   |
+| 2.14    | The last version the author seemed actively involved with      |
+| 2.15    | Seems to be the one currently distributed with purchased FreHD | 
+| 2.17    | Latest On Github, contains some more recent fixes              |
 
 ## SD Card Setup
 
@@ -38,7 +38,8 @@ Card must have a volume name, leaving the name blank will result in a card which
 
 ### FREHD.ROM
 
-There seem to be a couple of versions
+There seem to be a couple of versions of this, if downloading from Ian's Site, I suggest you use
+the combined ZIP files that contain disk images, they seem to have a newer version.
 
 ## Operation
 
@@ -60,8 +61,8 @@ On a Model 1 there appear to only be 2 OS
 
 ### LDOS
 
-If you want to use LDOS without an Expansion Interface (floppy disks), there are a couple of extra setup steps. 
-Immediately after loading LDOS, issue these commands:
+If you want to use LDOS without an Expansion Interface (floppy disks), you may find it hangs.
+There are a couple of extra setup steps. Immediately after loading LDOS, issue these commands:
 
 ```
 SYSTEM (DRIVE=6,DISABLE)
@@ -69,9 +70,11 @@ SYSTEM (DRIVE=7,DISABLE)
 SYSTEM (SYSGEN)
 ```
 
+which disables floppy drives.
+
 ## UTILITIES
 
-The current version of these is 2.05, where as hard drive images generally have 2.03
+The current version of these is 2.05, whereas hard drive images generally have 2.03
 
 | Utility  | Description                                                    |
 |----------|----------------------------------------------------------------|
@@ -82,7 +85,7 @@ The current version of these is 2.05, where as hard drive images generally have 
 | EUPDATE  | EEPROM Update ?                                                |
 
 This document describes the utilities
-* [FreHD Utilities](https://trs-80.com.au/trs80/FreHD%20Utilities.docx) - Describes
+* [FreHD Utilities](https://trs-80.com.au/trs80/FreHD%20Utilities.docx)
 
 
 
