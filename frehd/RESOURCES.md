@@ -44,11 +44,16 @@ Suggest use the download links below
 ### Downloading
 
 If downloading from Ian's Site, I suggest you use the combined ZIP files 
-that contain disk images, they seem to have a newer version.
+that contain disk images, and FreHD.ROM (seem to have a newer version).
 
-There are 2 disk Images for primary download
+There are 2 ZIP files for primary download
 * [SD Card Model 1 - Floppy](https://trs-80.com.au/downloads/SDcardM1auto.zip) - 
-* [Quinerface - No Floppy](https://trs-80.com.au/downloads/Quinnterface.zip) - 
+* [Quinnerface - No Floppy](https://trs-80.com.au/downloads/Quinnterface.zip) - 
+
+The downloads include LDOS 5.3.1, NEWDOS/80 2.5, DOSPLUS 3.5 and frehd.rom
+
+While named quinnerface, i believe this includes disk images that don't support 
+normal floppy drives.
 
 ## Operation
 
