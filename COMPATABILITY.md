@@ -52,11 +52,15 @@ Audio output (sound) has been tested and works.
 ### Internal IO
 
 The Internal IO header has been tested with external devices connected via 40 pin ribbon cable
-to the internal IO 40 pin header. This requires cable with a female header attached to one end. 
+to the internal IO 40 pin header. This requires a cable with a female header attached to one end. 
 
 ## Expansion Devices
 
 The following are devices confirmed to work with the Model 1 K
+
+### Model 1 Expansion Interface
+
+Not Tested
 
 ### FreHd (External)
 
@@ -90,6 +94,6 @@ Works with some minor issues.
 
 ### TRS-IO
 
-Unknown
+Not Tested
 
 
