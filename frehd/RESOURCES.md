@@ -75,7 +75,17 @@ On a Model 1 there appear to only be 2 OS the boot
 
 ### NEWDOS/80
 
+For NewDOS 80 the simplist way I have found to disable floppy disks is to use the system command
+
+```
+SYSTEM 0,AL=6
+```
+
+which set only 6 drives (assume harddrives) as active excluding latter floppy disks
+
 ### LDOS
+
+#### Disable Floppy Disks
 
 If you want to use LDOS without an Expansion Interface (floppy disks), you may find it hangs.
 There are a couple of extra setup steps. Immediately after loading LDOS, issue these commands:
@@ -87,6 +97,20 @@ SYSTEM (SYSGEN)
 ```
 
 which disables floppy drives.
+
+#### Mount Floppy Disks
+
+A LSDOS utility (works with LDOS5 and LSDOS6) which allows to mount one or more .dsk image,
+directly from the SD card. It is written as an LSDOS driver, so you use it with
+
+SYSTEM(DRIVE=x,DRIVER="DSK/DCT").
+
+The driver will prompt you for the image name, then you can *read* from that image
+(works great with DISKCOPY to make new boot disks, for example).
+The dsk image is mounted read-only, there is no support for writes.
+The usual emulated formats are supported : DMK, JV1 and JV3.
+
+`DSK.CMD`
 
 ## UTILITIES
 
@@ -102,6 +126,5 @@ The current version of these is 2.05, whereas hard drive images generally have 2
 
 This document (from Ian M's site) describes use of these utilities
 * [FreHD Utilities](https://trs-80.com.au/trs80/FreHD%20Utilities.docx)
-
 
 
