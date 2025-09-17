@@ -76,12 +76,13 @@ The [FreHD](./frehd/README.md) internal board (part of this project)
 has been built and tested, and has one known issue
 
 Since an internal FreHD is powered from the main computer it may not
-have enough time to boot before the main computer (CPU) trys to access it
-via an auto boot ROM. The computer will need a hard reset after FreHD has fully booted.
-Hard reset requires a patched ROM, that forces a hard reset when reset button is pushed.
+have enough time to boot before the main computer (CPU) trys to access it.
+The computer will need a hard reset after FreHD has fully booted.
+If no expansion interface (floppy controller) is connected, 
+a patched ROM may be required to force hard reset from the user reset button.
 
-This issue may be fixed with a different version of the autoboot rom that adds a small delay
-during startup.
+This issue may be fixed with a different version of the autoboot ROM
+that adds a small delay during startup.
 
 ### MIRE / MISE
 
