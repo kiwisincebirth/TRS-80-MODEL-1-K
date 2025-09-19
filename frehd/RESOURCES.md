@@ -29,13 +29,15 @@ paste it into browser and change, make sure it says HTTPS
 
 ## Firmware Versions
 
-| Version | Description                                                    |
-|---------|----------------------------------------------------------------|
-| 2.13    | Is still listed on on Ian M's downloads Page                   |
-| 2.14    | The last version the author seemed actively involved with      |
-| 2.15    | Seems to be the one currently distributed with purchased FreHD |
-| 2.16    | Was quickly superseded by 2.17                                 |
-| 2.17    | Latest (Sept 2024), with various fixes                         |
+The following FreHD firmware versions are known to exist
+
+| Version | Description                                    | Where         |
+|---------|------------------------------------------------|---------------|
+| 2.13    | Is listed on Ian M's downloads Page            | Ian M         |
+| 2.14    | Last version the author seemed involved with   | Ian M, Author |
+| 2.15    | Seems to be distributed with purchased FreHD   | Purchase      |
+| 2.16    | Was quickly superseded by 2.17                 | GitHub        |
+| 2.17    | Latest (Sept 2024), with various fixes.        | Github        |
 
 ## SD Card Setup
 
