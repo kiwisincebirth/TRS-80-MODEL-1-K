@@ -110,8 +110,8 @@ Typically, solder components in order of the lowest profile to the tallest compo
 
 ## Assembly Options
 
-Please see the Section [Advanced Feature](./FEATURES.md#advanced-features) 
-which describes some additional assembly information, and includes some information 
+Please see the Section [Advanced Feature](./FEATURES.md#advanced-features)
+which describes some additional assembly information, and includes some information
 about additional parts that may be required.
 
 ## Configuration
@@ -139,7 +139,7 @@ The following optional headers Pins are provided, you can choose to install or n
 - J14 - Used to connect an external reset button, mirroring the external reset switch
 - J15, J16 - are pin headers that provide 5v power for any internal board or accessory
 - J17 - an alternate way to supply (or use) 5V power (both pins) to the board. This is before the power switch
-- J20 - Used for installing an internal expansion card or ribbon cable. 
+- J20 - Used for installing an internal expansion card or ribbon cable.
 - J21 - Used to provide power to an internal expansion card.
 
 ## Testing
@@ -193,7 +193,7 @@ Additional Testing to consider:
 
 ## Troubleshooting
 
-See [Troubleshooting Guide](./TROUBLESHOOT.md) for more information 
+See [Troubleshooting Guide](./TROUBLESHOOT.md) for more information
 
 ## Usage Notes
 
@@ -209,8 +209,8 @@ presence of RAM, the EI buffers the output of RAM back to main databus.
 
 There are 2 approaches:
 
-(1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets. 
-This completely isolates the RAM from the data-bus and is easily reversible by installing chips. 
+(1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets.
+This completely isolates the RAM from the data-bus and is easily reversible by installing chips.
 The approach requires more work, but simple to change on the fly, and doesn't affect the circuit itself.
 A future user will notice the missing chips and can simply install them to restore to factory
 configuration.
