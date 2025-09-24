@@ -56,6 +56,7 @@ Unreleased
 
 This release fixes minor Issues
 - Silkscreen for character generator SW10-SW13 has been corrected
+- Added a single mounting hole, to allow for FreHD board to be mounted to.
 
 ## Version 1.0b (Current)
 
