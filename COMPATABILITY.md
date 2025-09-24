@@ -24,9 +24,9 @@ Following connectors have specifically been tested
 * DIN Video Connector
 * RCA Video Connector
 * Modern Power Switch
-* Legacy Power Switch (untested at present)
+* Legacy Power Switch
 * Modern Reset Switch
-* Legacy Reset Switch (untested at present)
+* Legacy Reset Switch
 
 ## Functional Tests
 
