@@ -126,7 +126,7 @@ Additional Images can be found here [Images](./images/README.md)
 
 ## Resources
 
-The use of the FreHD is not well documented, addition resources will be added here when they are found 
+The use of the FreHD is not well documented, see [Resources](./RESOURCES.md)
 
 ## Credits
 

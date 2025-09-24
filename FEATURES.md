@@ -177,13 +177,75 @@ tbd - info on setting up the timing signal's
 
 ### Joystick Port
 
-In V2 (and latter) of the board 
+In V2 (and latter) of the board a TRStick (Alpha) 5 bit Joystick Port was added. 
+Note the port also supports a second fire button (6th bit),
+but this would require a specific Joystick and software to use it.
 
-J9 and specific cable
+The most important aspect is that the appropriate DB9 to 10 Pin header cable 
+is ordered and attached as there are 2 incompatible types:
+* Cross Wired (Correct)
+* Straight Through (Incompatible)
+
+You must use a Cross Wired cable, which maps the pins on the DB9 connector
+based on the relative position, not the actual DB-9 pin numbering. 
+The incompatable) straight through cable in contrast ensures the 
+pin numbering on the DB-9 matches the pin numbering on the pin header
+
+The easiest way to identify the correct cable is one with a DB-9 IDC connector. 
+Cables that have a soldered connection (typically covered in a shroud)
+can be wired in either configuration, and must be checked for compatability,
+typically by removing the shroud.
+
+See this guide which defines and highlights the difference.
+[Internal Serial Cables for COM2 Port](https://www.scantips.com/serial-db9.html)
 
 ### Amplifier and Speaker
 
-In V2 (and latter) of the board
+In V2 (and latter) of the board, and onboard amplifier (module) and small speaker is supported
 
-M1, M2, J8
+#### Amplifier
+
+A small 6 pin amplifier module based on either LTK5128, or (identical) XPT8871 chipset is used
+For more information about the chip itself. Noting datasheets are in chinese
+* https://components101.com/ics/XPT8871-audio-amplifier-ic-pinout-datasheet-circuit
+
+Googling these chip ID's you will find the modules themselves. There are three variants
+which differ in pcb colour/size, pinout, and main capacitor size.
+They are commonly available from online chinese stores, or ebay.
+
+There are 2 pin outs supported. Which are identified as M1, and M2 on the mani PCD. 
+
+| Module | Height/Width | Pinout                            |
+|--------|--------------|-----------------------------------|
+| M1     | 16mm x 20mm  | +5V, GND, GND, Input, Out+, Out-  |
+| M2     | 16mm x 12mm  | Out+, Out-, Mute, GND, Input, +5V | 
+
+Note: M2 offers a Mute function, which is activated when the cassette motor is on.
+
+Three modules are typically available
+
+| PCB Colour | Module | Feature                                  |
+|------------|--------|------------------------------------------|
+| Red        | M1     | Large 470uF thru-hole power capacitor    |
+| Green      | M1     | Medium 220uF thru-hole power capacitor   |
+| Blue       | M2     | Small 100uF SMD capacitor, supports Mute |
+
+When purchasing this you should probably get one without a soldered header.
+The module is designed to be mounted with the components facing up.
+
+#### Speaker
+
+The amplifier module supports a small speaker, typically about 5 watts.
+You are free to support any speaker and mount it inside the case, connecting it to 
+the J8 pin header on the main PCB
+
+Alternately a small speaker can be mounted to the PCB itself, there is a space 
+for a 60mm (radius) or 45mm x 45mm (square) speaker. Mounting could be 
+by hot glue, or by double-sided tape, or another method
+
+#### Volume
+
+Volume adjustment is via RV2 (multi-turn) potentiometer, which is near the cassette socket.
+It would be possible to mount this externally to the mainboard, but may impact cassette
+reliability.
 
