@@ -1,6 +1,10 @@
 
 # Project Status
 
+## 24 Sept 2025
+
+Ordered the V2 boards
+
 ## Update 10 Sept 2025
 
 A couple of items to report

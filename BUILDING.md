@@ -232,28 +232,4 @@ See [Troubleshooting Guide](./TROUBLESHOOT.md) for more information
 
 ## Usage Notes
 
-### FreHD
-
-Consider building the separate [FreHD board](/frehd/README.md) for use with this board.
-
-### Expansion Interface
-
-When connecting the Expansion interface (EI) its internal RAM needs to be disabled.
-Noting: It is not good enough to remove the RAM chips themselves, as regardless of the
-presence of RAM, the EI buffers the output of RAM back to main databus.
-
-There are 2 approaches:
-
-(1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets.
-This completely isolates the RAM from the data-bus and is easily reversible by installing chips.
-The approach requires more work, but simple to change on the fly, and doesn't affect the circuit itself.
-A future user will notice the missing chips and can simply install them to restore to factory
-configuration.
-
-(2) Disable the buffers from outputting back to the bus. There are 2 options that I can suggest
-but without access to an expansion interface I am not sure which is easier;
-* Cut trace leading out of Z28 Pin 6, and bridge Pin 19 of either Z29, or Z31 to Pin 20 (vcc)
-* Cut trace leading into Z28 Pin 5, (or out of Z32 Pin 2) and bridge Z28 Pin 5 to Pin 7 (gnd)
-
-The second approach requires less overall work, but is harder to revert. A future user will have
-to trace out what was changed, and have skill to revert it.
+See [Compatability Notes](./COMPATABILITY.md)
