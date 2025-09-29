@@ -81,47 +81,48 @@ against what is in the BOM, and cross it off. An interactive BOM is provided to 
 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in either direction as they do not have a polarity.
-  - R16 and R18 should maybe be installed latter See [Sync Timing](./FEATURES.md#video-sync-timing)
+  - R16 and R18 should be installed latter See [Sync Timing](./FEATURES.md#video-sync-calibration)
   - R37 is a 1/2 watt resistor and slightly bigger than the other resistors.
   - Resistor values are labelled on the board using R (ohms) K (kOhms) M (mOhms)
-- Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
+- Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last. These are optional components
 - Ceramic disc capacitors with specific values
   - C3, C5, C6, C7, C8, C13, C17, C18, C43, C48, C50, C57, C60, C61
   - Capacitors are labelled on the board in 3 digit (value exponent) notation
-- Then all remaining ceramic disk capacitors.
-  - These should all be 100nf (104) in value
-  - There are approximately 50 of these.
-  - While installing (using a Multimeter), please check the power rail is not shorted
-- Install any IC sockets, preferably all IC's should be socketed. Don't install IC's at this point.
-  - As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc,
-  - Some other more sensitive components U3 (SN75452), U25 (LM3900), U60 (74HCU04)
+- Then install all remaining (power decoupling) ceramic disk capacitors.
+  - There are about 50 of these and are all 100nf (104) in value
+  - While installing (using a Multimeter), please check the power rails are not shorted
+- Install IC sockets (preferably) for all IC's. Don't install IC's at this point.
+  - As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc.
+  - You MUST need to install sockets for programmable ROM's 
+  - Consider sockets for more sensitive components U3 (SN75452), U25 (LM3900)
+  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for U60
 - All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
 - 4 way DIP Jumper Switch pack, SW10
 - Main 10.6445 Mhz Quartz Crystal Y1.
   - If installing a tall component it must be mounted horizontally for height clearance
-  - See section below additional/alternate installation.
+  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) dont install Y1
 - Onboard Power LED D1. It needs to be installed in the correct polarity
   - This is optional, and can be installed at any time.
 - Jumper J18 - Should be shorted for normal CPU frequency
-- Jumper JP21, JP27 - Needs to be jumpered to set the main ROM Chip Type
-- Solder any optional Pin Headers (See Below)
-- Cassette Relay K1
+- Jumper JP21, JP27 - Must be jumpered to set the main ROM Chip Type
+- Solder any [Optional Pin Headers](#optional-headers)
+- Cassette Relay K1. This is an optional component
 - Transistors Q1, Q2
 - Power barrel Jack J11
 - RV2, RV4, RV5 Trim resistors. The alignment should be clear on the silk screen.
-- Electrolytic Capacitors C11, C19, C70.
+- Electrolytic capacitors with specific values C11, C19, C70.
   - These need to be installed in the correct polarity
   - The large capacitor (C11) should be mounted horizontally to reduce height
-- Install all remaining electrolytic capacitors
-  - These are all 10uF in value, and most are power decoupling
-  - After installing (using a Multimeter), please check the power rails are not shorted
-- Cassette DIN Socket J3
+- Then install all remaining (power decoupling) electrolytic capacitors. 
+  - These are all 10uF in value
+  - While installing (using a Multimeter), please check the power rails are not shorted
+- Cassette DIN Socket J3. This is an optional component.
 - Video output connector J2 (DIN) or J12 (RCA).
-  - If soldering RCA be sure to bridge solder jumper JP20.
+  - If soldering the RCA connector (J12) you MUST bridge solder jumper JP20.
 - Main Power switch, solder either S1 (Traditional) or SW1 (Modern Toggle) switch.
 - Main Reset switch, solder either S2 (Traditional) or SW2 (Modern) push button switch.
-- Keyboard header CN3, Can be mounted on front (or  rear) of the PCB.
-  - Should be mounted carefully depending on the cable connecting to the keyborard
+- Keyboard header CN3, should be mounted carefully depending on the cable used 
+  - This can be mounted on front (or  rear) of the PCB.
 
 ## Assembly Options
 

@@ -73,7 +73,9 @@ Composite video output is via the original DIN plug, or an optional RCA connecto
 The RCA connector is provided to be compatible with a larger range of external monitors, potentially more reliable and
 less subject to noise.
 
-A modern video sync generation circuit exists which allows the H and V positions to be adjusted
+A modern video sync generation circuit exists 
+* In V1 (of this board) it used the Japanese design, which derived sync pulses directly from the main counters
+* In V2 a new design was introduced, See the section [Video Sync Generation](#video-sync-generation) for more details
 
 If using the DIN socket better support has been added to allow the use of RGBtoHDMI, by passing the HDRV signal to
 pin 3 of the DIN socket. This is enabled by bridging jumper JP15. See below for further details.
@@ -166,14 +168,54 @@ Owing to height restrictions it is unlikely the oscillator could be socketed.
 * https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-P145-BX/965972
 * https://www.ecsxtal.com/store/pdf/ecs-p143x-p145x.pdf
 
-### Video Sync Timing
+### Video Sync Generation
 
-In V2 (and latter) of the board Video sync generation logic changed.
+First some History:
 
-When assembling **maybe don't** install R16 and R18 until latter as these can be used 
-to fine tune the Horizontal and vertical sync pulse durations.
+* The traditional Model 1 - used 74C04 CMOS inverters to build an analog timing circuit.
+  This circuit was problematic and known to fail over time.
+* The Japanese Model 1 (which this board is derived) used a digital sync signal derived off the 
+  primary video counter/dividers. This meant rock steady sync but eliminated picture adjustment  
 
-tbd - info on setting up the timing signal's
+In V1 of this board the Japanese design was followed. In V2 a new design was introduced
+The rest of this section describes this approach.
+
+The new (V2) design uses specific monostable multi-vibrators (74221) controlled by an RC network.
+This approach was first used in the Model 3, and latter in "Glens stuff TRS-80 Model 1 clone"
+
+This design allows for calibration of both 
+* the sync pulse delay (H and V position), is done via trim pots (RV4, RV5). 
+* the sync pulse duration via fixed trimming resistors (R16, and R18).  
+
+R17 & R19 are primary timing resistors, and have been chosen to ensure that by themselves 
+the pulse duration is slightly long. Pulse duration can be adjusted via trimming resistors.
+
+R16 & R18 are parallel trimming resistors and should be matched based on the other components.
+The values given are calculated and are based on 100% accuracy of other components.
+
+The indicated values of R16, and R18 can be used which will produce sync signals which
+while not 100% accurate, should generally be within tolerance. The tolerance depends on the
+accuracy to the other components used (specifically C6, and C8).
+
+#### Video Sync Calibration
+
+To accurately control the length of the Horizontal and Vertical sync pulses an 
+oscilloscope is required to measure the actual sync pulse duration. The following
+procedure can be followed:
+
+- During assembling **DON'T** install R16 and R18
+- Once assembled and powered on, h.sync and v.sync pulse can be calibrated independently.
+- Connect an oscilloscope to test points h.sync (or v.sync) on the PCB.
+- Place (hold) the default resistor in the trim resistor position and measure the pulse duration.
+- If the duration is too long, try a smaller resistor (but not smaller than 2K ohms)
+- If duration is too short try a larger resistor, or omit entirely.
+
+| Sync       | Duration | Test Point | Trim Resistor | Default Value |
+|------------|----------|------------|---------------|---------------|
+| Horizontal | 4.7 uS   | h.sync     | R16           | 62K ohms      |
+| Vertical   | 256 uS   | v.sync     | R18           | 24K ohms      |
+
+This process can be done without other major components (e.g. CPU/RAM/ROM) being inserted.
 
 ### Joystick Port
 
