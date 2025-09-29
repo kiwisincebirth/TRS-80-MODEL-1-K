@@ -2,9 +2,9 @@
 
 ## Renders of V1b
 
-![Front of Board](../pcb/TRS-80-MP-FrontV1b.png)
+![Front of Board](../pcb/TRS-80-MP-FrontV1c.png)
 
-![Back of Board](../pcb/TRS-80-MP-BackV1b.png)
+![Back of Board](../pcb/TRS-80-MP-BackV1c.png)
 
 ## The Whole Board
 

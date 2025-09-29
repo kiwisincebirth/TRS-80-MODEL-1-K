@@ -34,6 +34,10 @@ Char   SW10  SW11  SW12  SW13
 Noting SW11 for 27256, 27128 show `ON` incorrectly. This is partly
 confusion because an ON => Logic 0, while OFF => Logic 1
 
+## V1a
+
+See V1 (below) for issues not fixed in V1a
+
 ## V1
 
 The following minor should be noted for the board. These were discovered after initial PCB manufacture, and affect

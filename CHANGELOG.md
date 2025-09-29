@@ -50,17 +50,15 @@ Unreleased
 - Major improvement in the Schematic diagram quality.
 - Many component designators have changed from V1, so some V1 docs may not be accurate
 
-## Version 1.0c (Future)
+## Version 1.0c (Current)
 
-Unreleased
+![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1c.png)
 
 This release fixes minor Issues
 - Silkscreen for character generator SW10-SW13 has been corrected
 - Added a single mounting hole, to allow for FreHD board to be mounted to.
 
-## Version 1.0b (Current)
-
-![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1b.png)
+## Version 1.0b (Past)
 
 This is a patch version of the 1.0a board with the items back-ported from V2
 - Z50 is now pin compatible with a Full Can (DIP14) oscillator.
