@@ -1,6 +1,12 @@
 
 # Project Status
 
+## 29 Sept 2025
+
+I have now published a V1c of the board that fixes some minor issues.
+* The issue in the silkscreen for Character Generator Dip Switches
+* Added a mounting hole to allow [FreHD](./frehd/README.md) board to better held in place 
+
 ## 24 Sept 2025
 
 Ordered the V2 boards
