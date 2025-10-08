@@ -68,12 +68,6 @@ See The following discussion:
 
 [GENDON3 improved character generator for the Model I](https://forum.vcfed.org/index.php?threads/gendon3-improved-character-generator-for-the-model-i-discussion.59498)
 
-### Glens Stuff M1 Character Set
-
-This is an unmodified copy (which is fully compatible) of the font file used in the following project
-
-[Glens Stuff TRS-80 Clone](https://www.glensstuff.com/trs80/trs80.htm)
-
 ### Graphics 8 Bit Only Font
 
 In a regular TRS-80 64 characters of the regular font are assigned to represent graphic pixels in a 2 x 3 matrix.
@@ -93,4 +87,13 @@ One advantage would be existing software could easily make use of it, just need 
 to write to the screen, and when to switch into and out of this new font, nothing much else changes.
 The downsides is that you can't show any text characters on the screen at the same time.
 
+### Glens Stuff M1 Character Set
 
+This is an unmodified copy (which is fully compatible) of the font file used in the following project
+
+[Glens Stuff TRS-80 Clone](https://www.glensstuff.com/trs80/trs80.htm)
+
+### Minecraft
+
+This is a new font for the Model 1, mimicking the Minecraft in game text font. It comes in both the 4k format
+comatible with this computer and a 1k version compatible with traditional Model 1 character font roms.

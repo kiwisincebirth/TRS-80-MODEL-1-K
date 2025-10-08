@@ -121,6 +121,7 @@ The cassette Relay is an Omron "G5V-1 DC5"
 It can be obtained fairly easily from multiple sources, these usually come in either 2.1 or 2.5mm
 you need to choose the best one based on the power brick you intend to use.
 However, 2.1mm seems to be the more common one in use.
+* https://www.kycon.com/Catalog_PDF/KLDX_0202.pdf
 * https://core-electronics.com.au/dc-barrel-power-jack-connector.html
 
 ### DIN Connector
