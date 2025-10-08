@@ -96,4 +96,8 @@ This is an unmodified copy (which is fully compatible) of the font file used in 
 ### Minecraft
 
 This is a new font for the Model 1, mimicking the Minecraft in game text font. It comes in both the 4k format
-comatible with this computer and a 1k version compatible with traditional Model 1 character font roms.
+compatible with this computer and a 1k version compatible with traditional Model 1 character font roms.
+
+![Minecraft Font](./Minecraft_Image1.jpeg)
+
+In the above image the first 32 characters are the traditional Model 1 characters and are for comparison.
