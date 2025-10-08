@@ -26,17 +26,19 @@ And the following
 The PCB is flexible and allows certain the installation of either Modern or Traditional components this includes
 * The main power switch either Traditional, or modern toggle switch
 * The video output either traditional DIN, or RCA connector
-* Note: The traditional DIN power connector is NOT supported
+* Note: The traditional DIN power connector is **NOT** supported
 
 Other components that can be substituted are
 * Main System ROM, and character generator ROM support 27128, 27256, 27512, or 28256
+* An [Alternate Main Clock](./FEATURES.md#alternate-main-clock) provides support
+  support for a modern Can Crystal oscillator, rather than traditional discrete crystal circuit.
 
 The PCB has clear instructions for components considered (Optional). If you don't need a feature
 or wish to install it latter you can simply exclude it. Note however the components are included in the BOM
 * Cassette interface for loading/reading programs. Excluding these components does not prevent Audio output.
 * The cassette relay can also be excluded, which only prevents to control of external tape drive
-* The joystick interface is also optional and can be excluded
-* Audio amplifier and speaker are not required
+* The joystick interface is also optional and can be installed at any time.
+* Audio amplifier and speaker are not required, and can be installed at any time.
 * This also includes many Pin Headers which are for external connection.
 
 Before starting, you should ensure you have read and understand all the documentation
@@ -47,13 +49,13 @@ You should also have assembled all the components you need
 ### Programming ROMS
 
 You will also need to program the two (E)EPROMS, the Main system ROM, and the Character generator ROM.
-You will need an apprpriate programmer to do this.
+You will need an appropriate programmer to do this.
 
-For the main system ROM you should use the latest 1.3 version of the L2 ROM's
-Some ROM images have been provided in the ROMS folder.
+For the main system ROM you should probably use the latest 1.3 version of the 
+L2 ROM's. Some ROM images have been provided in the [ROMS](./roms/README.md) folder.
 
 For the Character generator ROM you may include multiple character fonts
-and choose which font via DIP switches. See the FONTS folder for these images
+and choose which via DIP switches. See the [FONTS](./fonts/README.md) folder for these images
 
 ### Solder Jumpers
 
@@ -98,6 +100,7 @@ Typically, solder components in order of the lowest profile to the tallest compo
   - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for U60
 - All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
 - 4 way DIP Jumper Switch pack, SW10
+- Transistors Q1, Q2
 - Main 10.6445 Mhz Quartz Crystal Y1.
   - If installing a tall component it must be mounted horizontally for height clearance
   - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) dont install Y1
@@ -107,7 +110,6 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Jumper JP21, JP27 - Must be jumpered to set the main ROM Chip Type
 - Solder any [Optional Pin Headers](#optional-headers)
 - Cassette Relay K1. This is an optional component
-- Transistors Q1, Q2
 - Power barrel Jack J11
 - RV2, RV4, RV5 Trim resistors. The alignment should be clear on the silk screen.
 - Electrolytic capacitors with specific values C11, C19, C70.
@@ -155,9 +157,9 @@ Configuration is provided by several jumper options
 - JP18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for high speed.
   - This can be routed to a switch, which could use a small capacitor to avoid bounce
 - JP19 - Provide +5V power to external monitor via DIN connector. Cut to disable this
-- JP20 - Used to support video output via RCA socket. Must be bridged to enable RCA
-- JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. See silkscreen on the PCB
-  - Note : JP21 controls Pin 21, and JP27 controls Pin 27 of the ROM socket
+- JP20 - Used to support video output via RCA socket. Must be bridged to enable RCA.
+- JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. See silkscreen on the PCB.
+  - Note : JP21 controls Pin 21, and JP27 controls Pin 27 of the ROM socket.
   - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
 - JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
   - Note : Default of 12 disables Writes to EEPROM, deferring to setting on JP27
@@ -166,9 +168,9 @@ Configuration is provided by several jumper options
 - SW10 - SW13 - (REQUIRED) - Configures the Character generator ROM
   - Note : See silkscreen for details of this.
   - Note : Switched On = Logic 1, Switched Off = Logic 0
-- RV2 - configures the signal level (volume) sent to the audio amplifier
-- RV4 - horizontal position of video image
-- RV5 - vertical position of video image
+- RV2 - configures the signal level (volume) sent to the audio amplifier.
+- RV4 - horizontal position of video image.
+- RV5 - vertical position of video image.
 
 ## Optional Headers
 
