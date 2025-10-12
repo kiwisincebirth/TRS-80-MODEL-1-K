@@ -1,6 +1,7 @@
 
 # Builders Guide
 
+This Guide is for VERSION 2 of the board.
 For V1 please see the [Builders Guide V1](/BUILDING-V1.md)
 
 ## Provided Files
@@ -11,8 +12,8 @@ The files provided in this project are primarily:
 - Gerber files for manufacture [JLCPCB ZIP](/pcb/TRS-80-MP_JLCPCBV2.zip) and [PCBWAY ZIP](/pcb/TRS-80-MP_PCBWayV2.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV2.csv)
 - A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV2.html)
-- The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 - The [Ordering](ORDERING.MD) guide for how to place a component order
+- The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 - The [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
 - The [Compatability Guide](COMPATABILITY.md) which identifies tested components and additions.
 
@@ -31,7 +32,8 @@ The PCB is flexible and allows certain the installation of either Modern or Trad
 Other components that can be substituted are
 * Main System ROM, and character generator ROM support 27128, 27256, 27512, or 28256
 * An [Alternate Main Clock](./FEATURES.md#alternate-main-clock) provides support
-  support for a modern Can Crystal oscillator, rather than traditional discrete crystal circuit.
+  for a modern Can Crystal oscillator, rather than traditional discrete crystal circuit.
+* A [SUPERMEM] memory addition
 
 The PCB has clear instructions for components considered (Optional). If you don't need a feature
 or wish to install it latter you can simply exclude it. Note however the components are included in the BOM
@@ -93,31 +95,32 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Then install all remaining (power decoupling) ceramic disk capacitors.
   - There are about 50 of these and are all 100nf (104) in value
   - While installing (using a Multimeter), please check the power rails are not shorted
+- Transistors Q1, Q2, these have fine pitch pads and require a small soldering iron tip and solder
 - Install IC sockets (preferably) for all IC's. Don't install IC's at this point.
-  - As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc.
-  - You MUST need to install sockets for programmable ROM's 
+  - You MUST need to install sockets for ROM's, including the character generator
+  - As a minimum you should have sockets for large scale components CPU,RAM, etc.
   - Consider sockets for more sensitive components U3 (SN75452), U25 (LM3900)
-  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for U60
-- All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
+  - If installing the [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for U60
+  - If installing the [SUPERMEM] DON'T install a socket for 
 - 4 way DIP Jumper Switch pack, SW10
-- Transistors Q1, Q2
+- All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
 - Main 10.6445 Mhz Quartz Crystal Y1.
   - If installing a tall component it must be mounted horizontally for height clearance
   - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) dont install Y1
 - Onboard Power LED D1. It needs to be installed in the correct polarity
   - This is optional, and can be installed at any time.
+- Electrolytic capacitors with specific values C11, C19, C70.
+  - These need to be installed in the correct polarity
+  - The large capacitor (C11) should be mounted horizontally to reduce height
+- Then install all remaining (power decoupling) electrolytic capacitors.
+  - These are all 10uF in value
+  - While installing (using a Multimeter), please check the power rails are not shorted
 - Jumper J18 - Should be shorted for normal CPU frequency
 - Jumper JP21, JP27 - Must be jumpered to set the main ROM Chip Type
 - Solder any [Optional Pin Headers](#optional-headers)
 - Cassette Relay K1. This is an optional component
 - Power barrel Jack J11
 - RV2, RV4, RV5 Trim resistors. The alignment should be clear on the silk screen.
-- Electrolytic capacitors with specific values C11, C19, C70.
-  - These need to be installed in the correct polarity
-  - The large capacitor (C11) should be mounted horizontally to reduce height
-- Then install all remaining (power decoupling) electrolytic capacitors. 
-  - These are all 10uF in value
-  - While installing (using a Multimeter), please check the power rails are not shorted
 - Cassette DIN Socket J3. This is an optional component.
 - Video output connector J2 (DIN) or J12 (RCA).
   - If soldering the RCA connector (J12) you MUST bridge solder jumper JP20.
