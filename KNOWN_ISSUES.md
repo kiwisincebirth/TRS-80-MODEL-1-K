@@ -4,6 +4,20 @@ The following known issues were found on the specific board versions. Note: the 
 in prior versions. Typically, these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
 for the actual changes made.
 
+## V1c
+
+MSly (discord channel) has uncovered an issue with C101 (2200uF), which takes about 5 seconds to discharge
+after power is removed. If power is reapplied before the capacitor has had significant time to 
+discharge then the computer won't boot. This is primarily observed as the video displaying showing the
+last screen contents (maybe dependent on the SRAM used) when power was disconnected.
+
+With externally powered devices (still powered on), there is a possibility of parasitic power increasing this time.
+With a FreHD it was observed it took 15 seconds for the power to be sufficiently drained to allow normal startup.
+
+The Resolution is to replace C101 which a much smaller capacitor in the range, 220uF - 470uF. Additionally, 
+installing a bleed resistor 100 ohms 1/2 watt across the main power rail, will improve the situation
+This bleed resistor will draw a consistent 1/4 watt of power.
+
 ## V1b
 
 I have found an issue on the silkscreen for Character Generator Dip Switch settings SW10-13 which affects
