@@ -9,8 +9,8 @@ The files provided in this project are primarily:
 - Gerber files for manufacture [JLCPCB ZIP](/pcb/TRS-80-MP_JLCPCBV1b.zip) and [PCBWAY ZIP](/pcb/TRS-80-MP_PCBWayV1b.zip)
 - Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1b.csv)
 - A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV1b.html)
-- The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 - The [Ordering](ORDERING.MD) guide for how to place a component order
+- The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 - The [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
 - The [Compatability Guide](COMPATABILITY.md) which identifies tested components and additions.
 
@@ -24,7 +24,7 @@ And the following
 The PCB is flexible and allows certain the installation of either Modern or Traditional components this includes
 * The main power switch either Traditional, or modern toggle switch
 * The video output either traditional DIN, or RCA connector
-* Note: The traditional DIN power connector is NOT supported
+* Note: The traditional DIN power connector is **NOT** supported
 
 Other components that can be substituted are
 * Main System ROM, and character generator ROM support 27128, 27256, 27512, or 28256
@@ -37,13 +37,13 @@ You should also have assembled all the components you need
 ### Programming ROMS
 
 You will also need to program the two (E)EPROMS, the Main system ROM, and the Character generator ROM.
-You will need an apprpriate programmer to do this.
+You will need an appropriate programmer to do this.
 
-For the main system ROM you should use the latest 1.3 version of the L2 ROM's
-Some ROM images have been provided in the ROMS folder.
+For the main system ROM you should probably use the latest 1.3 version of the 
+L2 ROM's. Some ROM images have been provided in the [ROMS](./roms/README.md) folder.
 
 For the Character generator ROM you may include multiple character fonts
-and choose which font via DIP switches. See the FONTS folder for these images
+and choose which via DIP switches. See the [FONTS](./fonts/README.md) folder for these images
 
 ### Solder Jumpers
 
@@ -157,7 +157,7 @@ You will need to power on to perform necessary tests
 Follow these steps
 - Don't install any socketed IC's yet
 - Before connecting power (using a multimeter) ensure the 5V and GND rails are not shorted
-  - This can be done on any IC socket generally Pin's 14/16 and Pin's 7/8.  
+  - This can be done on any IC socket generally Pin's 14/16 and Pin's 7/8.
 - Connect the power supply to the board.
 - With power turned off, test for +5V on J17, located just behind the barrel jack.
 - With power turned on, test for +5V on a few IC sockets Pin 14 or 16 around the board.
@@ -168,7 +168,7 @@ Follow these steps
 - Use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
   - If not found then need to trace back to main oscillator
   - Consider installing C61 (Patch) to make main oscillator run.
-- Connect a monitor (CRT preferable), you should see a video raster.
+- Connect a CRT (preferable) monitor, you should see a video raster.
 - Insert video generation chips
   - Static video RAM chips.
   - Insert character generator ROM.
