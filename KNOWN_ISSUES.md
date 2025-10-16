@@ -1,8 +1,22 @@
 # Known Issues
 
-The following known issues were found on the specific board versions. Note: If indicated the issues may also exist
+The following known issues were found on the specific board versions. Note: the issues probably also exist
 in prior versions. Typically, these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
 for the actual changes made.
+
+## V1c
+
+MSly (discord channel) has uncovered an issue with C101 (2200uF), which takes about 5 seconds to discharge
+after power is removed. If power is reapplied before the capacitor has had significant time to 
+discharge then the computer won't boot. This is primarily observed as the video displaying showing the
+last screen contents (maybe dependent on the SRAM used) when power was disconnected.
+
+With externally powered devices (still powered on), there is a possibility of parasitic power increasing this time.
+With a FreHD it was observed it took 15 seconds for the power to be sufficiently drained to allow normal startup.
+
+The Resolution is to replace C101 which a much smaller capacitor in the range, 220uF - 470uF. Additionally, 
+installing a bleed resistor 100 ohms 1/2 watt across the main power rail, will improve the situation
+This bleed resistor will draw a consistent 1/4 watt of power.
 
 ## V1b
 
@@ -36,7 +50,14 @@ confusion because an ON => Logic 0, while OFF => Logic 1
 
 ## V1a
 
-See V1 (below) for issues not fixed in V1a
+the following issues were discovered and fixed from V1b and latter revisions
+
+- Thermal reliefs are missing on power rails connecting to most IC's. When soldering you need to use a higher
+  temperature soldering iron. Also ensure the soldering iron comes into direct contact with the pcb pad
+- The footprints for C19 (capacitor), Q1, Q2 (transistors) is not modern, the legs of the components 
+  will need to be bent outwards and the component mounted higher to fit correctly 
+- The footprint for CR4 diode is too small making the diode harder to fit, you will need to bend the legs
+  exactly to fit, and possibly sanding the legs may make it easier to mount
 
 ## V1
 
@@ -50,10 +71,4 @@ the boards design, and or the silkscreen. NOTE: The following have be fixed in V
 - Z32 can be a 74**HCT**00 just like other digital logic. The specific use of 74**C**00 is not required.
 - C51 (decoupling capacitor) duplicates C79 and is not required. While it does no harm it we be removed in future. 
 
-And the following issues were fixed from V1b and latter revisions
-- Thermal reliefs are missing on power rails connecting to most IC's. When soldering you need to use a higher
-  temperature soldering iron. Also ensure the soldering iron comes into direct contact with the pcb pad
-- The footprints for C19 (capacitor), Q1, Q2 (transistors) is not modern, the legs of the components 
-  will need to be bent outwards and the component mounted higher to fit correctly 
-- The footprint for CR4 diode is too small making the diode harder to fit, you will need to bend the legs
-  exactly to fit, and possibly sanding the legs may make it easier to mount
+

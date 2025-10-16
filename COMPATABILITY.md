@@ -94,6 +94,17 @@ Not Specifically relating to the Model 1K but more generally the following tips
 * For the 40/50 Pin adapter there is a Jumper JP1, this should NOT be shorted as prevents computer boot.
 * The SPAM chip should be removed from the Quinnerface, as it conflicts with the internal 48KB RAM
 
+#### Some Issues
+
+The FreHD appears to provide parasitic power back to the Model 1K (assumed via WAIT signal)
+This causes a 15-second delay before power can successfully be reapplied (with FreHD powered)
+
+Resolutions
+* Power the FreHD from the internal power on the Model 1K
+* Update the FreHD with Open Collector WAIT signal.
+* Reduce the size of the large filtering capacitor C101 to 220uF - 470uF
+* Install a bleed resistor 100 ohms 1/2 watt across the Model 1K main power rail
+
 ### FreHd (Internal)
 
 The [FreHD](./frehd/README.md) internal board (part of this project)
@@ -110,7 +121,15 @@ that adds a small delay during startup.
 
 ### MIRE / MISE
 
-Works with some minor issues.
+Is known to have some incompatibility. The following was investigated by MSly (discord channel):
+
+The MIRE seems to work fine - except for the reset button, which locks up the system.
+
+The MIRE with MISE connected boots up, but the reset button returns to Mem Size instead of a reboot.
+
+The MISE is incompatible with the Model 1k. I am having issues with LDOS not returning from a standard DIR command.
+It doesn't seem to be able to recognize the last drive - just hangs requiring a power cycle on both the MISE and M1K.
+This behavior is not seen on a Rev G.
 
 ### TRS-IO
 

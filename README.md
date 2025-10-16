@@ -68,4 +68,5 @@ See the separate [Status and Future](/STATUS.md) which provides a mini update bl
 - VCF Forums for some help and guidance
     - https://forum.vcfed.org/index.php?threads/trs-80-model-1-board-design.1251905/
 - The Tandy Discord Channel for feedback, help and support
-    - MSly, Marcel Erz, Maboytim, Tuc
+    - MSly for his continued support of this project
+    - also Marcel Erz, Maboytim, and Tuc
