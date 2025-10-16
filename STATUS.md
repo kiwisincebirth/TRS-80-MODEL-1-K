@@ -1,6 +1,11 @@
 
 # Project Status
 
+## 18 October 2025
+
+Major milstone today, completed work on the Supermem board, and
+got the V2 prototype up and running.
+
 ## 29 Sept 2025
 
 I have now published a V1c of the board that fixes some minor issues.
