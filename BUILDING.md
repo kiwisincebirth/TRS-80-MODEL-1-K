@@ -21,6 +21,7 @@ And the following
 - A few compatible font have been provided in this project see [Fonts](/fonts/README.md)
 - A few ROM image files have been provided in this project see [ROMS](/roms/README.md)
 - A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
+- A [SuperMem board](/supermem/README.md) that replaces the System RAM board providing 512KB or paged RAM
 
 ## Introduction
 
@@ -33,7 +34,6 @@ Other components that can be substituted are
 * Main System ROM, and character generator ROM support 27128, 27256, 27512, or 28256
 * An [Alternate Main Clock](./FEATURES.md#alternate-main-clock) provides support
   for a modern Can Crystal oscillator, rather than traditional discrete crystal circuit.
-* A [SUPERMEM] memory addition
 
 The PCB has clear instructions for components considered (Optional). If you don't need a feature
 or wish to install it latter you can simply exclude it. Note however the components are included in the BOM
