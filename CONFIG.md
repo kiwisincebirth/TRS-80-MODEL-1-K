@@ -34,7 +34,8 @@ Configuration is provided by several jumper options:
 - JP20 - Used to support video output via RCA socket. Must be bridged to enable RCA.
 - JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. 
   - Note : See Section Below [System ROM](#system-rom)
-- JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
+- JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27.
+  This is provided as an experimental feature.
   - Note : Default of 12 disables Writes to EEPROM, deferring to setting on JP27
   - Note : Shorting 23 (cutting 12) enables Writes to EEPROM, ignoring setting on JP27
   - Note : This requires software to perform the programming.
@@ -61,6 +62,49 @@ Configuration is provided by several jumper options
   - Note : See Section Below [Font Rom V1](#font-rom-v1)
 - J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for 2x speed.
   - This can be routed to a switch, which could use a small capacitor to avoid bounce
+
+## Video Calibration
+
+In Version 2 of the Model 1k the Video Sync Pulse generation is adjustable, and must be calibrated.
+This should be done during initial testing after the board has been assembled
+
+Calibration of the Horizontal and Vertical sync pulse delays (positions) is done
+via Trim potentiometers RV4 and RV, and can be done at any time.
+
+Calibration of the Horizontal and Vertical sync pulse durations is done by R16 & R18.
+These are parallel (to R17 R19) and are used to trim/calibrate the sync pulse durations.
+
+Ideally R16 and R18 should be chosen in the testing stage when accurate measurements
+can be taken and actual values chosen.
+
+### Sync Duration Calibration
+
+To accurately control the duration of the Horizontal and Vertical sync pulses an
+oscilloscope is required to measure the actual sync pulse duration. The following
+procedure can be followed:
+
+During assembling do **NOT** install R16 and R18. Once assembled and powered on, 
+h.sync and v.sync pulse can be calibrated independently:
+
+This process can be done without other major components (e.g. CPU/RAM/ROM) being inserted,
+but does require the main crystal oscillator to be fully functional.
+
+- Connect an oscilloscope to test points h.sync (or v.sync) on the PCB.
+- Place (hold) the default resistor in the trim resistor position and measure the pulse duration.
+- If the duration is too long, try a smaller resistor (but not smaller than 2K ohms)
+- You may need to test several resistors, to find a suitable value
+- If duration is too short try a larger resistor, or omit entirely.
+
+| Sync       | Duration | Test Point | Trim Resistor | Default Value |
+|------------|----------|------------|---------------|---------------|
+| Horizontal | 4.7 uS   | h.sync     | R16           | 62K ohms      |
+| Vertical   | 256 uS   | v.sync     | R18           | 24K ohms      |
+
+The default values of R16, and R18 can be used which will produce sync signals which
+while may not be 100% accurate, should generally be within tolerance. The tolerance depends on the
+accuracy to the other components used (specifically C6, and C8).
+
+Once values for R16, and R18 have been found they can be solder to the board permanently
 
 ## Configuring ROM Paging
 

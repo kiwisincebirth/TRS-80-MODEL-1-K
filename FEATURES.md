@@ -84,19 +84,6 @@ pin 3 of the DIN socket. This is enabled by bridging jumper JP15. See below for 
 For tear free video output Tim Halloran's no chip VBLANK modification is provided. See following for details:
 * https://github.com/hallorant/bigmit/blob/master/ta19demo/README.md
 
-### Sound Output (V2)
-
-Sockets (U4 and U5) provide a location to install a small audio amplifier module,
-based on the LTK5128, or XPT8871 chipset. 2 headers are provided for 2 distinct pinout configurations.
-A volume control is provided (RV2), with a speaker needing to be attached to (J8)
-If supported the amplifier will be muted when the cassette interface is active.
-
-### Joystick Port (V2)
-
-An Alpha Joystick port (5 bit) on Ports 00h-0Fh. At this time 4 bit mode is not supported.
-
-http://www.trs-80.org/alpha-joystick/
-
 ### Internal Expansion:
 
 The main board has an internal 40pin Header (J20) identical to and located just behind the main 40 pin expansion port.
@@ -173,7 +160,7 @@ Owing to height restrictions it is unlikely the oscillator could be socketed.
 First some History:
 
 * The traditional Model 1 - used 74C04 CMOS inverters to build an analog timing circuit.
-  This circuit was problematic and known to fail over time.
+  This circuit was **highly** problematic and known to fail over time.
 * The Japanese Model 1 (which this board is derived) used a digital sync signal derived off the 
   primary video counter/dividers. This meant rock steady sync but eliminated picture adjustment  
 
@@ -181,46 +168,20 @@ In V1 of this board the Japanese design was followed. In V2 a new design was int
 The rest of this section describes this approach.
 
 The new (V2) design uses specific monostable multi-vibrators (74221) controlled by an RC network.
-This approach was first used in the Model 3, and latter in "Glens stuff TRS-80 Model 1 clone"
+This approach was partially used in the Model 3, and fully used in "Glens stuff TRS-80 Model 1 clone"
 
 This design allows for calibration of both 
 * the sync pulse delay (H and V position), is done via trim pots (RV4, RV5). 
 * the sync pulse duration via fixed trimming resistors (R16, and R18).  
 
-R17 & R19 are primary timing resistors, and have been chosen to ensure that by themselves 
-the pulse duration is slightly long. Pulse duration can be adjusted via trimming resistors.
-
-R16 & R18 are parallel trimming resistors and should be matched based on the other components.
-The values given are calculated and are based on 100% accuracy of other components.
-
-The indicated values of R16, and R18 can be used which will produce sync signals which
-while not 100% accurate, should generally be within tolerance. The tolerance depends on the
-accuracy to the other components used (specifically C6, and C8).
-
-#### Video Sync Calibration
-
-To accurately control the length of the Horizontal and Vertical sync pulses an 
-oscilloscope is required to measure the actual sync pulse duration. The following
-procedure can be followed:
-
-- During assembling **DON'T** install R16 and R18
-- Once assembled and powered on, h.sync and v.sync pulse can be calibrated independently.
-- Connect an oscilloscope to test points h.sync (or v.sync) on the PCB.
-- Place (hold) the default resistor in the trim resistor position and measure the pulse duration.
-- If the duration is too long, try a smaller resistor (but not smaller than 2K ohms)
-- If duration is too short try a larger resistor, or omit entirely.
-
-| Sync       | Duration | Test Point | Trim Resistor | Default Value |
-|------------|----------|------------|---------------|---------------|
-| Horizontal | 4.7 uS   | h.sync     | R16           | 62K ohms      |
-| Vertical   | 256 uS   | v.sync     | R18           | 24K ohms      |
-
-This process can be done without other major components (e.g. CPU/RAM/ROM) being inserted.
+See the Section [Video Calibration](./CONFIG.md#video-calibration) which covers this
+process to perform calibration of the video circuitry.
 
 ### Joystick Port
 
-In V2 (and latter) of the board a TRStick (Alpha) 5 bit Joystick Port was added. 
-Note the port also supports a second fire button (6th bit),
+In V2 (and latter) of the board a TRStick (Alpha) 5 bit Joystick Port was added.
+At this time 4 bit mode is not supported.
+The port also supports a 6th bit, (second fire button),
 but this would require a specific Joystick and software to use it.
 
 The most important aspect is that the appropriate DB9 to 10 Pin header cable 
@@ -230,7 +191,7 @@ is ordered and attached as there are 2 incompatible types:
 
 You must use a Cross Wired cable, which maps the pins on the DB9 connector
 based on the relative position, not the actual DB-9 pin numbering. 
-The incompatable) straight through cable in contrast ensures the 
+The incompatible) straight through cable in contrast ensures the 
 pin numbering on the DB-9 matches the pin numbering on the pin header
 
 The easiest way to identify the correct cable is one with a DB-9 IDC connector. 
@@ -241,9 +202,11 @@ typically by removing the shroud.
 See this guide which defines and highlights the difference.
 [Internal Serial Cables for COM2 Port](https://www.scantips.com/serial-db9.html)
 
-### Amplifier and Speaker
+### Internal Audio Output (V2)
 
-In V2 (and latter) of the board, and onboard amplifier (module) and small speaker is supported
+In V2 of the board, and onboard amplifier (module) and small speaker is supported
+A volume control is provided (RV2), with a speaker needing to be attached to (J8)
+If supported the amplifier will be muted when the cassette interface is active.
 
 #### Amplifier
 
@@ -255,7 +218,7 @@ Googling these chip ID's you will find the modules themselves. There are three v
 which differ in pcb colour/size, pinout, and main capacitor size.
 They are commonly available from online chinese stores, or ebay.
 
-There are 2 pin outs supported. Which are identified as M1, and M2 on the mani PCD. 
+There are 2 pin outs supported. Which are identified as M1, and M2 on the main PCB. 
 
 | Module | Height/Width | Pinout                            |
 |--------|--------------|-----------------------------------|
@@ -284,10 +247,3 @@ the J8 pin header on the main PCB
 Alternately a small speaker can be mounted to the PCB itself, there is a space 
 for a 60mm (radius) or 45mm x 45mm (square) speaker. Mounting could be 
 by hot glue, or by double-sided tape, or another method
-
-#### Volume
-
-Volume adjustment is via RV2 (multi-turn) potentiometer, which is near the cassette socket.
-It would be possible to mount this externally to the mainboard, but may impact cassette
-reliability.
-

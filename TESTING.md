@@ -35,6 +35,7 @@ Follow these steps
     - If not found then need to trace back to main oscillator
     - For V1 board consider installing C61 (Patch) to make main oscillator run.
 - Connect a CRT (preferable) monitor, you should see a video raster.
+- Calibrate the Video [Sync Duration](./CONFIG.md#sync-duration-calibration). Version 2 Only!
 - Insert video generation chips
     - Static video RAM chip or chips(s).
     - Insert character generator ROM.

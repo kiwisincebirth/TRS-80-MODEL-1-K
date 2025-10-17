@@ -85,7 +85,7 @@ against what is in the BOM, and cross it off. An interactive BOM is provided to 
 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in either direction as they do not have a polarity.
-  - R16 and R18 should be installed latter See [Sync Timing](./FEATURES.md#video-sync-calibration)
+  - R16 and R18 should **NOT** be installed now. See [Video Calibration](./CONFIG.md#video-calibration)
   - R37 is a 1/2 watt resistor and slightly bigger than the other resistors.
   - Resistor values are labelled on the board using R (ohms) K (kOhms) M (mOhms)
 - Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last. These are optional components
