@@ -2,6 +2,8 @@
 
 ## Introduction
 
+![Supermem](./images/IMG_0036.jpeg)
+
 The SuperMem board is an addition to the Model 1k that provides 512KB of Banked SRAM
 (mostly) compatible with the SuperMem 512 for the Model 1
 
@@ -120,11 +122,11 @@ MEM SIZE ? 32000
 
 ### Version 1
 
-[PCBV1](./SuperMem_PCBFront_V1.png)
+![PCBV1](./images/SuperMem_PCBFront_V1.png)
 
 ### Version 2
 
-[PCBV2](./SuperMem_PCBFront_V2.png)
+![PCBV2](./images/SuperMem_PCBFront_V2.png)
 
 
 
