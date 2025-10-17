@@ -154,7 +154,7 @@ The following optional headers Pins are provided, you can choose to install or n
 
 ## Initial Testing
 
-See [Testing Guide](./TROUBLESHOOT.md) for more information
+See [Testing Guide](./TESTING.md) for more information
 
 ## Troubleshooting
 
