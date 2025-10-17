@@ -32,16 +32,14 @@ Configuration is provided by several jumper options:
   - This can be routed to a switch, which could use a small capacitor to avoid bounce
 - JP19 - Provide +5V power to external monitor via DIN connector. Cut to disable this
 - JP20 - Used to support video output via RCA socket. Must be bridged to enable RCA.
-- JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. See silkscreen on the PCB.
-  - Note : JP21 controls Pin 21, and JP27 controls Pin 27 of the ROM socket.
-  - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
+- JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. 
+  - Note : See Section Below [System ROM](#system-rom)
 - JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
   - Note : Default of 12 disables Writes to EEPROM, deferring to setting on JP27
   - Note : Shorting 23 (cutting 12) enables Writes to EEPROM, ignoring setting on JP27
   - Note : This requires software to perform the programming.
 - SW10 - SW13 - (REQUIRED) - Configures the Character generator ROM
-  - Note : See silkscreen for details of this.
-  - Note : Switched On = Logic 1, Switched Off = Logic 0
+  - Note : See Section Below [Font Rom V2](#font-rom-v2)
 - RV2 - configures the signal level (volume) sent to the audio amplifier.
 - RV4 - horizontal position of video image.
 - RV5 - vertical position of video image.
@@ -58,11 +56,9 @@ Configuration is provided by several jumper options
     memory in the 0x37E0 - 0x37FF range. If using a 14kb ROM the 0x37E0 - 0x37EF memory address should probably
     return 0xFF so (if installed) a Level 2 ROM will not think a floppy controller is attached.
 - JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM.
-  - Note : JP21 controls Pin 21, and JP27 controls Pin 27
-  - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
+  - Note : See Section Below [System ROM](#system-rom)
 - SW10 - SW13 - (REQUIRED) - Configures the Character generator ROM
-  - Note : See silkscreen for details of this.
-  - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
+  - Note : See Section Below [Font Rom V1](#font-rom-v1)
 - J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for 2x speed.
   - This can be routed to a switch, which could use a small capacitor to avoid bounce
 
@@ -100,9 +96,9 @@ The mapping of the address line(s) is covered below.
 Since a character font ROM occupies 4 KB it uses A0-A11 
 to address its data, leaving A12-A15 (depending on chip) for page control
 
-**Warning** The silkscreen on the V1 PCB is incorrect. Only use the table below.
+#### Font Rom V1
 
-#### V1
+**Warning** The silkscreen on the V1 PCB is incorrect. Only use the table below.
 
 | PROM TYPE | SW10 | SW11 | SW12 | SW13 |
 |-----------|------|------|------|------|
@@ -114,9 +110,9 @@ to address its data, leaving A12-A15 (depending on chip) for page control
 Notes:
 - In V1 of the board DIP Switches were inverted in meaning i.e
   - Switched ON = Logic 0, and switched OFF = Logic 1
-  - This was corrected in V2 and latter revisions, ie. ON=1, OFF=0
+  - This was corrected in V2 and latter revisions.
 
-#### V2
+#### Font Rom V2
 
 | PROM TYPE | SW10 | SW11 | SW12 | SW13 |
 |-----------|------|------|------|------|
@@ -124,6 +120,8 @@ Notes:
 | 27512     | A14  | A15  | A13  | A12  |
 | 27256     | A14  | ON   | A13  | A12  |
 | 27128     | ON   | ON   | A13  | A12  |
+
+Switched ON = Logic 1, Switched OFF = Logic 0
 
 ### System ROM
 
