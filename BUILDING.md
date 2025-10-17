@@ -7,10 +7,10 @@ This Guide is for **VERSION 1** of the board.
 
 The files provided in this project are primarily:
 
-- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1b.pdf)
-- Gerber files for manufacture [JLCPCB ZIP](/pcb/TRS-80-MP_JLCPCBV1b.zip) and [PCBWAY ZIP](/pcb/TRS-80-MP_PCBWayV1b.zip)
-- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1b.csv)
-- A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV1b.html)
+- The Schematics in PDF Format [Schematics PDF Format](/pcb/TRS-80-MP-SchematicsV1c.pdf)
+- Gerber files for manufacture [JLCPCB ZIP](/pcb/old/TRS-80-MP_JLCPCBV1c.zip) and [PCBWAY ZIP](/pcb/old/TRS-80-MP_PCBWayV1c.zip)
+- Bill of Materials [BOM CSV Format](/pcb/TRS-80-MP-BillOfMatV1c.csv)
+- A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV1c.html)
 - The [Ordering](ORDERING.MD) guide for how to place a component order
 - The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
 - The [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself

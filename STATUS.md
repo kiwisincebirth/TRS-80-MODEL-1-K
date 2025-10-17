@@ -3,8 +3,9 @@
 
 ## 18 October 2025
 
-Major milstone today, completed work on the Supermem board, and
-got the V2 prototype up and running.
+Major milestones today 
+* completed work on the Supermem board, which is now fully documented.
+* Got the V2 prototype up and running. 
 
 ## 29 Sept 2025
 
