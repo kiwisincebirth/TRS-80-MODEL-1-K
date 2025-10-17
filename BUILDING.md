@@ -21,7 +21,7 @@ And the following
 - A few compatible font have been provided in this project see [Fonts](/fonts/README.md)
 - A few ROM image files have been provided in this project see [ROMS](/roms/README.md)
 - A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
-- A [SuperMem board](/supermem/README.md) that replaces the System RAM board providing 512KB or paged RAM
+- A [SuperMem 512](/supermem/README.md) board that replaces the System RAM board providing 512KB of banked RAM
 
 ## Introduction
 
@@ -129,6 +129,10 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Keyboard header CN3, should be mounted carefully depending on the cable used 
   - This can be mounted on front (or  rear) of the PCB.
 
+Once assembled it is recommended that the board be cleaned of any resin/flux
+deposited during soldering. Using a soft toothbrush and isopropyl alcohol is generally
+acceptable for this process.
+
 ## Assembly Options
 
 Please see the Section [Advanced Feature](./FEATURES.md#advanced-features)
@@ -137,43 +141,7 @@ about additional parts that may be required.
 
 ## Configuration
 
-Configuration is provided by several jumper options
-- JP6 - (REQUIRED) - Used to configure video output to either 50Hz or 60Hz.
-- JP10 - Configure how character generator selects its page number (LSB), switch vs software.
-  - Note : 1&2 are bridged by default, using SW13 to select the LSB char generator page
-  - Note : Setting 2&3 enable software selection using (Port FF Bit 7), ignoring SW13.
-- JP12 - Configure the use of an all RAM machine, replacing the use of ROM. This is provided
-  as an experimental feature, a boostrap process will be needed to initialise the computer
-  - Note : If shorting this the ROM chip itself should be removed.
-  - Note : If shorting this JP14 (1&2) cannot be bridged, instead (2&3) must be used.
-- JP13, JP14 - Configure either RAM or ROM to be mapped into the 12-13kb and 13-14kb address space
-  - Note : Using the 13-14kb address space will prevent the use of Floppy disk
-    or printer which occupy memory in the 0x37E0 - 0x37FF range.
-  - Note : If using the 13-14kb address space unmodified Level 2 ROM may cause issues.
-    I have included modified ROMs to deal with these issues.
-- JP15 - Enable output of HDRV on Video DIN socket for RGBtoHDMI support
-  - Note : Only bridge this if installing DIN connector, RCA connector can't use it
-- JP16 - Change the Reset switch from NMI (12) the default to full CPU reset (23)
-- JP17 - Selects CPU High speed when in High speed mode
-  - Note : 1&2 are bridged by default and select 3.55 Mhz when in high speed mode
-  - Note : 2&3 select 5.32 Mhz as the high speed mode. If bridging cut 1&2 first
-- JP18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for high speed.
-  - This can be routed to a switch, which could use a small capacitor to avoid bounce
-- JP19 - Provide +5V power to external monitor via DIN connector. Cut to disable this
-- JP20 - Used to support video output via RCA socket. Must be bridged to enable RCA.
-- JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. See silkscreen on the PCB.
-  - Note : JP21 controls Pin 21, and JP27 controls Pin 27 of the ROM socket.
-  - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
-- JP30 - Allows EEPROM programming (support) by allowing WR signal to be routed to Pin 27
-  - Note : Default of 12 disables Writes to EEPROM, deferring to setting on JP27
-  - Note : Shorting 23 (cutting 12) enables Writes to EEPROM, ignoring setting on JP27
-  - Note : This requires software to perform the programming.
-- SW10 - SW13 - (REQUIRED) - Configures the Character generator ROM
-  - Note : See silkscreen for details of this.
-  - Note : Switched On = Logic 1, Switched Off = Logic 0
-- RV2 - configures the signal level (volume) sent to the audio amplifier.
-- RV4 - horizontal position of video image.
-- RV5 - vertical position of video image.
+Configuration of the board is via [Jumpers](./CONFIG.md#version-2-jumpers)
 
 ## Optional Headers
 
@@ -184,53 +152,9 @@ The following optional headers Pins are provided, you can choose to install or n
 - J20 - Used for installing an internal expansion card or ribbon cable.
 - J21 - Used to provide power to an internal expansion card.
 
-## Testing
+## Initial Testing
 
-Before testing, you will need a regulated power supply that provides 5V. The connector is a center positive
-barrel jack, and is quite common to find this connection in 12V power supplies, however these are not
-compatible. The board performs no power regulation so a good quality power source is required.
-
-**WARNING!!** - Connecting a 12V Power supply will probably **damage several components on the board**.
-Please **test the power supply** for correct voltage and polarity **before connecting**.
-
-For each of the step (when inserting components) ensure power is turned off and disconnected.
-You will need to power on to perform necessary tests
-
-Follow these steps
-- Don't install any socketed IC's yet
-- Before connecting power (using a multimeter) ensure the 5V and GND rails are not shorted
-  - This can be done on any IC socket generally Pin's 14/16 and Pin's 7/8.
-- Connect the power supply to the board.
-- With power turned off, test for +5V on J17, located just behind the barrel jack.
-- With power turned on, test for +5V on a few IC sockets Pin 14 or 16 around the board.
-- Insert all simple socketed logic chips
-  - Including all 74xx series logic
-  - Including U3 (SN75452), and U25 (LM3900)
-  - Do not insert the CPU, ROMs, character generator, and RAMs for now.
-- Use an oscilloscope test for a 1.77 Mhz Clock Signal on Pin 6 of the Z-80 CPU Socket
-  - If not found then need to trace back to main oscillator
-- Connect a CRT (preferable) monitor, you should see a video raster.
-- Insert video generation chips
-  - Static video RAM chip.
-  - Insert character generator ROM.
-- Ensure SW10 is configured for the chip type, and character set.
-- When powered on you should see random but recognisable characters.
-- With Power disconnected, Insert the main Z80 processor chip.
-- When powered on you should see the display fill up with repeating `@9`characters
-  - This indicates the CPU is functioning and executing code.
-- With Power disconnected, Insert the main system RAM, and ROM chip's
-- Ensure JP21, JP27 are configured for the ROM chip type you are using
-- When powered on, you should see a prompt showing "MEM SIZE?" (if it is the normal system ROM).
-  - You may see random characters being input, this is expected since keyboard is not connected
-- Install the keyboard with the IDC cable (if you installed a header).
-- Now, you should be able to use the system.
-
-Additional Testing to consider:
-- Load and save a program to cassette tape
-- Run a Hello World program: 10 PRINT "Hello World!" (Return) 20 GOTO 10 (Return) RUN (Return).
-  You should run this for some time. You can stop with the BREAK key.
-- 32 character mode PRINT CHR$(xx) or right arrow and clear on the keyboard
-- Another program to try ; 10 PRINT MEM;:IF MEM >100 GOSUB 10 ELSE RUN
+See [Testing Guide](./TROUBLESHOOT.md) for more information
 
 ## Troubleshooting
 

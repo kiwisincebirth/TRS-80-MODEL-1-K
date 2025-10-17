@@ -1,6 +1,6 @@
 # Images
 
-## Renders of V1b
+## Renders of V1c
 
 ![Front of Board](../pcb/TRS-80-MP-FrontV1c.png)
 

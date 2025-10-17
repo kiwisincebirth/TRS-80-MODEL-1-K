@@ -52,6 +52,7 @@ See the separate [Builders Guide](/BUILDING.md) for complete technical documenta
 Included with this project are:
 - All required materials and guides to order and assemble this project.
 - A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
+- A [SuperMem 512](/supermem/README.md) board that replaces the System RAM board providing 512KB of banked RAM
 - A selection of [Font Files](/fonts/README.md) for use with this project.
 - A selection of [ROM Images](/roms/README.md) for use with this project.
 
