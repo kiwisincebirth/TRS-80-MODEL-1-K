@@ -116,6 +116,16 @@ MEM SIZE ? 32000
 20 FOR N = 0 TO 15:OUT 67,N:PRINT PEEK(-1);:NEXT X 
 25 PRINT PEEK(32767)
 ```
+## Board Layouts
+
+### Version 1
+
+[PCBV1](./SuperMem_PCBFront_V1.png)
+
+### Version 2
+
+[PCBV2](./SuperMem_PCBFront_V2.png)
+
 
 
 
