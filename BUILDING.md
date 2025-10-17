@@ -119,21 +119,7 @@ about additional parts that may be required.
 
 ## Configuration
 
-Configuration is provided by several jumper options
-- JP6, JP7, JP8, and JP10 - (REQUIRED) - Used to configure video output to either 50Hz or 60Hz.
-- JP13, JP14 - Size of the main system ROM as either 12KB (DEFAULT), 13KB, or 14KB
-  - Note : 1&2 are bridged by default and need to be cut for any change.
-  - Note : Using a 14KB ROM size will prevent the use of Model 1 floppy controller or printer port which occupy
-    memory in the 0x37E0 - 0x37FF range. If using a 14kb ROM the 0x37E0 - 0x37EF memory address should probably
-    return 0xFF so (if installed) a Level 2 ROM will not think a floppy controller is attached.
-- JP21, JP27 - (REQUIRED) - Configures the type and Page of the main ROM. 
-  - Note : JP21 controls Pin 21, and JP27 controls Pin 27
-  - Note : Shorting Pin 1&2 = Logic 1 , while shorting Pin 2&3 = Logic 0
-- SW10 - SW13 - (REQUIRED) - Configures the Character generator ROM
-  - Note : See silkscreen for details of this.
-  - Note : The switch polarity is reversed Switched On = Logic 0, Switched Off = Logic 1
-- J18 - Short pin to set CPU speed to Normal 1.77Mhz, or removed for 2x speed.
-  - This can be routed to a switch, which could use a small capacitor to avoid bounce
+Configuration of the board is via [Jumpers](./CONFIG.md#version-1-jumpers)
 
 ## Optional Headers
 
