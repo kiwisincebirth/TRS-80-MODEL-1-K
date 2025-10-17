@@ -1,0 +1,101 @@
+Name     SUPERMEM-M1K ;
+PartNo   00 ;
+Date     29.09.2025 ;
+Revision 01 ;
+Designer KiwiSinceBirth ;
+Company  Individual ;
+Assembly None ;
+Location None ;
+Device   g22v10 ;
+
+/*
+===============================================================================
+
+Provides Super-Mem 512KB capability to TRS-80 Model 1k
+https://github.com/kiwisincebirth/TRS-80-MODEL-1-K/supermem
+
+===============================================================================
+                                 Chip Diagram
+===============================================================================
+
+                               ______________
+                              | SUPERMEM-M1K |
+                       A0 x---|1           24|---x Vcc                      
+                       A1 x---|2           23|---x !LOAD_X                  
+                       A2 x---|3           22|---x !VIEW_X                  
+                       A3 x---|4           21|---x RAMA16                   
+                       A7 x---|5           20|---x RAMA18                   
+                       A6 x---|6           19|---x RAMA17                   
+                       A5 x---|7           18|---x RAMA15                   
+                       A4 x---|8           17|---x BANK1                    
+                      A15 x---|9           16|---x BANK3                    
+                 !CPU_OUT x---|10          15|---x BANK2                    
+                  !CPU_IN x---|11          14|---x BANK0                    
+                      GND x---|12          13|---x                          
+                              |______________|
+
+*/
+
+// GAL INPUT PINS
+// ==============
+
+// Z80 CPU Address Bus 
+PIN [1,2,3,4,8,7,6,5] = [A0..7] ; //  For IO Port Decoding
+PIN 9                 = A15 ; // For Low High Bank selection
+
+// Z80 CPU Control Bus 
+PIN 10   =  !CPU_OUT ;
+PIN 11   =  !CPU_IN ;
+
+// Memory Bank Hardware Register (14-17)
+PIN [14,17,15,16] = [BANK0..3] ;
+
+// GAL OUTPUT PINS
+// ===============
+
+// SRAM Page Address. (18-21)
+PIN [18,21,19,20] = [RAMA15..18] ;
+
+// Control for Bank Register and Output Buffer
+
+PIN 22   = !VIEW_X ; // Enables Latch onto main data bus
+PIN 23   = !LOAD_X ; // Loads Bank from data bus into Latch
+
+// GAL EQUATIONS
+// =============
+
+//
+// BANK REGISTER CONTROL
+//
+
+// Bank Register IO Address Decoding - Port 67 - ( 0x43 ) : 0100 0011
+IO_BANK_REG_ADDR  = !A7 & A6 & !A5 & !A4 & !A3 & !A2 & A1 & A0 ; 
+
+// Loads Bank register from data bus, OUT 67,x
+LOAD_X = CPU_OUT & IO_BANK_REG_ADDR ;
+
+// Enable Bank Register onto main data Bus , IN 67
+VIEW_X = CPU_IN & IO_BANK_REG_ADDR ;  
+
+//
+// SRAM BANK ADDRESS SELECTION
+//
+// Function is to provide SRAM Page address
+// * Must use Bank 0 for Lower 32K RAM (ignore Bank Register)
+// * Must avoid Bank 0 for Upper 32K RAM (mapped to Bank 1)
+//
+
+// detects valid bank number, NOT Equal to Zero, 
+IS_BANK_OK = BANK0 # BANK1 # BANK2 # BANK3 ; 
+
+// For Hi 32K , Only pass on bank number if valid, 
+// If Invalid (=0) bank number, revert to Bank 1, which is 1 for A15
+RAMA15 = A15 & ( ( IS_BANK_OK & BANK0 ) # ! IS_BANK_OK  ) ;
+
+// For all other address lines
+// If Invalid (=0) Bank Number, revert to Bank 1, which is 0 for A16-A18
+RAMA16 = A15 & ( IS_BANK_OK & BANK1  ) ;
+RAMA17 = A15 & ( IS_BANK_OK & BANK2  ) ;
+RAMA18 = A15 & ( IS_BANK_OK & BANK3  ) ;
+
+
