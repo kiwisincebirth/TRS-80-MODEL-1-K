@@ -5,7 +5,7 @@ This guide details the initial testing steps required after assembly is complete
 
 ## Prior to Testing
 
-Before testing you should have completed the assembly, but not inserted any socketed chips.
+Before testing, you should have completed the assembly, but not inserted any socketed chips.
 Please review the board to ensure all components are installed and soldered.
 
 You will need a regulated power supply that provides 5V. The connector is a center positive
@@ -53,9 +53,12 @@ Follow these steps
 
 ## Additional Testing
 
-Additional Testing to consider:
-- Load and save a program to cassette tape
+Basic testing to consider:
 - Run a Hello World program: 10 PRINT "Hello World!" (Return) 20 GOTO 10 (Return) RUN (Return).
   You should run this for some time. You can stop with the BREAK key.
-- 32 character mode PRINT CHR$(xx) or right arrow and clear on the keyboard
-- Another program to try ; 10 PRINT MEM;:IF MEM >100 GOSUB 10 ELSE RUN
+- Another program to try ; 10 PRINT MEM;:IF MEM >100 GOSUB 10 ELSE RUN (Return) RUN (Return)
+
+Hardware testing
+- Test that load and save a program to cassette tape works.
+- Test the computer runs at high speed by removing J18.
+- Test 32 character mode PRINT CHR$(xx) or right arrow and clear on the keyboard
