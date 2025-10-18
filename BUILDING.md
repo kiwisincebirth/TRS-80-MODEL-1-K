@@ -32,6 +32,7 @@ The PCB is flexible and allows certain the installation of either Modern or Trad
 
 Other components that can be substituted are
 * Main System ROM, and character generator ROM support 27128, 27256, 27512, or 28256
+* Main System RAM can be enhanced with [SuperMem 512](/supermem/README.md) compatible banked RAM
 * An [Alternate Main Clock](./FEATURES.md#alternate-main-clock) provides support
   for a modern Can Crystal oscillator, rather than traditional discrete crystal circuit.
 
@@ -146,6 +147,7 @@ Configuration of the board is via [Jumpers](./CONFIG.md#version-2-jumpers)
 ## Optional Headers
 
 The following optional headers Pins are provided, you can choose to install or not install as required
+- J13 - Audio signal taken from cassette output, requires an amplifier
 - J14 - Used to connect an external reset button, mirroring the external reset switch
 - J15, J16 - are pin headers that provide 5v power for any internal board or accessory
 - J17 - an alternate way to supply (or use) 5V power (both pins) to the board. This is before the power switch
