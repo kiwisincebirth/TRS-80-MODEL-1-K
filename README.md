@@ -30,6 +30,7 @@ For more images [See Here](./images/README.md)
 - Larger ROM's allow multiple paged ROM images selectable by Jumper.
 - ROM can be configured to occupy the empty memory region (12-14kb) above the main ROM.
 - A full 48Kb of RAM is provided by a single modern SRAM chip.
+- 512KB of banked RAM provided by an optional [SuperMem 512](/supermem/README.md) board 
 - Video character generation is provided by standard 32 pin 27xxx EPROM's or 28xxx EEPROM's
 - Video character generator provides full 6x12 pixel matrix (Gendon3 compatible) descenders.
 - Multiple character sets can be defined, the character set chosen is by dip switches.
