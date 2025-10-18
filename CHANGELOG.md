@@ -9,14 +9,14 @@ Unreleased
 
 ### New Features
 
-* Dual port video SRAM, reducing contention (snow) issues with shared CPU access.
-* Onboard Audio amplifier utilising small class D module, with space for PCB speaker
-* Alpha Joystick port (6 bit) with header to connect 9 Pin DB9 Connector
+* [Dual port video SRAM](FEATURES.md#video-ram), reducing contention (snow) issues with shared CPU access.
+* [Onboard Audio amplifier](FEATURES.md#internal-audio-output) utilising small class D module, with space for PCB speaker
+* [Alpha Joystick port](FEATURES.md#joystick-port) with header to connect 9 Pin DB9 Connector
 * Changed crystal oscillator to parallel resonant circuit based on 74HCU04 chip,
-  which is pin compatible with a Full Can (DIP14) oscillator.
-* New Video sync generation circuit, including Horizontal and Vertical Position.
+  which is pin compatible with a [Full Can (DIP14) oscillator](FEATURES.md#alternate-main-clock).
+* New [Video sync generation](FEATURES.md#video-sync-generation) circuit, including Horizontal and Vertical Position.
 * Improved support for RGBtoHDMI by exposing HSYNC on Video DIN socket
-* Added Tim Halloran's no chip VBLANK modification, for improved video updating  
+* Added Tim Halloran's [no-chip VBLANK modification](FEATURES.md#video-output), for improved video updating. 
 * Added Jumper (JP16) to allow main Reset button to function as full CPU reset.
 * Can configure either RAM or ROM to occupy the 12kB to 14kB address space in memory.
 * Added support for EEPROM in circuit writing (requires software support).
@@ -64,7 +64,7 @@ This release fixes minor Issues
 ## Version 1.0b (Past)
 
 This is a patch version of the 1.0a board with the items back-ported from V2
-- Z50 is now pin compatible with a Full Can (DIP14) oscillator.
+- Z50 is now pin compatible with a [Full Can (DIP14) oscillator](FEATURES.md#alternate-main-clock).
 - Inputs of spare gates are now tied a logic level, not left floating.
 - Improved (more modern) footprints for C19, Q1, Q2, CR4.
 - Fixed multiple issues with small via's and thermal reliefs on power rails
@@ -96,20 +96,20 @@ April 2025
 
 ### New Features
 
-* 48Kb RAM provided by a single static RAM chip (AS6C1008)
-* System ROM's have been replaced with standard 32 pin 27xxx EPROM's or 28xxx EEPROM's
+* 48Kb RAM provided by a [single static RAM chip](FEATURES.md#system-ram) (AS6C1008)
+* System ROM's have been replaced with [standard 32 pin 27xxx EPROM](FEATURES.md#system-rom) or 28xxx EEPROM
 * System ROM's can be configured to occupy for 12 KB, 13 KB, or 14 KB of RAM.
-* Video character generation is provided by standard 32 pin 27xxx EPROM's or 28xxx EEPROM's  
+* Video [character generation](FEATURES.md#character-generation) is provided by standard 32 pin 27xxx EPROM's or 28xxx EEPROM's  
 * Video character generation supports full (Gendon-3 compatible) descender's.
-* Composite Video can be provided via standard RCA connector, replacing DIN connector
-* All power regulation has been removed and requires an external regulated 5V DC power supply.
-* Internal 40pin Expansion IO Header, located just behind the main expansion port
-* Double Speed clock election (J18), auto fallback with cassette use
+* Composite Video can be provided via [standard RCA connector](FEATURES.md#video-output), replacing DIN connector
+* All [power regulation](FEATURES.md#power) has been removed and requires an external regulated 5V DC power supply.
+* Internal [40pin Expansion IO Header](FEATURES.md#internal-expansion), located just behind the main expansion port
+* [Double Speed clock](FEATURES.md#cpu) selection (J18), auto fallback with cassette use
 
 ### Changed Features
 
-* Power (and Reset) buttons have been superseded with more available standardized components
-* Power connection is by the of a standard barrel jack replacing the DIN connector
+* [Power](PARTS_GUIDE.md#power-switch) (and [Reset](PARTS_GUIDE.md#reset-switch)) buttons have been superseded with more available standardized components
+* [Power connection](PARTS_GUIDE.md#power-connector) is by the of a standard barrel jack replacing the DIN connector
 * Pin Header for internal audio amplifier, taken from cassette output
 * Pin Header for internal reset signal, mirroring the external reset switch
 * This system is intended to be used (almost) exclusively with CMOS technology

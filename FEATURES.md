@@ -39,15 +39,17 @@ The 4116 16kb DRAM has been replaced with a single static RAM chip (AS6C1008) pr
 need for an external expansion interface or other add on card. Note this chip is 128 kBytes in size, but only 48kB
 is being used. No provision for RAM paging has been made.
 
+An optional add-on board provide [SuperMem 512KB](/supermem/README.md) banked RAM support
+
 If you intend to connect an expansion interface then the RAM in the interface will have to be disabled to prevent conflict.
 
-### Video RAM (V2)
+### Video RAM
 
 One of the bigger issues with model 1 design was use of shared video ram with very primitive contention resolution.
 The Model 1 video subsystem takes second priority to CPU, causing artefacts (snow) when CPU accesses video RAM during visible period.
 The Model 3 somewhat improved this by asking CPU to wait for next blank interval, giving priority to video system.
 
-Dual Port SRAM
+In V2 of the board a Dual Port video SRAM was added
 - The chip itself has 2 channels/ports, mirroring all address data control lines as if a standalone chip. This accounts for the chips high 48 pin count
 - Contention still exists but this is at byte level, Ie when both ports try to access the same address in RAM
 - This significantly reduces the chance of contention when CPU accesses vram from about 33% (time when not blanking), to about  .033% a factor of 1024
@@ -202,7 +204,7 @@ typically by removing the shroud.
 See this guide which defines and highlights the difference.
 [Internal Serial Cables for COM2 Port](https://www.scantips.com/serial-db9.html)
 
-### Internal Audio Output (V2)
+### Internal Audio Output
 
 In V2 of the board, and onboard amplifier (module) and small speaker is supported
 A volume control is provided (RV2), with a speaker needing to be attached to (J8)
