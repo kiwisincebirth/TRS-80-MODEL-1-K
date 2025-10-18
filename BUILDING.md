@@ -31,8 +31,11 @@ The PCB is flexible and allows certain the installation of either Modern or Trad
 
 Other components that can be substituted are
 * Main System ROM, and character generator ROM support 27128, 27256, 27512, or 28256
+* Main System RAM can be enhanced with [SuperMem 512](/supermem/README.md) compatible banked RAM
+* An [Alternate Main Clock](./FEATURES.md#alternate-main-clock) provides support
+  for a modern Can Crystal oscillator, rather than traditional discrete crystal circuit.
 
-Before starting, you should ensure you have read and understand all the documentation
+* Before starting, you should ensure you have read and understand all the documentation
 You should also have assembled all the components you need
 
 ## Pre Assembly
@@ -54,7 +57,7 @@ Before starting need to look at the solder jumpers on the board.
 - JP6, JP7, JP8, JP10 are required be configured as appropriate for either
   50Hz (PAL) or 60Hz (NTSC) video. You just need to solder a bridge on Pins 1&2 (NTSC) or 2&3 (PAL)
 - Other solder jumpers can be changed at any time and have
-  reasonable default connections. If changing you will probably need to cut existing connection
+  reasonable default connections. If changing you may need to cut the existing connection.
 
 ### Patches
 
@@ -76,33 +79,35 @@ against what is in the BOM, and cross it off. An interactive BOM is provided to 
 Typically, solder components in order of the lowest profile to the tallest components.
 - All resistors, these can be installed in either direction as they do not have a polarity.
   - Note R37 is a 1/2 watt resistor and slightly bigger than the other resistors.
-- Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
-- Ceramic disk capacitors with specific values 
+- Next install diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last
+- Then install ceramic disc capacitors with specific values
   - C3, C13, C17, C18, C43, C48, C50, C57, C60
-- Then all remaining ceramic disk capacitors.
-  - These should all be 100nf (104) in value
-  - There are approximately 50 of these.
-  - While installing (using a Multimeter), please check the power rail is not shorted
-- Install any IC sockets, preferably all IC's should be socketed. Don't install IC's at this point.
-  - As a minimum you should have sockets for large scale components CPU,RAM,ROM, etc,
-  - Some other more sensitive components Z3 (SN75452), Z25 (LM3900), Z50 (SN7404N)
-- All Resistor Networks. These are labelled as RN1, RN2 on the PCB
+- Then install all remaining (power decoupling) ceramic disk capacitors.
+  - There are about 50 of these and are all 100nf (104) in value.
+  - While installing (using a Multimeter), please check the power rails are not shorted
+- Install IC sockets, (preferably) for all IC's. Don't install IC's at this point.
+  - As a minimum you should have sockets for large scale components CPU,RAM, etc.
+  - You MUST install sockets for ROM's, including the character generator.
+  - Consider sockets for more sensitive components Z3 (SN75452), Z25 (LM3900)
+  - If installing the [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for Z50
+  - If installing the [SuperMem](/supermem/README.md) board consider not installing a socket System RAM
 - 4 way DIP Jumper Switch pack, SW10
+- All Resistor Packs. These are labelled as RNxx on the PCB.
 - Main 10.6445 Mhz Quartz Crystal Y1.
   - If installing a tall component it must be mounted horizontally for height clearance
-  - See section below additional/alternate installation.
+  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install Y1
+- Electrolytic Capacitors C19, C70, and C101.
+  - These need to be installed in the correct polarity
+  - The large capacitor (C101) should be mounted horizontally to reduce height
+- Then install all remaining electrolytic capacitors.
+  - These are all 10uF in value, and most are power decoupling.
+  - While installing (using a Multimeter), please check the power rails are not shorted
 - Jumper J18 - Should be shorted for normal CPU frequency
-- Jumper JP21, JP27 - Needs to be jumpered to set the main ROM Chip Type
-- Solder any optional Pin Headers (See Below)
+- Jumper JP21, JP27 - Must be jumpered to set the main ROM Chip Type
+- Solder any [Optional Pin Headers](#optional-headers)
 - Cassette Relay K1
 - Transistors Q1, Q2
 - Power barrel Jack J11
-- Electrolytic Capacitors C19, C70, and C101. 
-  - These need to be installed in the correct polarity
-  - The large capacitor (C101) should be mounted horizontally to reduce height
-- Install all remaining electrolytic capacitors
-  - These are all 10uF in value, and most are power decoupling
-  - After installing (using a Multimeter), please check the power rails are not shorted
 - Cassette DIN Socket J3
 - Video output connector J2 (DIN) or J12 (RCA). 
   - If soldering DIN socket, don't solder (remove) the centre pin from the socket
