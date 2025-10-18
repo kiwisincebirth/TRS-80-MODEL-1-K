@@ -66,7 +66,7 @@ Before starting need to look at the solder jumpers on the rear of the board.
 - JP6 is required be configured as appropriate for either
   50Hz (PAL) or 60Hz (NTSC) video. You just need to solder a bridge on Pins 1&2 (NTSC) or 2&3 (PAL)
 - Other solder jumpers can be changed at any time and have
-  reasonable default connections. If changing you may need to cut the existing connection
+  reasonable default connections. If changing you may need to cut the existing connection.
 
 ### Patches
 
@@ -89,32 +89,32 @@ Typically, solder components in order of the lowest profile to the tallest compo
   - R16 and R18 should **NOT** be installed now. See [Video Calibration](./CONFIG.md#video-calibration)
   - R37 is a 1/2 watt resistor and slightly bigger than the other resistors.
   - Resistor values are labelled on the board using R (ohms) K (kOhms) M (mOhms)
-- Diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last. These are optional components
-- Ceramic disc capacitors with specific values
+- Next install optional diodes, fitting CR5-CR8 (1N4148), and then CR4 (1N4001) last.
+- Then install ceramic disc capacitors with specific values
   - C3, C5, C6, C7, C8, C13, C17, C18, C43, C48, C50, C57, C60, C61
   - Capacitors are labelled on the board in 3 digit (value exponent) notation
 - Then install all remaining (power decoupling) ceramic disk capacitors.
-  - There are about 50 of these and are all 100nf (104) in value
+  - There are about 50 of these and are all 100nf (104) in value.
   - While installing (using a Multimeter), please check the power rails are not shorted
 - Transistors Q1, Q2, these have fine pitch pads and require a small soldering iron tip and solder
 - Install IC sockets (preferably) for all IC's. Don't install IC's at this point.
-  - You MUST need to install sockets for ROM's, including the character generator
   - As a minimum you should have sockets for large scale components CPU,RAM, etc.
+  - You MUST install sockets for ROM's, including the character generator.
   - Consider sockets for more sensitive components U3 (SN75452), U25 (LM3900)
   - If installing the [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for U60
-  - If installing the [SUPERMEM] DON'T install a socket for 
+  - If installing the [SuperMem](/supermem/README.md) board consider not installing a socket System RAM 
 - 4 way DIP Jumper Switch pack, SW10
-- All Resistor Packs. These are labelled as RPxxx on PCB and clearly indicate the value
+- All Resistor Packs. These are labelled as RPxx on PCB and clearly indicate the value.
 - Main 10.6445 Mhz Quartz Crystal Y1.
   - If installing a tall component it must be mounted horizontally for height clearance
-  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) dont install Y1
+  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install Y1
 - Onboard Power LED D1. It needs to be installed in the correct polarity
   - This is optional, and can be installed at any time.
 - Electrolytic capacitors with specific values C11, C19, C70.
   - These need to be installed in the correct polarity
   - The large capacitor (C11) should be mounted horizontally to reduce height
-- Then install all remaining (power decoupling) electrolytic capacitors.
-  - These are all 10uF in value
+- Then install all remaining electrolytic capacitors.
+  - These are all 10uF in value, and most are power decoupling.
   - While installing (using a Multimeter), please check the power rails are not shorted
 - Jumper J18 - Should be shorted for normal CPU frequency
 - Jumper JP21, JP27 - Must be jumpered to set the main ROM Chip Type
@@ -127,8 +127,8 @@ Typically, solder components in order of the lowest profile to the tallest compo
   - If soldering the RCA connector (J12) you MUST bridge solder jumper JP20.
 - Main Power switch, solder either S1 (Traditional) or SW1 (Modern Toggle) switch.
 - Main Reset switch, solder either S2 (Traditional) or SW2 (Modern) push button switch.
-- Keyboard header CN3, should be mounted carefully depending on the cable used 
-  - This can be mounted on front (or  rear) of the PCB.
+- Keyboard header CN3, Can be mounted on front (or  rear) of the PCB.
+  - Should be mounted carefully depending on the cable connecting to the keyborard
 
 Once assembled it is recommended that the board be cleaned of any resin/flux
 deposited during soldering. Using a soft toothbrush and isopropyl alcohol is generally
@@ -147,7 +147,6 @@ Configuration of the board is via [Jumpers](./CONFIG.md#version-2-jumpers)
 ## Optional Headers
 
 The following optional headers Pins are provided, you can choose to install or not install as required
-- J13 - Audio signal taken from cassette output, requires an amplifier
 - J14 - Used to connect an external reset button, mirroring the external reset switch
 - J15, J16 - are pin headers that provide 5v power for any internal board or accessory
 - J17 - an alternate way to supply (or use) 5V power (both pins) to the board. This is before the power switch
@@ -156,7 +155,7 @@ The following optional headers Pins are provided, you can choose to install or n
 
 ## Initial Testing
 
-See [Testing Guide](./TESTING.md) for more information
+See [Testing Guide](./TROUBLESHOOT.md) for more information
 
 ## Troubleshooting
 
