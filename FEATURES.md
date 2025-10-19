@@ -137,6 +137,8 @@ In V1-RevB (and latter) of the board, there is support for two types of main Clo
 * A standard quartz crystal with 7404 circuit (the traditional design)
 * A modern DIP-14 Can oscillator (discussed below)
 
+<img src="images/IMG_0025.jpeg" width="400">
+
 A DIP-14 Can oscillator is a self-contained metal package (similar to normal quarts crystal)
 that comes in a DIP-14 pinout, but only has 4 pins exposed.
 * Pin 1 Enable
@@ -214,7 +216,7 @@ If supported the amplifier will be muted when the cassette interface is active.
 
 #### Amplifier
 
-<img src="images/IMG_0013.jpeg" width="300">
+<img src="images/IMG_0013.jpeg" width="400">
 
 A small 6 pin amplifier module based on either LTK5128, or (identical) XPT8871 chipset is used
 For more information about the chip itself. Noting datasheets are in chinese
