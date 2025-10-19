@@ -186,26 +186,26 @@ process to perform calibration of the video circuitry.
 ### Joystick Port
 
 In V2 (and latter) of the board a TRStick (Alpha) 5 bit Joystick Port was added.
-At this time 4 bit mode (fire is similtanious up/down) is not directly supported.
+At this time 4 bit mode (fire is simultaneous up/down) is not directly supported.
 The port also supports a 6th bit, (second fire button),
 but this would require a specific Joystick and software to use it.
 
-The most important aspect is that the appropriate DB9 to 10 Pin header cable 
-is ordered and attached as there are 2 incompatible types:
-* Cross Wired (Correct) - see line below for definition
-* Straight Through (Incompatible)
+The most important aspect is that the correct DB9 to 10 Pin header cable. 
 
-You must use a Cross Wired cable, which maps the pins on the DB9 connector
+<img src="images/ImageJoystickCable.png" width="400">
+
+You must use a cable, which maps the pins on the DB9 connector
 based on the relative position, not the actual DB-9 pin numbering. 
-The incompatible) straight through cable in contrast ensures the 
-pin numbering on the DB-9 matches the pin numbering on the pin header
+The incompatible cable in contrast ensures the pin numbering on the DB-9 
+matches the pin numbering on the pin header.
 
 The easiest way to identify the correct cable is one with a DB-9 IDC connector. 
 Cables that have a soldered connection (typically covered in a shroud)
 can be wired in either configuration, and must be checked for compatability,
 typically by removing the shroud.
 
-See this guide which defines and highlights the difference.
+See this guide which defines and highlights the difference. In the following article 
+the cable required is referred to as a **Cross Wired** cable
 [Internal Serial Cables for COM2 Port](https://www.scantips.com/serial-db9.html)
 
 ### Internal Audio Output
