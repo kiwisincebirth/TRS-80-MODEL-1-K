@@ -214,7 +214,7 @@ If supported the amplifier will be muted when the cassette interface is active.
 
 #### Amplifier
 
-![Ampliefier](./images/IMG_0013.jpeg|height=100px)
+<img src="images/IMG_0013.jpeg" width="300">
 
 A small 6 pin amplifier module based on either LTK5128, or (identical) XPT8871 chipset is used
 For more information about the chip itself. Noting datasheets are in chinese
