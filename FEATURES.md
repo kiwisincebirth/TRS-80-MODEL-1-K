@@ -107,7 +107,7 @@ NOTE: The DRAM multiplexing signals CAS, and MUX are no longer generated, and ha
 These two expansion pins can be re-used for any future purpose, they are exposed as solder pads on the PCB
 
 A prototyping area is provided, it supports 14 or 16 pin power and locations for decoupling capacitors.
-This was included to add minor new features without the fragility of piggy back boards, or IC's
+This was included to add minor new features without the fragility of piggyback boards, or IC's
 
 ### Power
 
@@ -128,8 +128,8 @@ Additional changes have been made too numerous to mention please see [Changelog]
 ## Advanced Features
 
 What follows is specific guidance about certain features which come with consideration for
-* The actual parts used that will need to be ordered
-* The assembly of the components on the board itself 
+* The actual parts used that will need to be ordered.
+* The assembly of the components on the board itself. 
 
 ### Alternate Main Clock
 
@@ -166,11 +166,13 @@ First some History:
 * The Japanese Model 1 (which this board is derived) used a digital sync signal derived off the 
   primary video counter/dividers. This meant rock steady sync but eliminated picture adjustment  
 
-In V1 of this board the Japanese design was followed. In V2 a new design was introduced
-The rest of this section describes this approach.
+In the Model 1k the following was adopted:
+* In V1 of this board the Japanese design was followed, using a digital solution.
+* In V2 a new design was introduced, described in the rest of this section.
 
-The new (V2) design uses specific monostable multi-vibrators (74221) controlled by an RC network.
-This approach was partially used in the Model 3, and fully used in "Glens stuff TRS-80 Model 1 clone"
+The new (V2) design uses specific monostable multi-vibrators (74HCT221) controlled by an RC network.
+This approach was largely the same as that of  
+[Glens stuff TRS-80 Model 1 clone](https://www.glensstuff.com/trs80/trs80.htm)
 
 This design allows for calibration of both 
 * the sync pulse delay (H and V position), is done via trim pots (RV4, RV5). 
@@ -182,13 +184,13 @@ process to perform calibration of the video circuitry.
 ### Joystick Port
 
 In V2 (and latter) of the board a TRStick (Alpha) 5 bit Joystick Port was added.
-At this time 4 bit mode is not supported.
+At this time 4 bit mode (fire is similtanious up/down) is not directly supported.
 The port also supports a 6th bit, (second fire button),
 but this would require a specific Joystick and software to use it.
 
 The most important aspect is that the appropriate DB9 to 10 Pin header cable 
 is ordered and attached as there are 2 incompatible types:
-* Cross Wired (Correct)
+* Cross Wired (Correct) - see line below for definition
 * Straight Through (Incompatible)
 
 You must use a Cross Wired cable, which maps the pins on the DB9 connector
@@ -216,13 +218,14 @@ A small 6 pin amplifier module based on either LTK5128, or (identical) XPT8871 c
 For more information about the chip itself. Noting datasheets are in chinese
 * https://components101.com/ics/XPT8871-audio-amplifier-ic-pinout-datasheet-circuit
 
-Googling these chip ID's you will find the modules themselves. There are three variants
-which differ in pcb colour/size, pinout, and main capacitor size.
+Googling these chip ID's (and the word "board") you will find the modules themselves. 
+There are three variants which differ in pcb colour/size, pinout, and main capacitor size.
 They are commonly available from online chinese stores, or ebay.
 
 There are 2 pin outs supported. Which are identified as M1, and M2 on the main PCB. 
+These modules are located near the main power switch at the top left of the board 
 
-| Module | Height/Width | Pinout                            |
+| Module | Height/Width | Pinout (labeled on the board)     |
 |--------|--------------|-----------------------------------|
 | M1     | 16mm x 20mm  | +5V, GND, GND, Input, Out+, Out-  |
 | M2     | 16mm x 12mm  | Out+, Out-, Mute, GND, Input, +5V | 
@@ -231,14 +234,18 @@ Note: M2 offers a Mute function, which is activated when the cassette motor is o
 
 Three modules are typically available
 
-| PCB Colour | Module | Feature                                  |
-|------------|--------|------------------------------------------|
-| Red        | M1     | Large 470uF thru-hole power capacitor    |
-| Green      | M1     | Medium 220uF thru-hole power capacitor   |
-| Blue       | M2     | Small 100uF SMD capacitor, supports Mute |
+| PCB Colour | Module | Feature                                         |
+|------------|--------|-------------------------------------------------|
+| Red        | M1     | Large 470uF thru-hole power capacitor, no mute  |
+| Green      | M1     | Medium 220uF thru-hole power capacitor, no mute |
+| Blue       | M2     | Small 100uF SMD capacitor, supports Mute        |
 
 When purchasing this you should probably get one without a soldered header.
 The module is designed to be mounted with the components facing up.
+The module should be installed based on the outline and the matching pin labels 
+
+Note: While mute is not supported in the M1 module(s), Pin 1 of the chip itself is Mute.
+Thus to gain the Mute feature a small wire could be soldered from Pin 1 to the main PCB
 
 #### Speaker
 

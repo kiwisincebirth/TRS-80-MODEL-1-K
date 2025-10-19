@@ -1,11 +1,21 @@
 
 # Changelog
 
-## Version 2.0 (Future)
-
-Unreleased
+## Version 2.0a (Current)
 
 ![MainboardFront](/pcb/TRS-80-MP-FrontV2.png)
+
+This version was a minor patch after initial V2 prototype was created.
+
+### Minor Improvements
+
+* Added testpoints to support 3 signals required by SuperMem
+* Changed main power capacitor C11 to 470Uf after testing from MSly
+* Changed main power switch to discharge C11 (using 100R R14) when switched off
+* Keyboard resistor pack RN5 corrected to pull down keyboard data lines.
+* Corrections to Bill of Materials, and silkscreen fixes and improvements.
+
+## Version 2.0 (Past)
 
 ### New Features
 
