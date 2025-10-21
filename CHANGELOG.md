@@ -50,6 +50,16 @@ Unreleased
 - Major improvement in the Schematic diagram quality.
 - Many component designators have changed from V1, so some V1 docs may not be accurate
 
+## Version 1.0d (Future)
+
+Unreleased
+
+Fixes minor issues in version C
+- Added connection points (pads) for connecting supermem signals in, out, and reset.
+- Legacy Power switch footprint, correct spacing of Pins to allow for install.
+- Improve silkscreen to show what components can be removed when installing the alternate main clock
+- Replace C101 which a 470uF, affects BOM only
+
 ## Version 1.0c (Current)
 
 ![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1c.png)
