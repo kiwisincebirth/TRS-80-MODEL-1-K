@@ -3,12 +3,12 @@
 
 ## Version 2.0a (Current)
 
-![MainboardFront](/pcb/TRS-80-MP-FrontV2.png)
-
-This version was a minor patch after initial V2 prototype was created.
+![MainboardFront](/pcb/TRS-80-MP-FrontV2a.png)
 
 ### Minor Improvements
 
+This version was a minor patch after initial V2 prototype was created.
+See the below for a list of all the version 2 changes
 * Added testpoints to support 3 signals required by SuperMem
 * Changed main power capacitor C11 to 470Uf after testing from MSly
 * Changed main power switch to discharge C11 (using 100R R14) when switched off

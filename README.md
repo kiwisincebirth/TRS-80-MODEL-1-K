@@ -8,7 +8,7 @@ This project is an upgraded / evolved TRS-80 Model 1 main board replacement. It 
 compact, and modern replacement, removing some limitations of the original 1970's product, 
 while still remaining faithful to the original technology (i.e. no emulation) 
 
-![MainboardFront](/pcb/TRS-80-MP-FrontV2.png)
+![MainboardFront](/images/old/TRS-80-MP-FrontV2a.png)
 
 For more images [See Here](./images/README.md)
 

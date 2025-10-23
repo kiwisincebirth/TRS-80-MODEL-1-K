@@ -1,6 +1,10 @@
 
 # Project Status
 
+## 23 October 2025
+
+Completed Final assembly and testing of V2 board. Published to GITHUB
+
 ## 18 October 2025
 
 Major milestones today 
