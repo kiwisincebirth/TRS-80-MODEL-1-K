@@ -1,5 +1,23 @@
 # Images
 
+## Rnders of V2a
+
+![Front of Board](../pcb/TRS-80-MP-FrontV2a.png)
+
+![Back of Board](../pcb/TRS-80-MP-BackV2a.png)
+
+## The Whole Board
+
+![Detailed Top of Board](./IMG_0040.jpeg)
+
+## Closeups
+
+![closeup of amplifier](./IMG_0013.jpeg)
+
+![closeup of back of board](./IMG_0024.jpeg)
+
+![closeup of clock](./IMG_0025.jpeg)
+
 ## Renders of V1c
 
 ![Front of Board](../pcb/TRS-80-MP-FrontV1c.png)
