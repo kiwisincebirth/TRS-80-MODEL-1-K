@@ -95,10 +95,10 @@ but does require the main crystal oscillator to be fully functional.
 - You may need to test several resistors, to find a suitable value
 - If duration is too short try a larger resistor, or omit entirely.
 
-| Sync       | Duration | Test Point | Trim Resistor | Default Value |
-|------------|----------|------------|---------------|---------------|
-| Horizontal | 4.7 uS   | h.sync     | R16           | 62K ohms      |
-| Vertical   | 256 uS   | v.sync     | R18           | 24K ohms      |
+| Sync       | Duration | Test Point            | Trim Resistor | Default Value |
+|------------|----------|-----------------------|---------------|---------------|
+| Horizontal | 4.7 uS   | h.sync (or U50 pin 5) | R16           | 62K ohms      |
+| Vertical   | 256 uS   | v.sync (or U51 pin 5) | R18           | 24K ohms      |
 
 The default values of R16, and R18 can be used which will produce sync signals which
 while may not be 100% accurate, should generally be within tolerance. The tolerance depends on the

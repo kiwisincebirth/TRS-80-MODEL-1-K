@@ -37,9 +37,9 @@ commonly used on some Model 1 peripherals, or RAM for any purpose
 
 The 4116 16kb DRAM has been replaced with a single static RAM chip (AS6C1008) providing 48KB of RAM without the
 need for an external expansion interface or other add on card. Note this chip is 128 kBytes in size, but only 48kB
-is being used. No provision for RAM paging has been made.
+is being used.
 
-An optional add-on board provide [SuperMem 512KB](/supermem/README.md) banked RAM support
+An optional add-on board [SuperMem 512KB](/supermem/README.md) provides banked RAM support.
 
 If you intend to connect an expansion interface then the RAM in the interface will have to be disabled to prevent conflict.
 
@@ -237,6 +237,8 @@ These modules are located near the main power switch at the top left of the boar
 Note: M2 offers a Mute function, which is activated when the cassette motor is on.
 
 Three modules are typically available
+
+<img src="images/ImageAmplifierModule.png" width="400">
 
 | PCB Colour | Module | Feature                                         |
 |------------|--------|-------------------------------------------------|

@@ -1,5 +1,5 @@
 
-# Builders Guide
+# Builders Guide (V2)
 
 This Guide is for VERSION 2 of the board.
 For V1 please see the [Builders Guide V1](/BUILDING-V1.md)
