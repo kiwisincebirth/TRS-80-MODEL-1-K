@@ -2,14 +2,13 @@
 
 ## Base Features
 
-The board started with the Japanese board as a base, because it is slightly upgraded over the US board
+The board started with the TRS-80 Model Japan board as a base, because it is slightly upgraded over the US board
 with some minor improvements that carry over:
-- The Video sync has been upgraded with improved stability, and 50Hz support
+- The Video has been upgraded with support for 50Hz.
 - The cassette input has minor improvements in the A/D design.
-- The video RAM was upgrade to full 8 bits using 2 x 2114 SRAM Chips
+- The video supported full lower case, and alternate character-sets.
 
-The Japanese "specific" features have been removed to align this back to being a US Model 1. This includes the
-keyboard and Japanese Kana character set support.
+The Japanese "specific" keyboard has been removed to align this back to being a US Model 1.
 
 This system is intended to be used (almost) exclusively with CMOS technology utilizing 74HCT (CMOS TTL compatible) parts.
 Noting traditional 74LS components should work, however this has not been tested
@@ -21,7 +20,7 @@ This could be by external switch, or any future circuit potentially under softwa
 Note: If the cassette motor is turned on the speed will automatically be slowed.
 
 The Reset Switch can now be changed from a soft NMI Reset to a hard CPU Reset. Also, an onboard hard
-reset is provided via pushbutton, for full reset during diagnostics
+reset is provided via pushbutton, for full reset during diagnostics.
 
 ### System ROM
 
@@ -36,12 +35,11 @@ commonly used on some Model 1 peripherals, or RAM for any purpose
 ### System RAM
 
 The 4116 16kb DRAM has been replaced with a single static RAM chip (AS6C1008) providing 48KB of RAM without the
-need for an external expansion interface or other add on card. Note this chip is 128 kBytes in size, but only 48kB
-is being used.
+need for an external expansion interface or other add on card. If you intend to connect an expansion interface 
+then the RAM in the interface will have to be disabled to prevent conflict.
 
+The SRAM chip is actually 128 KB in size, but only 48KB is being used.
 An optional add-on board [SuperMem 512KB](/supermem/README.md) provides banked RAM support.
-
-If you intend to connect an expansion interface then the RAM in the interface will have to be disabled to prevent conflict.
 
 ### Video RAM
 

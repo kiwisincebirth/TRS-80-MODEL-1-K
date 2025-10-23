@@ -97,17 +97,17 @@ Typically, solder components in order of the lowest profile to the tallest compo
   - There are about 50 of these and are all 100nf (104) in value.
   - While installing (using a Multimeter), please check the power rails are not shorted
 - Transistors Q1, Q2, these have fine pitch pads and require a small soldering iron tip and solder
-- Install IC sockets (preferably) for all IC's. Don't install IC's at this point.
+- Install IC sockets (preferably) for all IC's. Do **NOT** install IC's at this point.
   - As a minimum you should have sockets for large scale components CPU,RAM, etc.
-  - You MUST install sockets for ROM's, including the character generator.
+  - You **MUST** install sockets for ROM's, including the character generator.
   - Consider sockets for more sensitive components U3 (SN75452), U25 (LM3900)
-  - If installing the [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install socket for U60
-  - If installing the [SuperMem](/supermem/README.md) board consider not installing a socket System RAM 
+  - If installing the [Alternate Main Clock](./FEATURES.md#alternate-main-clock) do **NOT** install socket for U60
+  - If installing the [SuperMem](/supermem/README.md) board consider **NOT** installing a socket System RAM 
 - 4 way DIP Jumper Switch pack, SW10
 - All Resistor Packs. These are labelled as RPxx on PCB and clearly indicate the value.
 - Main 10.6445 Mhz Quartz Crystal Y1.
   - If installing a tall component it must be mounted horizontally for height clearance
-  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) DON'T install Y1
+  - If installing a [Alternate Main Clock](./FEATURES.md#alternate-main-clock) do **NOT** install Y1
 - Onboard Power LED D1. It needs to be installed in the correct polarity
   - This is optional, and can be installed at any time.
 - Electrolytic capacitors with specific values C11, C19, C70.
@@ -128,7 +128,7 @@ Typically, solder components in order of the lowest profile to the tallest compo
 - Main Power switch, solder either S1 (Traditional) or SW1 (Modern Toggle) switch.
 - Main Reset switch, solder either S2 (Traditional) or SW2 (Modern) push button switch.
 - Keyboard header CN3, Can be mounted on front (or  rear) of the PCB.
-  - Should be mounted carefully depending on the cable connecting to the keyborard
+  - Should be mounted carefully depending on the cable connecting to the keyboard
 
 Once assembled it is recommended that the board be cleaned of any resin/flux
 deposited during soldering. Using a soft toothbrush and isopropyl alcohol is generally
