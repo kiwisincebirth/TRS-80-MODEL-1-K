@@ -65,6 +65,8 @@ When connecting the Expansion interface (EI) its internal RAM needs to be disabl
 Noting: It is not good enough to remove the RAM chips themselves, as regardless of the
 presence of RAM, the EI buffers the output of RAM back to main databus.
 
+#### Newer Revised Expansion Interface
+
 There are 2 approaches:
 
 (1) Remove (de-solder) the 74LS244 buffer chips Z29, and Z31, and replace with sockets.

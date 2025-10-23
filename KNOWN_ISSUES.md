@@ -20,8 +20,14 @@ This bleed resistor will draw a consistent 1/4 watt of power.
 
 Also
 
+There is an issue with the Legacy Power switch, there is (ony slightly) not enough spacing between pins. 
+This means that getting all six pin rows installed is problematic. A workaround is to remove/cut the 
+first row of pins (closest to the pushbutton), this should allow the remaining 5 rows of pins to be installed.
+Noting: That this row is NOT electrically required. Credit to @GaryK - discord for reporting this.
+
 Another issue is that when installing SuperMem board there is no easy way to route the 3 signal wires.
-The only alternative is to probably drill a hole, and feed wires through the board.
+The only alternative is to probably drill a hole, and feed wires through the board. There is space
+just above and to the right of the RAM chip that is suitable for a hole, as it has just GND planes.
 
 The silkscreen doesn't show what components can be removed when installing the alternate main clock.
 
