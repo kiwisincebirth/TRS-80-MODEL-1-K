@@ -105,19 +105,36 @@ For V1 the required signal can be obtained from:
 * OUT - Z40 Pin 5
 * SYSRES - Z45 Pin 13
 
+## Resources
+
+Some useful resources:
+* [Prof-80 FR SuperMem 512](https://prof-80.fr/index.php/carte-type-supermen-512k) contains original design and documentation.
+* [X-MEM/80 Github Project](https://github.com/lambdamikel/x-mem-80) has some useful software for the Model 1
+
 ## Testing
 
-Use the official SuperMem test program or run the basic program below.
-See the official documentation for its usage.
+Run the basic program below, which tests the basic functionality. The program
+is slightly enhanced from the original BASIC test program. Also you could
+use the AniTek MEMTEST/CMD program 
 
 ```
 MEM SIZE ? 32000
 
 5 POKE 32767,42
-10 FOR N = 0 TO 15:OUT 67,N:POKE -1,N:NEXT N 
-20 FOR N = 0 TO 15:OUT 67,N:PRINT PEEK(-1);:NEXT X 
+10 FOR N=0 TO 15:OUT 67,N:POKE -1,N:NEXT N 
+15 FOR N=0 TO 15:PRINT N;:NEXT N:PRINT
+20 FOR N=0 TO 15:OUT 67,N:PRINT PEEK(-1);:NEXT N 
 25 PRINT PEEK(32767)
+RUN
 ```
+
+You should receive the following output
+
+```
+ 0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+ 1  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  42
+```
+
 ## Board Layouts
 
 ### Version 1
