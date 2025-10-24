@@ -1,11 +1,24 @@
 
 # Project Status
 
-## 23 October 2025
+## 25 Oct 2025
+
+After almost 6 months V2 of the Model 1k is out. It provides significant
+improvements in video, not only does it use dual port RAM for snow free video, 
+but it changes the video sync generation circuit bringing back the picture 
+adjustment controls not present in V1. Also supported is software switchable 
+fonts, for alternate languages or other graphics. Other major features added to the board 
+include an audio amplifier for a small speaker (which can be mounted on the board), 
+Alpha Joystick port compatible with most software, and ability to mount a modern clock oscillator.
+Have added about 10 new config jumpers/settings in support of new features.
+V1 is still fully supported including a separate build guide.
+Not forgetting Supermem bank RAM and internal FreHD
+
+## 23 Oct 2025
 
 Completed Final assembly and testing of V2 board. Published to GITHUB
 
-## 18 October 2025
+## 18 Oct 2025
 
 Major milestones today 
 * completed work on the Supermem board, which is now fully documented.

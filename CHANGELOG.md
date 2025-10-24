@@ -37,7 +37,7 @@ See the below for a list of all the version 2 changes
 - Added PCB reset button (SW11) to allow full reset during diagnostics
 - CPU speedup offer fast speed as 5.3 (default 3.55) mhz via jumper (JP17)
 - Added Power LED indicator (D1) near to the main power switch.
-- Fixed issue with TEST signal immediately disconnecting CPU from BUS (Marcel Erz)
+- Fixed issue with [TEST signal immediately disconnecting CPU from BUS](https://github.com/RetroStack/TRS-80-Model-I-Arduino-Library/blob/eeeaf3446552eadae234f6c2e0ac8c4adc224504/docs/TESTMod.md) - Credit Marcel Erz
 - Fixed Issue with Bus control for interrupt Mode 0 and 2 where external device places data on bus
 - Added (back) software character set control (Port FF Bit 7), as per JP board.
 - Changed meaning of SW10-SW13. Now ON => Logic 1, and OFF => 0 (rather than reverse)

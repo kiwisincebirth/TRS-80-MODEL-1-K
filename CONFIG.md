@@ -42,8 +42,7 @@ Configuration is provided by several jumper options:
 - SW10 - SW13 - (REQUIRED) - Configures the Character generator ROM
   - Note : See Section Below [Font Rom V2](#font-rom-v2)
 - RV2 - configures the signal level (volume) sent to the audio amplifier.
-- RV4 - horizontal position of video image.
-- RV5 - vertical position of video image.
+- RV4, RV5 - horizontal and vertical position of video image.
 
 ### Version 1 Jumpers
 
