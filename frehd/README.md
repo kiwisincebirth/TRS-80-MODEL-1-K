@@ -34,7 +34,7 @@ as well as more decoupling capacitors located (where possible) closer to chip VC
 The J4 power connector may not have same pinout as modern (v1.3) FreHD. 
 
 The J1 header for external LED's and Reset, has the pinout adjusted for direct compatibility with
-microchip programmer ICSP pinout. If you 
+microchip programmer ICSP pinout.
 
 The IOREQ signal provided to GAL has been removed and the GAL input tied to GND. 
 It was determined that this signal was not required, as it duplicated RW/WR 
