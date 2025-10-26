@@ -6,8 +6,11 @@ This is a project to provide a FreHD that directly connects to the TRS-80 Model 
 It was designed to be functionally compatible using primarily all the same parts, 
 and also software compatible, as it uses he same PIC and GAL firmware
 
-It was designed to work with the Model 1 attached via appropriate 40 pin ribbon cable,
-and specifically for the Model 1k via it's internal expansion port,
+It was designed to work with the Model 1 either
+* internally within the Model 1k via it's 40 pin internal expansion port.
+* or attached externally to any Model 1 via appropriate 40 pin ribbon cable.
+
+Attaching it to a Model 1's expansion port, means there is no need for a 40/50 pin adapter.
 
 The physical layout of the board while different still has the 
 power and IO connection is on one side, and SD card and LED's on the other.
@@ -66,9 +69,9 @@ The other major original components are:
 
 * [J2 - Hirose DM1AA-SF-PEJ82 - SD Card Socket](https://au.mouser.com/ProductDetail/Hirose-Connector/DM1AA-SF-PEJ82?qs=q%252B4FLHukgWBHaRKRr0HV%252Bw%3D%3D)
 * [U1 - PIC18F4620-IP - microprocessor](https://au.mouser.com/ProductDetail/Microchip-Technology/PIC18F4620-I-P?qs=sX%2FisSQq3c4Cme3RX0st5A%3D%3D)
-* [U2 - GAL16V8 - PLD] or [Microchip Technology ATF16V8B-15PU]
-* [U4 - TS2950 - 3.3 voltage regulator]
-* [U7 - DS1307 - Realtime clock]
+* [U2 - Microchip Technology ATF16V8B-15PU](https://au.mouser.com/ProductDetail/Microchip-Technology/ATF16V8B-15PU?qs=2mdvTlUeTfCsdBIzx6v3gA%3D%3D) or Lattace GAL16V8
+* [U4 - TI LP2950CZ-3.3 - 3.3 voltage regulator] or TS2950
+* [U7 - DS1307+ - Realtime clock]
 * [Y1 - 10Mhz - Quartz Crystal]
 * [Y2 - 32.7kHz - Quartz Crystal]
 
