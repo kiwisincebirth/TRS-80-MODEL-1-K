@@ -56,25 +56,26 @@ The [pcb](./pcb) directory contains
 
 ### Parts
 
-All parts (excepting PCB) are the same as the original excepting:
+The BOM does not have exact manufacturer part numbers, these will have to be determined, noting 
+however All parts (excepting PCB) are generally the same as the original excepting:
 
-* (Sparkfun Quad Logic Level Converter Bidirectional)[https://www.sparkfun.com/sparkfun-logic-level-converter-bi-directional.html]
-* (Memory Protection Devices BS7 Batter Holder)[https://www.memoryprotectiondevices.com/datasheets/BS-7/BS-7.pdf]
+* [U8 - Sparkfun Quad Logic Level Converter Bidirectional](https://www.sparkfun.com/sparkfun-logic-level-converter-bi-directional.html)
+* [BT1 - Memory Protection Devices BS7 Batter Holder](https://www.memoryprotectiondevices.com/datasheets/BS-7/BS-7.pdf)
 
 The other major original components are:
 
-* (J2 - SD Card Socket - Hirose DM1AA-SF-PEJ.82)[https://au.mouser.com/datasheet/2/185/DM1AA_SF_PEJ_252872_2529_CL0609_0004_8_72_Catalog_-2585902.pdf]
-* (U1 - PIC18F4620-IP microprocessor)
-* (U2 - GAL16V8 PLD)
-* (U4 - TS2950-3.3 voltage regulator)
-* (U7 - DS1307 realtime clock)
+* [J2 - Hirose DM1AA-SF-PEJ82 - SD Card Socket](https://au.mouser.com/ProductDetail/Hirose-Connector/DM1AA-SF-PEJ82?qs=q%252B4FLHukgWBHaRKRr0HV%252Bw%3D%3D)
+* [U1 - PIC18F4620-IP - microprocessor](https://au.mouser.com/ProductDetail/Microchip-Technology/PIC18F4620-I-P?qs=sX%2FisSQq3c4Cme3RX0st5A%3D%3D)
+* [U2 - GAL16V8 - PLD] or [Microchip Technology ATF16V8B-15PU]
+* [U4 - TS2950 - 3.3 voltage regulator]
+* [U7 - DS1307 - Realtime clock]
+* [Y1 - 10Mhz - Quartz Crystal]
+* [Y2 - 32.7kHz - Quartz Crystal]
 
 ### Assembly
 
 The first step is probably to decide if you want the open collector WAIT signal,
 requiring a reprogrammed GAL, if so you need to Cut JP1 1,2 and solder 2 to 3
-If you think you may want to change this in the future, it may be easier to cut
-the trace and solder 1 to 2 now, making it easier to change in the future.
 
 Note: Unless you need this it may be safer to stick with the default, as may cause 
 confusion latter, if the GAL needs replacing, have to ensure the modified firmware is programmed.
@@ -83,26 +84,37 @@ The next step is to solder the SMD SD card, followed by the through hole compone
 
 As a minimum sockets need to be installed for PIC and GAL, so they can be reprogrammed.
 IC sockets are preferred on other components e.g. RTC, and 7400 series logic so they 
-can be replaced but it is not strictly essential.
+can be replaced, but it is not strictly essential.
+
+U8 (The 12 pin level shifter) should be soldered to the board,
+using small short pin headers. It should **NOT** be installed in a socket.
+
+J3 The 40 pin IO connector should be either 
+* For internal connection - A Female socket soldered to the reverse side of the board
+* For external connection - Male header pins soldered to the front of the board
+
+The 40 pin connection carries data signals, and gold contact pins should be chosen as a preference.
+If using internally it is best to solder the female header's (J3, J6) (reverse side of the board)
+in situ. i.e. placing the female header's onto the Model 1k board's header and soldering the
+board to the socket, allowing for a small clearance with components on the main board.
 
 Solder components typically in size and height order, typically from the lowest profile to highest, 
 and from smallest to largest. The only exception is the small crystal oscillator, 
 it is sensitive to damage, maybe consider soldering it latter.
-The 12 pin level shifter can be soldered using small short pin headers.
 
 ### Optional Parts
 
-If required you can choose to solder one of of the following options.
+If required you can choose to solder one of the following options.
 The first option is typically the default. 
 
 Power connection is via 1 of 2 header sockets.
-* J4 - Providing VCC and GND via similar header to the original board.
 * J6 - Designed for use with the modern TRS-80 Model 1k (evolution) internal expansion port.
   Providing VCC only, GND comes from he 40 pin IO connector
+* J4 - Providing VCC and GND via similar header to the original board. For external power.
 
 Dual sets of onboard LED's are provided, maximum of one of either:
-* Populate - D11, D12, R33, R34 - for mounting on the front on the PCB
 * Populate - D1, D2, R13, R14 - for mounting on the rear on the PCB
+* Populate - D11, D12, R33, R34 - for mounting on the front on the PCB
 * External LED's via J1
 
 Optional external Programming Header:
