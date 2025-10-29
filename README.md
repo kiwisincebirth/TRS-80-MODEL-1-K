@@ -20,22 +20,24 @@ For more images [See Here](./images/README.md)
 - Remains faithful to the use of traditional thru-hole parts, and discrete logic IC's
 
 ### What this isn't:
-- Is not compatible with 32Kb external RAM expansion, external RAM will need to be disabled.
 - Is not compatible with Model 1 power supply. It requires a fully regulated 5V DC power supply.
+- Is not compatible with 32Kb external RAM expansion, external RAM should be disabled.
 - Is not a faithful recreation of the original Model 1, other projects exist for this.
 
 ### Features at a Glance
-- CPU double speed (3.56 Mhz), configurable by jumper or external switch.
+- CPU double (or triple) speedup (3.5/5.3 Mhz), configurable by jumper or external switch.
 - System ROM's have been replaced with standard 32 pin EPROM (27xxx) or EEPROM (28xxx).
 - Larger ROM's allow multiple paged ROM images selectable by Jumper.
-- ROM can be configured to occupy the empty memory region (12-14kb) above the main ROM.
+- ROM (or RAM) can be configured to occupy the empty memory region (12-14kb) above the main ROM.
 - A full 48Kb of RAM is provided by a single modern SRAM chip.
 - 512KB of banked RAM provided by an optional [SuperMem 512](/supermem/README.md) board 
 - Video character generation is provided by standard 32 pin 27xxx EPROM's or 28xxx EEPROM's
 - Video character generator provides full 6x12 pixel matrix (Gendon3 compatible) descenders.
-- Multiple character sets can be defined, the character set chosen is by dip switches.
+- Multiple character sets can be defined, the character set chosen by software or dip switches.
 - The Video sync has been upgraded with improved stability, and 50Hz PAL support.
 - Video Output is via traditional DIN, or optional RCA socket.
+- An onboard audio amplifier and speaker are supported
+- An Alpha joystick (5 bit) port is provided
 - An internal 40 pin header is provided for plug in expansion cards
 - A [FreHD board](./frehd/README.md) has been developed primarily for internal expansion.
 - Power and Reset switches can be either traditional or modern components. 
@@ -63,7 +65,7 @@ See the separate [Status and Future](/STATUS.md) which provides a mini update bl
 
 ## Credits
 
-- The Board Folk Ver 1.1 Japanese board without which this project would not be possible.
+- The Board Folk Ver 1.1 Japanese board which this project was originally derived.
     - https://github.com/Board-Folk/TRS80IJP
 - Glens stuff TRS-80 Model 1 clone, of which some inspiration was taken.
     - https://www.glensstuff.com/trs80/trs80.htm
@@ -71,4 +73,4 @@ See the separate [Status and Future](/STATUS.md) which provides a mini update bl
     - https://forum.vcfed.org/index.php?threads/trs-80-model-1-board-design.1251905/
 - The Tandy Discord Channel for feedback, help and support
     - MSly for his continued support of this project
-    - also Marcel Erz, Maboytim, and Tuc
+    - also Marcel Erz, Maboytim, and Tuc, for there help and support.

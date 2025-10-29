@@ -84,6 +84,14 @@ but without access to an expansion interface I am not sure which is easier;
 The second approach requires less overall work, but is harder to revert. A future user will have
 to trace out what was changed, and have skill to revert it.
 
+#### Original Expansion Interface
+
+In the original Expansion Interface, and referring to method 1 above, the two 74LS367 buffer 
+chips that need to be removed (desoldered and socketed) are Z19, Z21, and optionally Z22.
+
+Referring to Option 2 (above) Z20 Pin 2, or 3 ; or Z37 Pin 13 or 14 seem like the easiest places
+to intercept the signal but this option is left undefined at this time.
+
 ### FreHd (External)
 
 An external FreHD plugged into edge connector appears to work. 
