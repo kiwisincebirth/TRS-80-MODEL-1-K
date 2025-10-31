@@ -59,6 +59,9 @@ CY7C130-55PC
 * https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/380/CY7C130%2C131%28A%29.pdf
 * https://www.silicon-ark.co.uk/datasheets/CY7C131-datasheet-cypress.pdf
 
+AM2130
+https://datasheet.octopart.com/AM2130-10DC-AMD-datasheet-182221887.pdf
+
 ## Alternate Part Usage
 
 The design of the board allows for several components to be chosen as either Traditional

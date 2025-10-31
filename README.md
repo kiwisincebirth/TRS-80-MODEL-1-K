@@ -22,7 +22,7 @@ For more images [See Here](./images/README.md)
 ### What this isn't:
 - Is not compatible with Model 1 power supply. It requires a fully regulated 5V DC power supply.
 - Is not compatible with 32Kb external RAM expansion, external RAM should be disabled.
-- Is not a faithful recreation of the original Model 1, other projects exist for this.
+- Is not a [faithful recreation of the original Model 1](https://github.com/RetroStack/TRS-80-Model-I-G-E1), other projects exist for this.
 
 ### Features at a Glance
 - CPU double (or triple) speedup (3.5/5.3 Mhz), configurable by jumper or external switch.
