@@ -18,6 +18,13 @@ And forked / related repositories
 * [ontheslab/FreHDv1CPM](https://github.com/ontheslab/FreHDv1CPM), contains downloadable software releases.
 * [maboytim/FreHDv1](https://github.com/maboytim/FreHDv1), contains alterations and improvements
 
+2 excellent blog articles:
+* [My TRS-80 FreHD Update Story](https://www.amigaretro.com/projects/my-trs-80-frehd-update-story/)
+* [My TRS-80 FreHD Update Story – TrsVid](https://www.amigaretro.com/projects/my-trs-80-frehd-update-story-trsvid/)
+
+And a good technical writeup of the Boot process 
+* [FreHD Emulation](http://48k.ca/trs80gp.html#frehd)
+
 Then there is Ian Mavrick's site, which has commercial product offerings, selling the FreHD. 
 Important Links from Ian M's site:
 * [FreHD Hard Drive Emulator](https://trs-80.com.au/trs80/emulator.htm)
@@ -81,8 +88,8 @@ There are 2 ZIP files for primary download
 The downloads include LDOS 5.3.1, NEWDOS/80 2.5, DOSPLUS 3.5.
 Multidos is not included in these images, it is downloadable separately.
 
-While named quinnerface, i believe this includes disk images that don't support 
-normal floppy drives.
+While named quinnerface, I believe this includes disk images that don't support 
+normal floppy drives, (but this is a guess).
 
 ## Operation
 

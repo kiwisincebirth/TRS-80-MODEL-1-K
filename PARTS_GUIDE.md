@@ -12,34 +12,45 @@ The part is no longer in production, and needs to obtained separately. Preferenc
 * CMOS variant, but this is not critical since older NMOS TTL is compatible
 * 6MHz since it is possible to overclock the computer to 5.3Mhz
 
-###  Crystal Oscillator (10.6445 Mhz)
+###  Clock Oscillator (10.645 Mhz)
+
+For new builds using a dedicated Quartz Oscillator is the easiest solution
+See the section [Alternate Main Clock](./FEATURES.md#alternate-main-clock)
+which contains details of how to use a modern clock oscillator
+
+###  Quartz Crystal (10.6445 Mhz)
 
 An exact replacement part is available, for a high cost
 * https://www.mutant-caterpillar.co.uk/shop/product_info.php?products_id=5174
 * https://www.ebay.com/itm/195727646631\
 
-Mouser Stock 10.695Mhz crystals (as well as 10.7Mhz)
-* https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGosgF2g%3D%3D
+10.6 mhZ (next closest)
 
 10.7 mhZ (next closest) can come from China
 * https://www.aliexpress.com/item/1005006183714474.html
 * https://www.aliexpress.com/item/1005003752108473.html
 * https://www.alibaba.com/product-detail/QZ-new-high-quality-10-7M_1601237726803.html
 
+Mouser Stock 10.695Mhz crystals (as well as 10.7Mhz)
+* https://www.mouser.com/ProductDetail/IQD/LFXTAL003560Bulk?qs=e4%2FAndAAwgLcW9WGosgF2g%3D%3D
+
 ### Video Memory (V1)
 
 Dual 1k x 4 bit SRAM - TMS2114L-15 or uPD2114LC-5 or equivalent
+including Intel D2148 and D2149
 
 Several Providers of this component have been identified
 * https://www.rocelec.com/part/01t4w00000PQTxNAAX-TMS2114L15NL
 * https://www.silicon-ark.co.uk/mm2114-15l-static-ram-by-national-semiconductor?search=2114
 * https://www.scribblygum.com.au/index.php?route=product/product&product_id=229
 * https://www.arcadepartsandrepair.com/store/integrated-circuits/ram-memory/2114-ram/
+* https://arcadechips.com/product_info.php?cPath=27_21&products_id=35&osCsid=zegqwwfeip
 * https://twistywristarcade.com/ram/43-2114-ram.html
 
 Datasheet's
 * https://www.lcsc.com/datasheet/C20918461.pdf
 * https://www.silicon-ark.co.uk/datasheets/uPD2114l-datasheet-nec.pdf
+* https://www.petervis.com/electronics/uPD2114LC/uPD2114LC.html (Intel)
 
 ### Video Memory (V2)
 

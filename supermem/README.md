@@ -11,10 +11,21 @@ This is implemented as a small board that replaces the 128 Kbyte SRAM chip on th
 main board, and contains the 512KB SRAM and the necessary bank control logic.
 
 This board supports 15 distinct banks for upper 32KB memory, numbered 1-15. 
-These banks map directly to physical pages in the actaul SRAM. 
+These banks map directly to physical pages in the actual SRAM. 
 Physical page 0 is reserved for lower 16KB RAM, and cannot be mapper to upper RAM. 
 Setting Bank number 0 for upper RAM, maps physical Page number 1.
-Setting the lower bank `OUT 67,32 (or greater)` is **NOT* supported.
+
+| Bank Number    |        Low RAM Page |       High RAM Page |
+|----------------|--------------------:|--------------------:|
+| **(OUT 67,X)** | **(0000h - 7FFFh)** | **(8000h - FFFFh)** |
+| 0              |                   0 |                   1 |
+| 1              |                   0 |                   1 |
+| 2              |                   0 |                   2 |
+| 3              |                   0 |                   3 |
+| ...            |                   0 |                 ... |
+| 15             |                   0 |                  15 |
+
+Setting the lower bank `OUT 67,32` (or greater) is **NOT** supported.
 
 There are 2 board revisions, Each version is designed for each version to the M1k 
 to fit around other existing components. Functionally they are the same. 

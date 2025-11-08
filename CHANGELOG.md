@@ -46,7 +46,7 @@ See the below for a list of all the version 2 changes
 ### Minor Improvements  
 
 - Moved main 10.6Mhz oscillator to central location, shorter signal paths.
-- CPU clock speed selector flip-flop (Z63a) clocked at slowest rate.
+- CPU clock speed selector flip-flop (U63a) clocked at slowest rate.
 - JP10 (and related circuit) used for video frequency was removed.
 - Inputs of spare gates are now tied to GND or VCC, with easy trace cuts for future use.
 - Added resistor pull-ups on address, data, and control busses, for CMOS stability.
@@ -68,7 +68,8 @@ See the below for a list of all the version 2 changes
 Unreleased
 
 Fixes minor issues in version C
-- Added connection points (pads) for connecting supermem signals in, out, and reset.
+- Backported a V2 improvement to CPU clock speed selector flip-flop (Z63a) clocked at slowest rate.
+- Added connection points (pads) for connecting supermem signals IN, OUT, and RESET.
 - Legacy Power switch footprint, correct spacing of Pins to allow for install.
 - Improve silkscreen to show what components can be removed when installing the alternate main clock
 - Replace C101 which a 470uF, affects BOM only
