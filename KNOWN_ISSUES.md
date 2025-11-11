@@ -6,6 +6,8 @@ for the actual changes made.
 
 ## V1c
 
+### Power Capacitor
+
 MSly (discord channel) has uncovered an issue with C101 (2200uF), which takes about 5 seconds to discharge
 after power is removed. If power is reapplied before the capacitor has had significant time to 
 discharge then the computer won't boot. This is primarily observed as the video displaying showing the
@@ -18,7 +20,19 @@ The Resolution is to replace C101 which a much smaller capacitor in the range, 2
 installing a bleed resistor 100 ohms 1/2 watt across the main power rail, will improve the situation
 This bleed resistor will draw a consistent 1/4 watt of power.
 
-Also
+### Clock Speed (Transition)
+
+MSly (discord channel) has uncovered an issue when clock speed is transitioned from Fast <-> Slow
+Sometime the computer will lock up. 
+
+Diagnosing the issue it appears that the circuit that controls the transition from one clock frequency to 
+another is not well timed, and can occur just after the current clock has transitioned, and switch to 
+the new clock then causes another level transition. This resulting is a very short duration clock pulse,
+in the order of 30ns. Depending on the CPU used this can be out of tolerance causing a CPU issue.
+
+The resolution is either to use a fast CPU, which is more tollerant, or simply disable high speed.
+
+### Also
 
 There is an issue with the Legacy Power switch, there is (ony slightly) not enough spacing between pins. 
 This means that getting all six pin rows installed is problematic. A workaround is to remove/cut the 
