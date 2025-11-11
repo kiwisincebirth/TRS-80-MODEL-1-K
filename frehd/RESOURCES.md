@@ -94,13 +94,36 @@ normal floppy drives, (but this is a guess).
 ## Operation
 
 ### LED's
+
+The following LEDs status signals apply
 * Green LED flashes once at startup to indicate that it has booted
-* Green LED flashes when accessing the FreHD, includes any access e.g. reading time.
-* Red led flashes when a card is inserted and no file system (FS) can be mounted
-* Red LED is just a error or warning LED.
-* RED LED ON, indicates that it is NOT safe to remove the SD card
-* If both LEDs are solid ON, the emulator is in bootloader mode
- 
+* Green LED flashes when accessing the FreHD. Includes any access including time.
+* Red LED is an error or warning LED.
+* Red LED flashes when a card is inserted and no file system (FS) can be mounted
+* Red LED ON, indicates that it is NOT safe to remove the SD card
+* BOTH LEDs are solid ON, the emulator is in bootloader mode
+
+### Startup Keys
+
+When resetting, (or powering on) the computer the following keys apply
+* BREAK - Will enter Level II Basic, skipping Floppy/Hard boot.
+* SPACE - Will attempt to boot a floppy disk, skipping FreHD boot.
+* No Key - Will attempt to load the FreHD Boot Menu
+
+### Using the Menu
+
+When the FreHD Menu is displayed use the following keys:
+* UP/DOWN - arrows (or A/Z keys) to select the image 
+* ENTER - To load the selected image
+* R – Reload the Hard Drive images from the SD card.
+
+FreHD displays files without sorting, leading to a surprising sort order for the user.
+Several program can be used to sort the files on the SD card 
+so that the menu displays the Operating Systems alphabetically.
+
+* https://fat-drive-sorter.netlify.app/
+* https://www.anerty.net/software/file/DriveSort
+
 ## OS's
 
 On a Model 1 there are several operating systems supported:
@@ -118,6 +141,8 @@ Overview of Dos's on the TRS-80
 
 The second partition `DIR :1` appears to have a few games preloaded
 
+Both LDOS and DOSPLUS have been found to work reliably at at double CPU speed.
+
 ### LDOS
 
 #### Disable Floppy Disks
@@ -131,6 +156,8 @@ SYSTEM (DRIVE=6,DISABLE)
 SYSTEM (DRIVE=7,DISABLE)
 SYSTEM (SYSGEN)
 ```
+
+Both LDOS and DOSPLUS have been found to work reliably at at double CPU speed.
 
 #### Mount Floppy Disks
 
@@ -157,6 +184,8 @@ SYSTEM 0,AL=6
 ```
 
 which set only 6 drives (assuming the first 6 are harddrives) as active excluding the latter floppy disks
+
+Hard Drive access with NEWDOS 80 2.5 is temperamental at double CPU speed
 
 ### MultiDOS
 
