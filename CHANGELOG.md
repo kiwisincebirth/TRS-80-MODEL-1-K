@@ -1,6 +1,10 @@
 
 # Changelog
 
+## Version 2.0b (Future)
+
+TBD - Potential Fix for CPU speed selection?
+
 ## Version 2.0a (Current)
 
 ![MainboardFront](/pcb/TRS-80-MP-FrontV2a.png)
@@ -68,8 +72,8 @@ See the below for a list of all the version 2 changes
 Unreleased
 
 Fixes minor issues in version C
-- Backported a V2 improvement to CPU clock speed selector flip-flop (Z63a) clocked at slowest rate.
-- Added connection points (pads) for connecting supermem signals IN, OUT, and RESET.
+- Backported a V2 improvement (still broken) to CPU clock speed selector flip-flop (Z63a) clocked at slowest rate.
+- Added connection points (pads) for connecting SuperMem signals IN, OUT, and RESET.
 - Legacy Power switch footprint, correct spacing of Pins to allow for install.
 - Improve silkscreen to show what components can be removed when installing the alternate main clock
 - Replace C101 which a 470uF, affects BOM only

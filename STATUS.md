@@ -1,6 +1,10 @@
 
 # Project Status
 
+## 4 Nov 2025
+
+MSly has reported a issue with CPU speed selection causing hanging. See [Known Issues](./KNOWN_ISSUES.md)
+
 ## 25 Oct 2025
 
 After almost 6 months V2 of the Model 1k is out. It provides significant
