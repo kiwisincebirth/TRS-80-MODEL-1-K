@@ -11,10 +11,14 @@ Downloading
 
 ## PicKit 3
 
-I ordered a PicKit 3.5 from China
-* It came with a small PCB containing a 40 pin ZIP socket
-* set jumpers for 40 pin operation J1:A J2:2-3 J3:2-3
-* connect pickit to small PCB - MCLR on board is Pin 1 (triangle on Pickit)
+I ordered a PicKit 3.5 from China which came with a small PCB containing a 40 pin ZIP socket
+to which the PIC chip can be inserted.
+
+Programming is done Either
+* connect pickit directly to programming header on the FreHD board
+* connect pickit to the supplied 40 pin ZIF socket (provided) board placing the PIC chip in the socket
+
+I would recommend the first option since you don't have to remove this chip from the FreHD board
 
 Software Download
 * As of writing 6.25 (and newer) is not compatible with pickit 3
