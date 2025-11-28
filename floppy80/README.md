@@ -70,7 +70,12 @@ however in my opinion they afre not needed, as the computer itself has 4k7 pullu
 
 ## Programming
 
-The Pi must be programmed ... todo
+The Pi must be programmed with the firmware. to do this:
+* Download the [U2F firmware file](./firmware/Floppy80.uf2) file.
+* Hold down the reset button in PI, while inserting it into a USB port.
+* A new USB drive will be mounted.
+* Copy the firmware file to the new mounted drive
+* The Drive will disconnect after the upload, this means programming is complete.
 
 ## SD Card Setup
 
