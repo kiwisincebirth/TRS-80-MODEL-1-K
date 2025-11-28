@@ -40,6 +40,7 @@ For more images [See Here](./images/README.md)
 - An Alpha joystick (5 bit) port is provided
 - An internal 40 pin header is provided for plug in expansion cards
 - A [FreHD board](./frehd/README.md) has been developed primarily for internal expansion.
+- A [Floppy80 board](./floppy80/README.md) has been developed primarily for internal expansion.
 - Power and Reset switches can be either traditional or modern components. 
 - The cassette input has minor improvements in the A/D design.
 - All internal power regulation circuitry has been removed, now externally provided.
@@ -55,6 +56,7 @@ See the separate [Builders Guide](/BUILDING.md) for complete technical documenta
 Included with this project are:
 - All required materials and guides to order and assemble this project.
 - A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
+- A [Floppy80 board](./floppy80/README.md) has been developed primarily for internal expansion.
 - A [SuperMem 512](/supermem/README.md) board that replaces the System RAM board providing 512KB of banked RAM
 - A selection of [Font Files](/fonts/README.md) for use with this project.
 - A selection of [ROM Images](/roms/README.md) for use with this project.

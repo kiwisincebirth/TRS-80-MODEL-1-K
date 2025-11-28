@@ -130,6 +130,11 @@ a patched ROM may be required to force hard reset from the user reset button.
 This issue may be fixed with a different version of the autoboot ROM
 that adds a small delay during startup.
 
+### Floppy80 (Internal)
+
+The [Floppy80](./floppy80/README.md) internal board (part of this project)
+has been built and tested, and has no known issues
+
 ### MIRE / MISE
 
 Is known to have some incompatibility. The following was investigated by MSly (discord channel):

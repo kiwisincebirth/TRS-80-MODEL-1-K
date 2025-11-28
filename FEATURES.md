@@ -92,7 +92,9 @@ The primary advantage being compactness. A optional second connector provides +5
 a internal expansion board.
 A few additional mounting holds have been provided to support an addon board
 
-See the [FreHD folder](/frehd/README.md) for a 40 pin FreHD that connects directly to this header.
+See the 
+* [FreHD folder](/frehd/README.md) for a 40 pin FreHD that connects directly to this header.
+* [Floppy80 folder](/floppy80/README.md) for a Floppy-80 that connects directly to this header.
 
 Routing an external 40 pin ribbon cable to the connector is also possible, bypassing the 'unreliable' card edge connector.
 

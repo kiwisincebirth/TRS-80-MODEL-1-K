@@ -21,6 +21,7 @@ And the following
 - A few compatible font have been provided in this project see [Fonts](/fonts/README.md)
 - A few ROM image files have been provided in this project see [ROMS](/roms/README.md)
 - A [FreHD board](/frehd/README.md) that can be connected directly to the mainboard, and installed internally.
+- A [Floppy80 board](/floppy80/README.md) that can be connected directly to the mainboard, and installed internally.
 - A [SuperMem 512](/supermem/README.md) board that replaces the System RAM board providing 512KB of banked RAM
 
 ## Introduction

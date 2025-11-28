@@ -1,6 +1,10 @@
 
 # Project Status
 
+## 28 Nov 2025
+
+Added Floppy 80 board
+
 ## 4 Nov 2025
 
 MSly has reported a issue with CPU speed selection causing hanging. See [Known Issues](./KNOWN_ISSUES.md)
