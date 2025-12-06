@@ -24,8 +24,8 @@ See comments in the schematic for modifications made to the original design.
 
 The [pcb](./pcb) directory contains
 * [PDF Schematics](./pcb/Floppy80_schematic_v1.pdf), 
-* Gerber files for JLCPCB or PCBWAY
-* Kicad Files
+* Gerber files for [JLCPCB](./pcb/jlcpcb_production.zip) or [PCBWAY](./pcb/pcbway_production.zip)
+* [Kicad Files](./pcb/Floppy80_kicad_v1.zip)
 
 ### Parts
 
@@ -80,6 +80,15 @@ The Pi must be programmed with the firmware. to do this:
 ## SD Card Setup
 
 An SD card must be setup ... todo
+
+### system.cfg
+It is important that upper 32 kb is disabled  
+```
+MEM=0
+```
+
+Also note that an additional line `WAIT=1` should be added to enable wait states
+if you intend to use a faster clock speed. See the main documentation
 
 ## Additional
 
