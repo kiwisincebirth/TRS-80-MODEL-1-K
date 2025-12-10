@@ -37,7 +37,8 @@ Mouser Stock 10.695Mhz crystals (as well as 10.7Mhz)
 ### Video Memory (V1)
 
 Dual 1k x 4 bit SRAM - TMS2114L-15 or uPD2114LC-5 or equivalent
-including Intel D2148 and D2149
+The following provides a list of compatible parts:
+* https://www.citylan.it/index.php/SRAM_1k_x_4
 
 Several Providers of this component have been identified
 * https://www.rocelec.com/part/01t4w00000PQTxNAAX-TMS2114L15NL

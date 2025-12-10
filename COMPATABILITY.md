@@ -17,7 +17,8 @@ Apart from the recommended AT28C256, the following ROM's have been tested
 ### Video Memory
 The following video memory chips have been tested and are known to work.
 * uPD2114LC (NEC)
-* um6114
+* D2148H (Intel)
+* UM6114 (UMC)
 
 ### IO Connectors
 
