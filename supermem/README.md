@@ -38,10 +38,30 @@ programmed with the provided firmware
 Three additional wires are required to be connected from the memory board to signal's 
 ( IN , OUT , SYSRES ) on the main board.
 
+## Revisions
+
+### First Revision
+
+The first revision supported a 4 bit (0-15) bank register. 
+
+This came with some limitations, which were noted when running the 
+Official Memory Test. The memory test reported more memory than is available, 
+and would cause a crash after a short amount of time.
+
+It is beleived (hard to confirm) that this is the result of only having a 
+four bit bank register so when reached Bank 16 it would interpret this as Bank 0
+(mapped to bank 1) and not account for the fact this bank had already been used. 
+
+### Second Revision
+
+The second revision increased to support a 5 bit (0-31) bank register.
+
+** More Details to Follow **
+
 ## Parts
 
 The main components required:
-* Lattace GAL22V10 or equivalent programmed with the provided firmware 
+* GAL22V10 (equivalent) programmed with the provided firmware 
 * AS6C4008-55PCN 4 Mbit - 512 Kbyte RAM chip
 * 74HCT174 Latch
 * 74HCT244 Buffer
