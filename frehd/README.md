@@ -131,8 +131,7 @@ Optional reset for the PIC:
 
 ## Programming
 
-The PIC must be programmed. The latest release is 2.17 and is in the file "FATFS.HEX"
-* The original PIC [FreHD PIC](https://github.com/veco/FreHDv1/tree/main/sw/trs_hard)
+The PIC must be programmed. See the separate [Programming PIC](PROGRAMING.md) guide.
 
 The GAL must be programmed. There are 2 versions
 * The original GAL [FreHD GAL](https://github.com/veco/FreHDv1/tree/main/hw/gal)

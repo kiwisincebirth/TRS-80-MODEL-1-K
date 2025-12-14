@@ -1,6 +1,13 @@
 
 # Project Status
 
+## 10 Dec 2025
+
+A recent discovery affecting SuperMem compatibility was discovered using the 
+official RAM testing application. While not fully confirmed at this point 
+it is beleived to be an issue because the soluton only supported a 4 bit bank
+register. [Further Details](supermem/README.md#revisions)
+
 ## 28 Nov 2025
 
 Added Floppy 80 board
@@ -42,7 +49,7 @@ I have now published a V1c of the board that fixes some minor issues.
 
 Ordered the V2 boards
 
-## Update 10 Sept 2025
+## 10 Sept 2025
 
 A couple of items to report
 * Just had a report of a an independent build of the board by "MSly" - reported on Tandy Discord
@@ -51,15 +58,15 @@ A couple of items to report
   * [Config](./CONFIG.md), showing a bit about how to program ROMS
   * [Compatability](./COMPATABILITY.md), showing things that have been tested and know to work (or not)
 
-## Update 3 Sept 2025
+## 3 Sept 2025
 
 An individual PCB can now be ordered from [Tuc's Workbench](https://shop.tucs-workbench.com/products/trs-80-model-i-revision-k)
 
-## Update 1 Sept 2025
+## 1 Sept 2025
 
 Added a new Folder "Roms" to the project.
 
-## Update 28th August 2025
+## 28th Aug 2025
 
 I have now published a V1b of the board that fixes some additional minor issues in V1.
 This also improves the BOM to include full component identifiers suitable for ordering.
@@ -77,16 +84,16 @@ PROM TYPE  SW10  SW11  SW12  SW13
 27128      OFF   OFF   A13   A12
 ```
 
-## Update 9th August 2025
+## 9th Aug 2025
 
 I have now published a V1a of the board that fixes the minor issues found in V1 of the board
 
-## Status July 2025
+## July 2025
 
 Working on V2 of the board, this is an ongoing process. See the changelog for an updated 
 list of changes in V2
 
-## Status June 2025
+## June 2025
 
 "FreHD" is up and running using an internal plug in board, and is document on this Repository.
 I am likely to spend some time relearning some of the aspects of DOS on trs-80
@@ -97,7 +104,7 @@ and includes most of the high priority items below.
 One item I am still considering is the inclusion of simpler Sync generation with
 adjustable Positional controls.
 
-## Status May 2025
+## May 2025
 
 This board has been built, functions, and basic testing has been performed. 
 I have tested overnight using the Diagnostic ROM, at both normal and double (3.5Mhz) without any issue

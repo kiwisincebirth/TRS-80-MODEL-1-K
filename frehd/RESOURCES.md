@@ -114,6 +114,7 @@ When resetting, (or powering on) the computer the following keys apply
 
 When the FreHD Menu is displayed use the following keys:
 * UP/DOWN - arrows (or A/Z keys) to select the image 
+* LEFT/RIGHT - arrows (or O/P keys) if more than 12 images 
 * ENTER - To load the selected image
 * R – Reload the Hard Drive images from the SD card.
 

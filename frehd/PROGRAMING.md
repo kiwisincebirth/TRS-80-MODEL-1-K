@@ -9,6 +9,9 @@ Downloading
 * download and uncompress the ZIP file 
 * The fie you need has a HEX extension
 
+Note: The official repository is here
+* https://github.com/veco/FreHDv1/tree/main/sw/trs_hard
+
 ## PicKit 3
 
 I ordered a PicKit 3.5 from China which came with a small PCB containing a 40 pin ZIP socket
