@@ -1,13 +1,16 @@
 
 # Changelog
 
-## Version 2.0b (Future)
+## Version 2.0b (Current)
 
-TBD - Potential Fix for CPU speed selection?
+![MainboardFront](/images/TRS-80-MP-FrontV2b.png)
 
-## Version 2.0a (Current)
+### Minor Improvements
 
-![MainboardFront](/pcb/TRS-80-MP-FrontV2a.png)
+This version was a fix for a specific issue
+- Fix to CPU clock speed selector flip-flop, now clocked on rising edge of both clocks
+
+## Version 2.0a (Past)
 
 ### Minor Improvements
 
@@ -67,20 +70,18 @@ See the below for a list of all the version 2 changes
 - Major improvement in the Schematic diagram quality.
 - Many component designators have changed from V1, so some V1 docs may not be accurate
 
-## Version 1.0d (Future)
+## Version 1.0d (Current)
 
-Unreleased
+![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1d.png)
 
 Fixes minor issues in version C
-- Backported a V2 improvement (still broken) to CPU clock speed selector flip-flop (Z63a) clocked at slowest rate.
+- Fix to CPU clock speed selector flip-flop, now clocked on rising edge of both clocks.
 - Added connection points (pads) for connecting SuperMem signals IN, OUT, and RESET.
 - Legacy Power switch footprint, correct spacing of Pins to allow for install.
 - Improve silkscreen to show what components can be removed when installing the alternate main clock
 - Replace C101 which a 470uF, affects BOM only
 
-## Version 1.0c (Current)
-
-![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1c.png)
+## Version 1.0c (Past)
 
 This release fixes minor Issues
 - Silkscreen for character generator SW10-SW13 has been corrected

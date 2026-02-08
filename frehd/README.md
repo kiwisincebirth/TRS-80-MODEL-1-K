@@ -76,7 +76,7 @@ others will have to be determined. These are some other notable major components
 * [U6 - 74LS595]
 * [U7 - DS1307+ - Realtime clock](https://www.digikey.com.au/en/products/detail/analog-devices-inc-maxim-integrated/DS1307/956883)
 * [Y1 - 10Mhz - Quartz Crystal]
-* [Y2 - 32.7kHz - Quartz Crystal]
+* [Y2 - 32.7kHz - Quartz Crystal - 12.5pf](https://www.digikey.com.au/en/products/detail/ecs-inc/ECS-327-6-13X/6821661)
 
 ### Assembly
 
@@ -136,6 +136,10 @@ The PIC must be programmed. See the separate [Programming PIC](PROGRAMING.md) gu
 The GAL must be programmed. There are 2 versions
 * The original GAL [FreHD GAL](https://github.com/veco/FreHDv1/tree/main/hw/gal)
 * The modified GAL [Open Collector GAL](https://github.com/maboytim/FreHDv1/tree/main/hw/gal-oc)
+
+## Troubleshooting
+
+See the separate [Trouble Shooting Guide](TROUBLE.md)
 
 ## Additional
 

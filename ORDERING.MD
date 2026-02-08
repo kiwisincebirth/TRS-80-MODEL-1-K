@@ -61,9 +61,7 @@ and are probably better for the larger IC's.
 Several optional Pin Headers have not been included in the BOM as
 they are not necessary in a standard configuration, and can be added at a latter date
 
-For V2 of the board an optional onboard Audio Amplifier Module and Speaker can be 
-installed. This requires specific sourcing and mounting and thus excluded from the BOM.
-See Parts Guide for more information
+Other optional components can be found in the [Advanced Features](FEATURES.md#advanced-features)
 
 ## Also Required
 

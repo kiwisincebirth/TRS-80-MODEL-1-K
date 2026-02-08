@@ -22,13 +22,7 @@ The following video memory chips have been tested and are known to work.
 
 ### IO Connectors
 
-Following connectors have specifically been tested
-* DIN Video Connector
-* RCA Video Connector
-* Modern Power Switch
-* Legacy Power Switch
-* Modern Reset Switch
-* Legacy Reset Switch
+All variants of the external connectors and switches have been tested 
 
 ## Functional Tests
 
@@ -37,13 +31,14 @@ Following connectors have specifically been tested
 The following video output have been tested and work as expected.
 * NTSC (60Hz) - using a 10.6 Mhz crystal, both CRT and Modern device
 * NTSC (60Hz) - using a 10.7 Mhz crystal, both CRT and Modern device
-* PAL (50Hz) - using a 10.7 Mhz crystal, only tested with Modern device
+* PAL (50Hz) - using a 10.7 Mhz crystal, only tested with Modern LCD
 
 ### CPU Speed 
 
 Double Speed (CPU speedup) is known to work. Note higher clock speeds require
 components that can handle the extra speed. An original Z-80 was rated at 2Mhz
-and may not work at higher speeds.
+and may not work at higher speeds. Early motherboards had an issue with 
+clock switchover, causing CPU to hang in some circumstances
 
 ### Cassette Interface
 

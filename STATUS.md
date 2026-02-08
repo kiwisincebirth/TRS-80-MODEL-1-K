@@ -1,11 +1,21 @@
 
 # Project Status
 
+## 9 Feb 2026
+
+Released updates to address the CPU speed selection issue.
+
+## 7 Feb 2026
+
+Circled back to this project and address the CPU speed selection issues.
+The fix was fairly simple requiring 1 additional gate. If want to implement it
+on existing motherboards can be done with 1 cut trace and 3 bodge wires.
+
 ## 10 Dec 2025
 
 A recent discovery affecting SuperMem compatibility was discovered using the 
 official RAM testing application. While not fully confirmed at this point 
-it is beleived to be an issue because the soluton only supported a 4 bit bank
+it is believed to be an issue because the solution only supported a 4 bit bank
 register. [Further Details](supermem/README.md#revisions)
 
 ## 28 Nov 2025

@@ -8,15 +8,7 @@ for the actual changes made.
 
 ### Clock Speed (Transition)
 
-MSly (discord channel) has uncovered an issue when clock speed is transitioned from Fast <-> Slow,
-Sometimes the computer will lock up.
-
-Diagnosing the issue it appears that the circuit that controls the transition from one clock frequency to
-another is not well-timed, and can occur just after the current clock has transitioned, and switch to
-the new clock then causes another level transition. This resulting is a very short duration clock pulse,
-in the order of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
-
-The resolution is either to use a fast CPU, which is more tolerant, or simply disable high speed.
+See issue descibed in V1C (below)
 
 # Version 1
 
@@ -47,6 +39,8 @@ the new clock then causes another level transition. This resulting is a very sho
 in the order of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
 
 The resolution is either to use a fast CPU, which is more tolerant, or simply disable high speed.
+In latter versions of the board the transition from one clock to another is based on both
+clocks transitioning to High. Not this fix could easily be done to existing boards.
 
 ### Also
 
