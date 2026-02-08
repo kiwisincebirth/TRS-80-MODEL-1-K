@@ -1,10 +1,10 @@
 # Images
 
-## Rnders of V2b
+## Renders of V2b Board
 
-![Front of Board](./TRS-80-MP-FrontV2b.png)
+![Front of Board](../pcb/TRS-80-MP-FrontV2b.png)
 
-![Back of Board](./TRS-80-MP-BackV2b.png)
+![Back of Board](../pcb/TRS-80-MP-BackV2b.png)
 
 ## The Whole Board
 
@@ -18,11 +18,11 @@
 
 ![closeup of clock](./IMG_0025.jpeg)
 
-## Renders of V1d
+## Renders of V1d Board
 
 ![Front of Board](../pcb/TRS-80-MP-FrontV1d.png)
 
-![Back of Board](../pcb//TRS-80-MP-BackV1d.png)
+![Back of Board](../pcb/TRS-80-MP-BackV1d.png)
 
 ## The Whole Board
 
