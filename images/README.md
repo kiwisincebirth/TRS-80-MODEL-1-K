@@ -45,3 +45,7 @@
 ## FreHD
 
 For Fre HD images [See Here](../frehd/images/README.md)
+
+## Floppy80
+
+For Floppy80 images [See Here](../floppy80/images/README.md)
