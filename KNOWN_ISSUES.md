@@ -8,7 +8,19 @@ for the actual changes made.
 
 ### Clock Speed (Transition)
 
-See issue descibed in V1C (below)
+MSly (discord channel) has uncovered an issue when clock speed is transitioned from Fast <-> Slow,
+Sometimes the computer will lock up.
+
+Diagnosing the issue it appears that the circuit that controls the transition from one clock frequency to
+another is not well-timed, and can occur just after the current clock has transitioned, and switch to
+the new clock then causes another level transition. This resulting is a very short duration clock pulse,
+in the order of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
+
+The resolution is either to either use a fast CPU, which is more tolerant of high speed clock signals
+or make a change to the board as described below (latter boards include this fix):
+
+In latter versions of the board the transition from one clock to another is based on both
+clocks transitioning to High. Not this fix could easily be done to existing boards.
 
 # Version 1
 
@@ -16,7 +28,7 @@ See issue descibed in V1C (below)
 
 ### Power Capacitor
 
-MSly (discord channel) has uncovered an issue with C101 (2200uF), which takes about 5 seconds to discharge
+@MSly (discord) has uncovered an issue with C101 (2200uF), which takes about 5 seconds to discharge
 after power is removed. If power is reapplied before the capacitor has had significant time to 
 discharge then the computer won't boot. This is primarily observed as the video displaying showing the
 last screen contents (maybe dependent on the SRAM used) when power was disconnected.
@@ -30,30 +42,20 @@ This bleed resistor will draw a consistent 1/4 watt of power.
 
 ### Clock Speed (Transition)
 
-MSly (discord channel) has uncovered an issue when clock speed is transitioned from Fast <-> Slow,
-Sometimes the computer will lock up. 
+See issue described in V2A (above)
 
-Diagnosing the issue it appears that the circuit that controls the transition from one clock frequency to 
-another is not well-timed, and can occur just after the current clock has transitioned, and switch to 
-the new clock then causes another level transition. This resulting is a very short duration clock pulse,
-in the order of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
+### Legacy Power Switch
 
-The resolution is either to use a fast CPU, which is more tolerant, or simply disable high speed.
-In latter versions of the board the transition from one clock to another is based on both
-clocks transitioning to High. Not this fix could easily be done to existing boards.
+@GaryK (discord) has uncovered an issue with the Legacy Power switch, there is (ony slightly) not enough 
+spacing between pins. This means that getting all six pin rows installed is problematic. 
+A workaround is to remove/cut the first row of pins (closest to the pushbutton/edge of PCB), 
+this should allow the remaining 5 rows of pins to be installed. Noting: That this row is NOT electrically required. 
 
 ### Also
 
-There is an issue with the Legacy Power switch, there is (ony slightly) not enough spacing between pins. 
-This means that getting all six pin rows installed is problematic. A workaround is to remove/cut the 
-first row of pins (closest to the pushbutton), this should allow the remaining 5 rows of pins to be installed.
-Noting: That this row is NOT electrically required. Credit to @GaryK - discord for reporting this.
-
-Another issue is that when installing SuperMem board there is no easy way to route the 3 signal wires.
+When installing SuperMem board there is no easy way to route the 3 signal wires.
 The only alternative is to probably drill a hole, and feed wires through the board. There is space
 just above and to the right of the RAM chip that is suitable for a hole, as it has just GND planes.
-
-The silkscreen doesn't show what components can be removed when installing the alternate main clock.
 
 ## V1b
 

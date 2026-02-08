@@ -3,19 +3,18 @@
 
 ## Version 2.0b (Current)
 
-![MainboardFront](/images/TRS-80-MP-FrontV2b.png)
+![MainboardFront](./pcb/TRS-80-MP-FrontV2b.png)
 
-### Minor Improvements
+February 2026
 
 This version was a fix for a specific issue
 - Fix to CPU clock speed selector flip-flop, now clocked on rising edge of both clocks
 
 ## Version 2.0a (Past)
 
-### Minor Improvements
+October 2025
 
 This version was a minor patch after initial V2 prototype was created.
-See the below for a list of all the version 2 changes
 * Added testpoints to support 3 signals required by SuperMem
 * Changed main power capacitor C11 to 470Uf after testing from MSly
 * Changed main power switch to discharge C11 (using 100R R14) when switched off
@@ -23,6 +22,10 @@ See the below for a list of all the version 2 changes
 * Corrections to Bill of Materials, and silkscreen fixes and improvements.
 
 ## Version 2.0 (Past)
+
+October 2025
+
+This was a significant upgrade of V1 with some significant new features
 
 ### New Features
 
@@ -74,7 +77,9 @@ See the below for a list of all the version 2 changes
 
 ![MainboardFrontBuiltK1](/pcb/TRS-80-MP-FrontV1d.png)
 
-Fixes minor issues in version C
+February 2026 
+
+Fixes release fixes minor Issues
 - Fix to CPU clock speed selector flip-flop, now clocked on rising edge of both clocks.
 - Added connection points (pads) for connecting SuperMem signals IN, OUT, and RESET.
 - Legacy Power switch footprint, correct spacing of Pins to allow for install.
@@ -83,11 +88,15 @@ Fixes minor issues in version C
 
 ## Version 1.0c (Past)
 
+September 2025
+
 This release fixes minor Issues
 - Silkscreen for character generator SW10-SW13 has been corrected
 - Added a single mounting hole, to allow for FreHD board to be mounted to.
 
 ## Version 1.0b (Past)
+
+August 2025
 
 This is a patch version of the 1.0a board with the items back-ported from V2
 - Z50 is now pin compatible with a [Full Can (DIP14) oscillator](FEATURES.md#alternate-main-clock).
@@ -105,10 +114,9 @@ Also made following improvements, which were also included in V2
 
 ## Version 1.0a (Past)
 
-8th August 2025
+July 2025
 
-This is a patch version of the 1.0 board with the following issue (discovered during build) resolved
-
+This is the first patch version with the following issues (discovered during first build) resolved
 - An optional C61 (100pf) has been added connecting pins 5 to 7 of Z50. 
   It was discovered during initial testing (V1) to be needed get the main crystal oscillator to function.
   NOTE This **may not be required** in all circumstances.
