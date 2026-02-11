@@ -14,7 +14,7 @@ The files provided in this project are primarily:
 - A visual BOM is also available [VISUAL BOM](/pcb/TRS-80-MP-BomVisualV1d.html)
 - The [Ordering](ORDERING.MD) guide for how to place a component order
 - The [Parts Guide](PARTS_GUIDE.md) for further advice on part usage
-- The [Known Issues](KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
+- The [Known Issues](issues/KNOWN_ISSUES.md) which identifies any deficiencies in the board itself
 - The [Compatability Guide](COMPATABILITY.md) which identifies tested components and additions.
 
 And the following
@@ -67,10 +67,12 @@ Before beginning the main assembly you should understand the following limitatio
 
 The following patches should be noted for the board. These were discovered after initial PCB manufacture, and affect
 the boards design, and or the silkscreen. NOTE: The following have be fixed in V1a of the board.
-- To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50
-  - In latter revisions of the board C61 was added to the board to simplify this installation.
+- To get the main crystal oscillator to function a 100pf capacitor was installed connecting pins 5 to 7 of Z50.
+  In latter revisions of the board C61 was added to the board to simplify this installation.
+- There is an [issue with CPU Frequency selection](./issues/FIX_CPU_SPEED.md), requiring a change. For Rev C boards traces need to be
+  cut before the board is assembled.
 
-Additionally, please see the [Known Issues](./KNOWN_ISSUES.md) which describe issues with the board design itself,
+Additionally, please see the [Known Issues](issues/KNOWN_ISSUES.md) which describe issues with the board design itself,
 that should also be addressed during build.
 
 ## Main Assembly
