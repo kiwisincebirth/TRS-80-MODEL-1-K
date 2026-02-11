@@ -1,26 +1,14 @@
 # Known Issues
 
 The following known issues were found on the specific board versions. Note: the issues probably also exist
-in prior versions. Typically, these issues are addressed in future versions. See the [Changelog](./CHANGELOG.md)
+in prior versions. Typically, these issues are addressed in future versions. See the [Changelog](../CHANGELOG.md)
 for the actual changes made.
 
 ## V2a
 
 ### Clock Speed (Transition)
 
-MSly (discord channel) has uncovered an issue when clock speed is transitioned from Fast <-> Slow,
-Sometimes the computer will lock up.
-
-Diagnosing the issue it appears that the circuit that controls the transition from one clock frequency to
-another is not well-timed, and can occur just after the current clock has transitioned, and switch to
-the new clock then causes another level transition. This resulting is a very short duration clock pulse,
-in the order of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
-
-The resolution is either to either use a fast CPU, which is more tolerant of high speed clock signals
-or make a change to the board as described below (latter boards include this fix):
-
-In latter versions of the board the transition from one clock to another is based on both
-clocks transitioning to High. Not this fix could easily be done to existing boards.
+See the separate description of this problem and a solution. [Clock Speed Transition](./FIX_CPU_SPEED.md)
 
 # Version 1
 
@@ -42,7 +30,7 @@ This bleed resistor will draw a consistent 1/4 watt of power.
 
 ### Clock Speed (Transition)
 
-See issue described in V2A (above)
+See the separate description of this problem and a solution. [Clock Speed Transition](./FIX_CPU_SPEED.md)
 
 ### Legacy Power Switch
 
