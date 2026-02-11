@@ -11,20 +11,22 @@ problematic if using a cassette tape since the board will automatically slowed
 down when the cassette drive is active. 
 
 Diagnosing the issue it appears that the circuit that controls the transition from
-one clock frequency to another is not well-timed, and can occur just after the 
-current clock has transitioned, and switch to the new clock then causes another 
-level transition. This resulting is a very short duration clock pulse, in the order
-of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
+one clock frequency to another is not well-timed. This resulting is a very short duration 
+clock pulse, in the order of 30ns (33Mhz). 
+Depending on the CPU used this can be out of tolerance causing the issue.
 
 ![Clock Issue](../images/fixes/IMG_0082.jpeg)
 
-In the above image the Green Trace is the Clock signal sent to the CPU
-and the bue trace is the control signal that selects which clock signal to use.
+In the above image the Yellow Trace is the Clock signal sent to the CPU
+and the Blue trace is the control signal that selects which clock signal to use.
+Notice, Just after the fast clock transitions to LOW, the switch happens to the 
+slow clock which is at a HIGH state, so the output clock (very quickly) transitions 
+back to a high state, causing a short period in the LOW state. 
 
 ## Options
 
 There are a few options:
-* Dont use high speed! not really an option worth discussing further.
+* Don't use high speed! not really an option worth discussing further.
 * Use a fast CPU, which is more tolerant of high speed clock signals.
 * Make a change to the board to fix the issue. Discussed Below
 
@@ -64,8 +66,8 @@ To reconnect the trace (bypassing) Z63 Pin, solder a wire from he exposed trace 
 
 Then we need to complete the circuit.
 * U1 Pin 8 (output of AND Gate ) -> connect to Z63 Pin 3 (input Pin we disconnected)
-* U1 Pin 9 (input of AND Gate) -> connect to U2 Pin 2
-* U1 Pin 10 (input of AND Gate) -> connect to U2 Pin 5
+* U1 Pin 9 (input of AND Gate) -> connect to U2 Pin 5
+* U1 Pin 10 (input of AND Gate) -> connect to U2 Pin 2
 
 The following shows the 4 connections that need to be made
 
