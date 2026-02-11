@@ -4,8 +4,8 @@
 ## Issue
 
 An issue has been found causing computer lockups when clock speed is transitioned 
-from Fast <-> Slow. Sometimes the computer will lock up. This was reproduced by quickly 
-toggling the speed selection jumper on and off. 
+from Fast <-> Slow. This was reproduced by quickly toggling the speed selection 
+jumper on and off. 
 
 This issue is not related to high speed itself just the transition period. This is  
 problematic if using a cassette tape since the board will automatically slowed
@@ -24,7 +24,7 @@ Notice, Just after the fast clock transitions to LOW, the switch happens to the
 slow clock which is at a HIGH state, so the output clock (very quickly) transitions 
 back to a high state, causing a short period in the LOW state. 
 
-Credit to MSly (discord channel), for reporting this issue.
+Credit to MSly (discord channel), for discovering this issue.
 
 ## Applicability
 
