@@ -16,7 +16,7 @@ current clock has transitioned, and switch to the new clock then causes another
 level transition. This resulting is a very short duration clock pulse, in the order
 of 30ns. Depending on the CPU used this can be out of tolerance causing the issue.
 
-![Clock Issue](../images/fixes/IMG_0446.jpeg)
+![Clock Issue](../images/fixes/IMG_0082.jpeg)
 
 In the above image the Green Trace is the Clock signal sent to the CPU
 and the bue trace is the control signal that selects which clock signal to use.
