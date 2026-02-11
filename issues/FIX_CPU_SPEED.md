@@ -63,12 +63,11 @@ requires the solder masked to be scraped off to expose the copper beneath.
 To reconnect the trace (bypassing) Z63 Pin, solder a wire from he exposed trace to Z65 Pin 1
 
 Then we need to complete the circuit.
+* U1 Pin 8 (output of AND Gate ) -> connect to Z63 Pin 3 (input Pin we disconnected)
+* U1 Pin 9 (input of AND Gate) -> connect to U2 Pin 2
+* U1 Pin 10 (input of AND Gate) -> connect to U2 Pin 5
 
-U1 Pin 8 (output of AND Gate ) -> connect to Z63 Pin 3 (input Pin we disconnected)
-U1 Pin 9 (input of AND Gate) -> connect to U2 Pin 2
-U1 Pin 10 (input of AND Gate) -> connect to U2 Pin 5
-
-The following shows the 4 connection that need to be made
+The following shows the 4 connections that need to be made
 
 ![Solder Four Wires](../images/fixes/IMG_0453.jpeg)
 
