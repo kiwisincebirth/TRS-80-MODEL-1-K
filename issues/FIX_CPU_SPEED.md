@@ -23,6 +23,10 @@ Notice, Just after the fast clock transitions to LOW, the switch happens to the
 slow clock which is at a HIGH state, so the output clock (very quickly) transitions 
 back to a high state, causing a short period in the LOW state. 
 
+## Applicability
+
+In V1.0d and V2c of the board a FIX (below) was incorporated into the board itself.
+
 ## Options
 
 There are a few options:
@@ -103,5 +107,3 @@ The circuit change is identical and the procedure similar excepting.
 
 For further information contact the author, and i will expand this section.
 
-In latter versions of the board the transition from one clock to another is based on both
-clocks transitioning to High. Not this fix could easily be done to existing boards.
