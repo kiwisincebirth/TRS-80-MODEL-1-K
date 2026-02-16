@@ -59,4 +59,9 @@ Then
 * Program
 * Verify
 
+## See Also
+
+this forum thread might provide some help.
+[VCF Forums: FreHD : programming the PIC?](https://forum.vcfed.org/index.php?threads/frehd-programming-the-pic.54265)
+
 

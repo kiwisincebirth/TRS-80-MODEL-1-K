@@ -16,7 +16,7 @@ The GIT Hub Repo contains some important software locations
 
 And forked / related repositories
 * [ontheslab/FreHDv1CPM](https://github.com/ontheslab/FreHDv1CPM), contains downloadable software releases.
-* [maboytim/FreHDv1](https://github.com/maboytim/FreHDv1), contains alterations and improvements
+* [maboytim/FreHDv1](https://github.com/maboytim/FreHDv1), contains alterations and improvements e.g. open collector
 
 2 excellent blog articles:
 * [My TRS-80 FreHD Update Story](https://www.amigaretro.com/projects/my-trs-80-frehd-update-story/)
@@ -224,4 +224,6 @@ The **latest versions** can be downloaded from the FreeHDv1CPM Github repository
 This document (from Ian M's site) describes the use of some these utilities
 * [FreHD Utilities](https://trs-80.com.au/trs80/FreHD%20Utilities.docx)
 
-
+And I found some third party utilities
+* [Github: AnotherMaker Frehd AutomatedEmulator Import](https://github.com/mudmin/AnotherMaker/blob/master/frehd/import.py)
+* [Github: TJBChris FreHd Floppy Disk Boot](https://github.com/TJBChris/FreHDDisk/blob/main/README.md)
